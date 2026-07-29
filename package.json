@@ -1,0 +1,14 @@
+{
+  "name": "le-cahier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A French vocabulary and conjugation trainer for one learner.",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test",
+    "fetch-frequency": "node scripts/fetch-frequency.mjs",
+    "enrich": "node scripts/enrich.mjs"
+  }
+}

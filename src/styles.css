@@ -1,0 +1,119 @@
+:root {
+  --paper:        #F5F4EF;
+  --paper-sheet:  #FCFBF7;
+  --paper-edge:   #E4E1D6;
+  --seyes:        #A8B2DE;   /* ruling, strong lines */
+  --seyes-faint:  #DFE3F2;   /* ruling, millimetre grid */
+  --marge:        #C9403A;   /* margin line, endings, errors */
+  --ink:          #1B2A4E;
+  --ink-soft:     #64719A;
+  --ink-ghost:    #9AA3BE;
+  --juste:        #1E7355;   /* correct answers */
+
+  --rule: 30px;              /* Seyès line height, drives all vertical spacing */
+  --marge-x: 3.25rem;
+  --measure: 46rem;
+
+  --display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --body: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent calc(var(--rule) - 1px),
+    var(--seyes-faint) calc(var(--rule) - 1px),
+    var(--seyes-faint) var(--rule)
+  );
+  font-family: var(--body);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: var(--rule);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0 0 var(--rule) 0;
+  line-height: var(--rule);
+}
+
+p, ul, ol {
+  margin: 0 0 var(--rule) 0;
+}
+
+.page {
+  position: relative;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--rule) 1.5rem var(--rule) var(--marge-x);
+  border-left: 2px solid var(--marge);
+  background-color: var(--paper-sheet);
+  min-height: 100vh;
+}
+
+.mono, code, .paradigm {
+  font-family: var(--mono);
+}
+
+.ending {
+  color: var(--marge);
+}
+
+.correct   { color: var(--juste); }
+.incorrect { color: var(--marge); }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 16px; /* below this, iOS Safari zooms on focus */
+}
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ink-ghost);
+  border-radius: 2px;
+  background: var(--paper-sheet);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--ink-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--marge);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --marge-x: 2rem;
+  }
+}
