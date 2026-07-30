@@ -38,9 +38,25 @@ export function onSyncStatus(fn) {
   return () => watchers.delete(fn);
 }
 
+/**
+ * Accepts whatever the Supabase dashboard put on the clipboard.
+ *
+ * The dashboard shows the REST endpoint as often as the bare project URL, and
+ * this file appends /rest/v1 and /auth/v1 itself, so a pasted suffix would
+ * double up into /rest/v1/rest/v1/progress and 404 for no visible reason.
+ */
+export function normaliseProjectUrl(raw) {
+  const trimmed = (raw ?? '').trim();
+  if (!trimmed) return '';
+  return trimmed
+    .replace(/\/+$/, '')
+    .replace(/\/(rest|auth|realtime|storage)\/v\d+$/i, '')
+    .replace(/\/+$/, '');
+}
+
 function config() {
   const { syncUrl, syncAnonKey } = getSettings();
-  const url = (syncUrl ?? '').trim().replace(/\/+$/, '');
+  const url = normaliseProjectUrl(syncUrl);
   const key = (syncAnonKey ?? '').trim();
   if (!url || !key) return null;
   return { url, key };

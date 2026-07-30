@@ -72,6 +72,9 @@ Finally, in the app under Settings, Sync, paste the project URL and the anon
 public key, enter your email, and ask for a sign in link. The anon key belongs
 in the browser: row level security is what keeps the row private.
 
+Either `https://yourproject.supabase.co` or the REST endpoint ending in
+`/rest/v1/` works; the app trims the suffix.
+
 Progress pulls on load and pushes a few seconds after the last review. Merging
 happens per card, taking the later review and the higher counts, so a session
 on the phone is never overwritten by a stale laptop.
