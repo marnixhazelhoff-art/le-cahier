@@ -144,6 +144,34 @@ for (const card of deck) {
     typeof card.expected === 'string' && card.expected.length > 0);
 }
 
+// --- Vocabulary bank (if it exists yet) -------------------------------------
+
+const VALID_POS = new Set(['noun', 'adj', 'adv', 'prep', 'conj', 'expr']);
+let vocab = [];
+try {
+  vocab = JSON.parse(await readFile(new URL('../data/vocab.json', import.meta.url), 'utf8'));
+} catch {
+  // not built yet
+}
+
+if (vocab.length > 0) {
+  const seenFr = new Set();
+  for (const entry of vocab) {
+    const label = `${entry.fr} (rank ${entry.rank})`;
+    ok(`${label}: fr is unique`, !seenFr.has(entry.fr));
+    seenFr.add(entry.fr);
+    ok(`${label}: pos is valid`, VALID_POS.has(entry.pos));
+    if (entry.pos === 'noun') {
+      ok(`${label}: noun has gender`, entry.gender === 'm' || entry.gender === 'f' || entry.gender === 'mf');
+      ok(`${label}: noun has article`, ['le', 'la', 'un', 'une', "l'"].includes(entry.article));
+    }
+    ok(`${label}: example and exampleNl are both present or both absent`,
+      Boolean(entry.example) === Boolean(entry.exampleNl));
+    ok(`${label}: has a non-empty nl gloss`, typeof entry.nl === 'string' && entry.nl.trim().length > 0);
+  }
+  console.log(`\nvocab.json: ${vocab.length} entries checked`);
+}
+
 // --- Summary ---------------------------------------------------------------
 
 console.log(`\n${passed} passed, ${failed} failed`);
