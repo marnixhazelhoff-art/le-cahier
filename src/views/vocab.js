@@ -1,6 +1,6 @@
 import { newCard, grade } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
-import { getCard, putCard, getSettings, recordReview } from '../store.js';
+import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
 import { buildVocabCardDeck } from '../vocab-cards.js';
 import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
@@ -23,10 +23,12 @@ function buildQueue(deck, settings) {
 
   const due = withState.filter((c) => c.card.state !== 'new' && c.card.due <= today());
 
+  // Deck order is rank order, and filter preserves it, so slicing takes the
+  // most frequent unseen words. Do not sort this: sorting by lemma introduces
+  // words alphabetically, which is exactly the grouping section 8.7 forbids.
   const newRecall = withState
     .filter((c) => c.spec.kind === 'recall' && c.card.state === 'new')
-    .sort((a, b) => a.spec.lemma.localeCompare(b.spec.lemma)) // stable; deck is already rank order
-    .slice(0, settings.newCardsPerDay);
+    .slice(0, newCardAllowance('vocab', settings.newCardsPerDay));
 
   // Production unlocks once the matching receptive card has matured to a
   // 21+ day interval (section 8.5) — not gated by the daily new-word cap,
@@ -52,7 +54,8 @@ function renderRecallCard(container, spec, card, onGraded) {
     // "null" instead of skipping them, unlike this file's h() helper — filter first.
     revealed.append(...[
       h('p', { class: 'correct' }, spec.answer),
-      spec.example ? h('p', { class: 'mono' }, `${spec.example} — ${spec.exampleNl}`) : null,
+      spec.example ? h('p', { class: 'mono' }, spec.example) : null,
+      spec.exampleNl ? h('p', { class: 'mono gloss' }, spec.exampleNl) : null,
       spec.falseFriend ? h('p', {}, `Let op: ${spec.falseFriend}`) : null,
       spec.note ? h('p', {}, spec.note) : null,
     ].filter(Boolean));
@@ -130,7 +133,8 @@ function renderCard(container, queue, index, mode, onDone) {
   const onGraded = (outcome) => {
     const graded = grade(card, outcome);
     putCard(graded);
-    recordReview('vocab', outcome);
+    // card is the pre-grade state, so reps 0 means this review introduced it.
+    recordReview('vocab', outcome, { introduced: card.reps === 0 });
     renderCard(container, queue, index + 1, mode, onDone);
   };
 

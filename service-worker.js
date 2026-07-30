@@ -2,7 +2,7 @@
 // Bump VERSION whenever the shell or the data files change. Old caches are
 // deleted on activate, so a bump is the whole upgrade story.
 
-const VERSION = 'v2';
+const VERSION = 'v4';
 const CACHE = `le-cahier-${VERSION}`;
 
 // Relative so this survives a GitHub Pages subpath. These resolve against the
@@ -16,7 +16,10 @@ const CORE = [
   './src/store.js',
   './src/scheduler.js',
   './src/conjugate.js',
+  './src/deck-stats.js',
   './src/grade.js',
+  './src/merge.js',
+  './src/sync.js',
   './src/tts.js',
   './src/accent-helper.js',
   './src/verb-cards.js',

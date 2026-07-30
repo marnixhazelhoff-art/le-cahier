@@ -77,6 +77,7 @@ p, ul, ol {
 
 .correct   { color: var(--juste); }
 .incorrect { color: var(--marge); }
+.gloss     { color: var(--ink-soft); }
 
 button, input, select, textarea {
   font-family: inherit;
@@ -205,7 +206,9 @@ nav.tabs a[aria-current="page"] {
     padding-bottom: calc(var(--rule) * 3);
   }
 
-  .actions {
+  /* Scoped to the drill on purpose. Only the review loop wants a fixed bar;
+     elsewhere it would just cover the page. */
+  .drill .actions {
     position: fixed;
     left: 0;
     right: 0;
@@ -220,9 +223,17 @@ nav.tabs a[aria-current="page"] {
     border-top: 1px solid var(--seyes);
   }
 
-  .actions button {
+  .drill .actions button {
     flex: 1 1 auto;
   }
+}
+
+/* Buttons that sit together outside the review loop, such as in settings. */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--rule);
 }
 
 .drill input[type="text"] {
@@ -238,6 +249,7 @@ nav.tabs a[aria-current="page"] {
 
 .paradigm-table {
   overflow-x: auto;
+  margin-bottom: var(--rule);
 }
 
 .paradigm-table table {

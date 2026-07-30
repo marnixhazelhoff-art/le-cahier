@@ -44,6 +44,14 @@ function deriveState(card) {
   return 'review';
 }
 
+/**
+ * A card counts as due once it has been seen at least once and its due date has
+ * arrived. New cards are not due; they are introduced under the daily cap.
+ */
+export function isDue(card, day = today()) {
+  return card.state !== 'new' && card.due <= day;
+}
+
 export function newCard(id, { familiar = false, due = today() } = {}) {
   return {
     id,

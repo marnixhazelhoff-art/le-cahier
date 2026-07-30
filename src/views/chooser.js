@@ -1,5 +1,5 @@
 import { newCard, grade } from '../scheduler.js';
-import { getCard, putCard, getSettings, recordReview } from '../store.js';
+import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
 import { h, clear, shuffle } from '../dom.js';
 
 function today() {
@@ -17,7 +17,7 @@ function buildQueue(items, settings) {
   const fresh = withState
     .filter((c) => c.card.state === 'new')
     .sort((a, b) => a.item.id.localeCompare(b.item.id))
-    .slice(0, settings.newCardsPerDay);
+    .slice(0, newCardAllowance('chooser', settings.newCardsPerDay));
   return [...shuffle(due), ...shuffle(fresh)];
 }
 
@@ -46,7 +46,8 @@ function renderCard(container, queue, index, onDone) {
 
     const graded = grade(card, correct ? 'good' : 'again');
     putCard(graded);
-    recordReview('chooser', correct ? 'good' : 'again');
+    // card is the pre-grade state, so reps 0 means this review introduced it.
+    recordReview('chooser', correct ? 'good' : 'again', { introduced: card.reps === 0 });
 
     clear(feedback);
     feedback.append(

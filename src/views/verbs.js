@@ -1,7 +1,7 @@
 import { fullTable, splitEnding, CORE_TENSES, ALL_TENSES, SUBJECTS } from '../conjugate.js';
 import { newCard, grade } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
-import { getCard, putCard, getSettings, recordReview } from '../store.js';
+import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
 import { buildVerbCardDeck } from '../verb-cards.js';
 import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
@@ -26,7 +26,7 @@ function buildQueue(deck, settings) {
   const fresh = withState
     .filter((c) => c.card.state === 'new')
     .sort((a, b) => a.spec.id.localeCompare(b.spec.id))
-    .slice(0, settings.newCardsPerDay);
+    .slice(0, newCardAllowance('verbs', settings.newCardsPerDay));
   return [...shuffle(due), ...shuffle(fresh)];
 }
 
@@ -61,7 +61,8 @@ function renderCard(container, queue, index, verbs, onDone) {
       const result = gradeAnswer(typed, spec.expected);
       const graded = grade(card, result.grade);
       putCard(graded);
-      recordReview('verbs', result.grade);
+      // card is the pre-grade state, so reps 0 means this review introduced it.
+      recordReview('verbs', result.grade, { introduced: card.reps === 0 });
 
       speak(spec.expected);
 

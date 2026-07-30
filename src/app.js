@@ -6,13 +6,14 @@ import { renderVocabView } from './views/vocab.js';
 import { renderChooserView } from './views/chooser.js';
 import { renderProgressView } from './views/progress.js';
 import { renderSettingsView } from './views/settings.js';
+import { captureSessionFromUrl, initSync } from './sync.js';
 
 const ROUTES = {
-  '#/home': (main) => renderHomeView(main),
+  '#/home': (main, data) => renderHomeView(main, data),
   '#/verbs': (main, data) => renderVerbsView(main, data),
   '#/vocab': (main, data) => renderVocabView(main, data),
   '#/chooser': (main, data) => renderChooserView(main, data),
-  '#/progress': (main) => renderProgressView(main),
+  '#/progress': (main, data) => renderProgressView(main, data),
   '#/settings': (main) => renderSettingsView(main),
 };
 
@@ -72,7 +73,18 @@ async function start() {
 
   window.addEventListener('hashchange', render);
   render();
+
+  // Last, and never awaited: a sync that cannot reach Supabase must not delay
+  // the first card by a single frame.
+  try {
+    initSync();
+  } catch { /* sync is an enhancement, never a dependency */ }
 }
 
 registerServiceWorker();
+// Before start(), because a magic link returns #access_token=... and the router
+// would otherwise treat that as an unknown route.
+try {
+  captureSessionFromUrl();
+} catch { /* a malformed callback must not stop the app loading */ }
 start();

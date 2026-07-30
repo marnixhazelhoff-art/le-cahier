@@ -35,7 +35,7 @@ function presentCard(verb, person) {
   const label = SUBJECTS[person];
   return makeCard(`c:${verb.infinitive}:present:${label}`, {
     infinitive: verb.infinitive, en: verb.en, kind: 'present-stem', tense: 'present', person,
-    prompt: `${verb.infinitive} (${verb.en}) — present — ${label}`,
+    prompt: `${verb.infinitive} (${verb.en}): present, ${label}`,
     expected: verb.present[person],
     note: verb.note,
   });
@@ -65,7 +65,7 @@ export function buildVerbCardDeck(verbs) {
     for (let person = 0; person < 6; person++) {
       cards.push(makeCard(`c:${infinitive}:present:${SUBJECTS[person]}`, {
         infinitive, en: verb.en, kind: 'present-pattern', tense: 'present', person,
-        prompt: `${infinitive} (${verb.en}) — present — ${SUBJECTS[person]}`,
+        prompt: `${infinitive} (${verb.en}): present, ${SUBJECTS[person]}`,
         expected: verb.present[person],
       }));
     }
@@ -76,7 +76,7 @@ export function buildVerbCardDeck(verbs) {
     if (verb.aux !== 'être' && verb.infinitive !== 'passer') continue;
     cards.push(makeCard(`c:${verb.infinitive}:aux:choice`, {
       infinitive: verb.infinitive, en: verb.en, kind: 'aux-choice', tense: 'passe-compose', person: null,
-      prompt: `${verb.infinitive} (${verb.en}) — avoir or être in the passé composé?`,
+      prompt: `${verb.infinitive} (${verb.en}): avoir or être in the passé composé?`,
       expected: verb.aux,
       note: verb.note,
     }));
@@ -87,7 +87,7 @@ export function buildVerbCardDeck(verbs) {
     if (predictedParticiple(verb) === verb.participle) continue;
     cards.push(makeCard(`c:${verb.infinitive}:participle`, {
       infinitive: verb.infinitive, en: verb.en, kind: 'participle', tense: 'passe-compose', person: null,
-      prompt: `${verb.infinitive} (${verb.en}) — past participle`,
+      prompt: `${verb.infinitive} (${verb.en}): past participle`,
       expected: verb.participle,
       note: verb.note,
     }));
@@ -100,7 +100,7 @@ export function buildVerbCardDeck(verbs) {
     const label = verb.impersonal ? 'il' : 'je';
     cards.push(makeCard(`c:${verb.infinitive}:futur:${label}`, {
       infinitive: verb.infinitive, en: verb.en, kind: 'futur-stem', tense: 'futur', person,
-      prompt: `${verb.infinitive} (${verb.en}) — futur — ${label}`,
+      prompt: `${verb.infinitive} (${verb.en}): futur, ${label}`,
       expected: conjugate(verb, 'futur')[person],
       note: verb.note,
     }));
@@ -110,14 +110,14 @@ export function buildVerbCardDeck(verbs) {
   const manger = byName.manger;
   cards.push(makeCard('c:_rule:imparfait:guard', {
     infinitive: 'manger', en: manger.en, kind: 'imparfait-rule', tense: 'imparfait', person: 3,
-    prompt: `${manger.infinitive} (${manger.en}) — imparfait — nous (drop the guard before -i)`,
+    prompt: `${manger.infinitive} (${manger.en}): imparfait, nous (drop the guard before -i)`,
     expected: conjugate(manger, 'imparfait')[3],
     note: 'The e that protects the soft g is only needed before a or o. Drop it before -ions, -iez.',
   }));
   const etre = byName.être;
   cards.push(makeCard('c:_rule:imparfait:etre', {
     infinitive: 'être', en: etre.en, kind: 'imparfait-rule', tense: 'imparfait', person: 0,
-    prompt: `${etre.infinitive} (${etre.en}) — imparfait — je (the one exception)`,
+    prompt: `${etre.infinitive} (${etre.en}): imparfait, je (the one exception)`,
     expected: conjugate(etre, 'imparfait')[0],
     note: etre.note,
   }));
