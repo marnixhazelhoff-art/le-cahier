@@ -3,6 +3,8 @@ import { gradeAnswer } from '../grade.js';
 import { getCard, putCard, getSettings, recordReview } from '../store.js';
 import { buildVocabCardDeck } from '../vocab-cards.js';
 import { h, clear, shuffle } from '../dom.js';
+import { speak } from '../tts.js';
+import { attachAccentHelper } from '../accent-helper.js';
 
 const PRODUCE_UNLOCK_INTERVAL = 21;
 
@@ -41,6 +43,7 @@ function buildQueue(deck, settings) {
 function renderRecallCard(container, spec, card, onGraded) {
   const revealed = h('div', {});
   const showButton = h('button', { type: 'button' }, 'Show answer');
+  const playButton = h('button', { type: 'button', onclick: () => speak(spec.prompt) }, 'Play');
 
   const grading = h('div', { class: 'feedback' });
   showButton.addEventListener('click', () => {
@@ -64,6 +67,7 @@ function renderRecallCard(container, spec, card, onGraded) {
   container.append(
     h('h2', {}, spec.prompt),
     showButton,
+    playButton,
     revealed,
     grading,
   );
@@ -82,6 +86,7 @@ function renderProduceCard(container, spec, card, onGraded) {
       const typed = input.value;
       if (!typed.trim()) return;
       const result = gradeAnswer(typed, spec.expected);
+      speak(spec.expected);
       input.disabled = true;
       clear(feedback);
       feedback.append(
@@ -95,7 +100,14 @@ function renderProduceCard(container, spec, card, onGraded) {
     },
   });
 
-  form.append(h('h2', {}, spec.prompt), input, h('button', { type: 'submit' }, 'Check'), feedback);
+  const accentRow = attachAccentHelper(input);
+  form.append(...[
+    h('h2', {}, spec.prompt),
+    input,
+    accentRow,
+    h('button', { type: 'submit' }, 'Check'),
+    feedback,
+  ].filter(Boolean));
   container.append(form);
   input.focus();
 }

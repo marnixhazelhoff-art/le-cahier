@@ -4,6 +4,8 @@ import { gradeAnswer } from '../grade.js';
 import { getCard, putCard, getSettings, recordReview } from '../store.js';
 import { buildVerbCardDeck } from '../verb-cards.js';
 import { h, clear, shuffle } from '../dom.js';
+import { speak } from '../tts.js';
+import { attachAccentHelper } from '../accent-helper.js';
 
 const TENSE_LABEL = {
   present: 'présent',
@@ -60,6 +62,8 @@ function renderCard(container, queue, index, verbs, onDone) {
       putCard(graded);
       recordReview('verbs', result.grade);
 
+      speak(spec.expected);
+
       clear(feedback);
       feedback.append(
         h('p', { class: result.grade === 'again' ? 'incorrect' : 'correct' },
@@ -81,13 +85,16 @@ function renderCard(container, queue, index, verbs, onDone) {
     },
   });
 
-  form.append(
+  const accentRow = attachAccentHelper(input);
+
+  form.append(...[
     h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left`),
     h('h2', {}, spec.prompt),
     input,
+    accentRow,
     h('button', { type: 'submit' }, 'Check'),
     feedback,
-  );
+  ].filter(Boolean));
 
   container.append(form);
   input.focus();

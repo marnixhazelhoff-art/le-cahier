@@ -4,6 +4,7 @@ const DEFAULT_SETTINGS = {
   newCardsPerDay: 12,
   conditionnelEnabled: false,
   ttsEnabled: true,
+  accentHelperOnTouch: false,
 };
 
 function defaultState() {

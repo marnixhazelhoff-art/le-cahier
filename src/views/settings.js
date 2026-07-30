@@ -16,6 +16,18 @@ export function renderSettingsView(container) {
   });
   if (settings.conditionnelEnabled) conditionnelToggle.checked = true;
 
+  const ttsToggle = h('input', {
+    type: 'checkbox',
+    onchange: (e) => updateSettings({ ttsEnabled: e.target.checked }),
+  });
+  if (settings.ttsEnabled) ttsToggle.checked = true;
+
+  const accentTouchToggle = h('input', {
+    type: 'checkbox',
+    onchange: (e) => updateSettings({ accentHelperOnTouch: e.target.checked }),
+  });
+  if (settings.accentHelperOnTouch) accentTouchToggle.checked = true;
+
   const exportButton = h('button', {
     type: 'button',
     onclick: () => {
@@ -31,6 +43,8 @@ export function renderSettingsView(container) {
     h('h1', {}, 'Settings'),
     h('p', {}, [h('label', {}, ['New cards per day: ', newCardsInput])]),
     h('p', {}, [h('label', {}, [conditionnelToggle, ' Show conditionnel présent in Browse'])]),
+    h('p', {}, [h('label', {}, [ttsToggle, ' Speak French words aloud (fr-FR)'])]),
+    h('p', {}, [h('label', {}, [accentTouchToggle, ' Show the accent button row on touch devices too'])]),
     h('p', {}, 'Progress lives only on this device until sync is built. Export it after a session so a browser storage clear cannot take it with it.'),
     exportButton,
   );
