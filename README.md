@@ -23,6 +23,29 @@ npm run validate    # data integrity and conjugation spot checks, run before com
 npm test            # unit tests for the scheduler, grading and the sync merge
 ```
 
+## Where the build is
+
+All thirteen steps of the BRIEF.md build order are done and deployed. Checks
+currently passing: 4071 data and conjugation assertions via `npm run validate`,
+and 38 unit tests via `npm test`.
+
+Verified against the deployed site on an emulated iPhone: the worker installs,
+a full twelve card session plays with the network off, and a force quit and
+reopen keeps every review. Verified against the live Supabase project: the key
+works, the table exists, and row level security refuses both reads and writes
+without a session.
+
+Still open:
+
+- **Real handset checks.** No emulator settles these. Install from Safari via
+  Share, Add to Home Screen. Confirm the Play button actually speaks, since a
+  real `fr-FR` voice has to exist and `getVoices()` is empty on first call.
+  Confirm the safe area padding clears the notch and the home indicator.
+- **Vocabulary is 512 of the 2,000 target.** `npm run enrich` needs
+  `ANTHROPIC_API_KEY`. Skim each batch as section 11.4 asks.
+- **Two device sync.** Signing in on a second device is where the per card merge
+  earns itself. Until then it is only unit tested.
+
 ## What is where
 
 | Path | What it does |
