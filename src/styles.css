@@ -228,6 +228,47 @@ nav.tabs a[aria-current="page"] {
   }
 }
 
+/* Links are tap targets too (section 12.1). Buttons already carry a 44px floor,
+   so this is for navigation and for the links that open a drill. Inline links
+   inside a sentence are left alone deliberately: padding a link out to 44px in
+   the middle of a paragraph breaks the line rhythm, and the tab bar above
+   reaches the same places. */
+@media (pointer: coarse) {
+  nav.tabs a,
+  .mode-list a,
+  .paradigm-table a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .mode-list li {
+    margin-bottom: 0.25rem;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  input[type="email"],
+  input[type="number"] {
+    min-height: 44px;
+  }
+
+  /* A checkbox cannot grow to 44px without looking absurd, so the label carries
+     the tap area. Tapping the text toggles the box, so that is the real target. */
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    min-height: 44px;
+  }
+}
+
 /* Buttons that sit together outside the review loop, such as in settings. */
 .button-row {
   display: flex;

@@ -28,7 +28,7 @@ export function renderHomeView(container, data = {}) {
   // counts and the way back in are the first thing on the page.
   container.append(
     h('p', {}, `${waiting} card${waiting === 1 ? '' : 's'} left today.`),
-    h('ul', {}, modes.filter((m) => m.waiting > 0).map((m) => h('li', {}, [
+    h('ul', { class: 'mode-list' }, modes.filter((m) => m.waiting > 0).map((m) => h('li', {}, [
       h('a', { href: m.route }, m.label),
       ` ${m.waiting} left`,
       m.due && m.newAvailable ? h('span', { class: 'gloss' }, ` (${m.due} due, ${m.newAvailable} new)`) : null,
