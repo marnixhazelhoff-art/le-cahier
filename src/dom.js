@@ -1,4 +1,6 @@
-export function h(tag, attrs = {}, children = []) {
+// children accepts both h('tr', {}, [a, b]) and h('tr', {}, a, b), like
+// native Element.append, so a stray extra argument is never silently dropped.
+export function h(tag, attrs = {}, ...children) {
   const el = document.createElement(tag);
   for (const [key, value] of Object.entries(attrs)) {
     if (value == null) continue;
@@ -9,7 +11,7 @@ export function h(tag, attrs = {}, children = []) {
       el.setAttribute(key, value);
     }
   }
-  for (const child of [].concat(children)) {
+  for (const child of children.flat()) {
     if (child == null) continue;
     el.append(child instanceof Node ? child : document.createTextNode(String(child)));
   }

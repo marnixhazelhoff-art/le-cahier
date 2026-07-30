@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { conjugate, subject } from '../src/conjugate.js';
+import { buildVerbCardDeck } from '../src/verb-cards.js';
 
 const raw = await readFile(new URL('../data/verbs.json', import.meta.url), 'utf8');
 const { verbs } = JSON.parse(raw);
@@ -126,6 +127,21 @@ for (const v of verbs) {
   if (!v.impersonal && v.infinitive !== 'être') {
     ok(`${v.infinitive} present[3] (nous) ends in ons`, v.present[3].endsWith('ons'));
   }
+}
+
+// --- Verb card deck --------------------------------------------------------
+
+const deck = buildVerbCardDeck(verbs);
+ok('verb card deck is non-empty', deck.length > 0);
+ok('verb card deck stays well under the full 1200 cell grid', deck.length < 300);
+
+const ids = new Set();
+for (const card of deck) {
+  ok(`card ${card.id} has a unique id`, !ids.has(card.id));
+  ids.add(card.id);
+  ok(`card ${card.id} references a real verb`, card.infinitive in byName || card.infinitive === 'être');
+  ok(`card ${card.id} has a non-empty expected answer`,
+    typeof card.expected === 'string' && card.expected.length > 0);
 }
 
 // --- Summary ---------------------------------------------------------------
