@@ -172,6 +172,31 @@ if (vocab.length > 0) {
   console.log(`\nvocab.json: ${vocab.length} entries checked`);
 }
 
+// --- Chooser (if it exists yet) ---------------------------------------------
+
+let chooser = [];
+try {
+  chooser = JSON.parse(await readFile(new URL('../data/chooser.json', import.meta.url), 'utf8'));
+} catch {
+  // not built yet
+}
+
+if (chooser.length > 0) {
+  const seenId = new Set();
+  for (const item of chooser) {
+    const label = item.id;
+    ok(`${label}: id is unique`, !seenId.has(item.id));
+    seenId.add(item.id);
+    ok(`${label}: sentence has exactly one blank`, (item.sentence.match(/___/g) ?? []).length === 1);
+    ok(`${label}: has exactly two options`, Array.isArray(item.options) && item.options.length === 2);
+    ok(`${label}: answer is one of the two options`, item.options.includes(item.answer));
+    ok(`${label}: options are distinct`, item.options[0] !== item.options[1]);
+    ok(`${label}: has a non-empty why`, typeof item.why === 'string' && item.why.trim().length > 0);
+    ok(`${label}: verb exists in verbs.json`, item.verb in byName);
+  }
+  console.log(`\nchooser.json: ${chooser.length} items checked`);
+}
+
 // --- Summary ---------------------------------------------------------------
 
 console.log(`\n${passed} passed, ${failed} failed`);

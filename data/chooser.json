@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "ch-001",
+    "sentence": "Il ___ de la musique quand le téléphone a sonné.",
+    "options": [
+      "entendait",
+      "a entendu"
+    ],
+    "answer": "entendait",
+    "why": "The imparfait sets the ongoing action of hearing music that was in progress, interrupted by the phone ringing; the passé composé would wrongly mark a single completed event.",
+    "verb": "entendre",
+    "category": "background"
+  },
+  {
+    "id": "ch-002",
+    "sentence": "Tu ___ trois ans à Lyon avant de déménager à Paris.",
+    "options": [
+      "vivais",
+      "as vécu"
+    ],
+    "answer": "as vécu",
+    "why": "The passé composé marks a completed, bounded stay of three years; the imparfait would describe it as an unbounded ongoing situation.",
+    "verb": "vivre",
+    "category": "background"
+  },
+  {
+    "id": "ch-003",
+    "sentence": "Nous ___ le petit-déjeuner quand les invités sont arrivés.",
+    "options": [
+      "prenions",
+      "avons pris"
+    ],
+    "answer": "prenions",
+    "why": "The imparfait shows the meal in progress as background; the passé composé would make it a punctual event rather than the interrupted action.",
+    "verb": "prendre",
+    "category": "background"
+  },
+  {
+    "id": "ch-004",
+    "sentence": "Hier soir, tu ___ tes devoirs en une heure seulement.",
+    "options": [
+      "faisais",
+      "as fait"
+    ],
+    "answer": "as fait",
+    "why": "The passé composé reports a single completed action finished within a set time; the imparfait would frame it as an ongoing habit instead.",
+    "verb": "faire",
+    "category": "background"
+  },
+  {
+    "id": "ch-005",
+    "sentence": "Il ___ très beau ce matin quand je me suis réveillé.",
+    "options": [
+      "faisait",
+      "a fait"
+    ],
+    "answer": "faisait",
+    "why": "The imparfait describes the ongoing weather as background; the passé composé would mark a completed weather event rather than the setting.",
+    "verb": "faire",
+    "category": "background"
+  },
+  {
+    "id": "ch-006",
+    "sentence": "Ce matin, j'___ enfin mes clés sous le canapé.",
+    "options": [
+      "trouvais",
+      "ai trouvé"
+    ],
+    "answer": "ai trouvé",
+    "why": "The passé composé marks the single moment of finding the keys; the imparfait would wrongly suggest a repeated or ongoing searching.",
+    "verb": "trouver",
+    "category": "background"
+  },
+  {
+    "id": "ch-007",
+    "sentence": "Les enfants ___ la télé pendant que je préparais le dîner.",
+    "options": [
+      "regardaient",
+      "ont regardé"
+    ],
+    "answer": "regardaient",
+    "why": "The imparfait shows the watching in progress as background to the other ongoing action; the passé composé would mark a single completed event.",
+    "verb": "regarder",
+    "category": "background"
+  },
+  {
+    "id": "ch-008",
+    "sentence": "En apprenant la nouvelle, ils ___ soudain très peur.",
+    "options": [
+      "avaient",
+      "ont eu"
+    ],
+    "answer": "ont eu",
+    "why": "The passé composé marks the sudden onset of fear as a reaction; the imparfait would describe a continuous, ongoing state instead.",
+    "verb": "avoir",
+    "category": "background"
+  },
+  {
+    "id": "ch-009",
+    "sentence": "À l'époque, nous ___ voir la mer depuis notre fenêtre.",
+    "options": [
+      "pouvions",
+      "avons pu"
+    ],
+    "answer": "pouvions",
+    "why": "The imparfait describes an ongoing background ability during that period; the passé composé would mark a single completed instance.",
+    "verb": "pouvoir",
+    "category": "background"
+  },
+  {
+    "id": "ch-010",
+    "sentence": "Hier, tu ___ ton vieux vélo à ton petit frère.",
+    "options": [
+      "donnais",
+      "as donné"
+    ],
+    "answer": "as donné",
+    "why": "The passé composé marks the single completed act of giving yesterday; the imparfait would frame it as a repeated or ongoing action.",
+    "verb": "donner",
+    "category": "background"
+  },
+  {
+    "id": "ch-011",
+    "sentence": "Les invités ___ tranquillement quand l'orage a éclaté.",
+    "options": [
+      "mangeaient",
+      "ont mangé"
+    ],
+    "answer": "mangeaient",
+    "why": "The imparfait shows the eating in progress as background, interrupted by the storm; the passé composé would mark it as a punctual event.",
+    "verb": "manger",
+    "category": "background"
+  },
+  {
+    "id": "ch-012",
+    "sentence": "Il ___ tout le roman en une seule nuit.",
+    "options": [
+      "lisait",
+      "a lu"
+    ],
+    "answer": "a lu",
+    "why": "The passé composé reports a completed action bounded to one night; the imparfait would describe an ongoing or habitual reading.",
+    "verb": "lire",
+    "category": "background"
+  },
+  {
+    "id": "ch-013",
+    "sentence": "Vous ___ toujours vos manteaux quand il faisait froid.",
+    "options": [
+      "mettiez",
+      "avez mis"
+    ],
+    "answer": "mettiez",
+    "why": "The imparfait describes a habitual, ongoing background action with 'toujours'; the passé composé would mark one specific completed event.",
+    "verb": "mettre",
+    "category": "background"
+  },
+  {
+    "id": "ch-014",
+    "sentence": "Nous ___ à la gare juste avant le départ du train.",
+    "options": [
+      "arrivions",
+      "sommes arrivé(e)s"
+    ],
+    "answer": "sommes arrivé(e)s",
+    "why": "The passé composé marks the single completed arrival at a precise moment; the imparfait would wrongly describe an ongoing situation.",
+    "verb": "arriver",
+    "category": "background"
+  },
+  {
+    "id": "ch-015",
+    "sentence": "Chaque été, il ___ chez ses grands-parents à la campagne.",
+    "options": [
+      "allait",
+      "est allé(e)"
+    ],
+    "answer": "allait",
+    "why": "The imparfait describes a repeated habitual action with 'chaque été'; the passé composé would mark a single specific trip.",
+    "verb": "aller",
+    "category": "background"
+  },
+  {
+    "id": "ch-016",
+    "sentence": "La semaine dernière, tu ___ une réponse claire au professeur.",
+    "options": [
+      "donnais",
+      "as donné"
+    ],
+    "answer": "as donné",
+    "why": "The passé composé marks a single completed act at a specific time; the imparfait would suggest a repeated or ongoing giving.",
+    "verb": "donner",
+    "category": "background"
+  },
+  {
+    "id": "ch-017",
+    "sentence": "Nous ___ des bruits étranges chaque nuit dans le grenier.",
+    "options": [
+      "entendions",
+      "avons entendu"
+    ],
+    "answer": "entendions",
+    "why": "The imparfait describes a repeated ongoing background situation each night; the passé composé would mark a single completed event.",
+    "verb": "entendre",
+    "category": "background"
+  },
+  {
+    "id": "ch-018",
+    "sentence": "Ce week-end, tu ___ un gâteau délicieux pour l'anniversaire.",
+    "options": [
+      "faisais",
+      "as fait"
+    ],
+    "answer": "as fait",
+    "why": "The passé composé marks the single completed act of making the cake; the imparfait would frame it as habitual or ongoing.",
+    "verb": "faire",
+    "category": "background"
+  },
+  {
+    "id": "ch-019",
+    "sentence": "Nous ___ la banderole pendant que la foule défilait devant nous.",
+    "options": [
+      "tenions",
+      "avons tenu"
+    ],
+    "answer": "tenions",
+    "why": "The imparfait shows the ongoing holding as background to the passing crowd; the passé composé would mark a punctual completed action.",
+    "verb": "tenir",
+    "category": "background"
+  },
+  {
+    "id": "ch-020",
+    "sentence": "Quand j'ai glissé, j'___ fermement la rampe pour ne pas tomber.",
+    "options": [
+      "tenais",
+      "ai tenu"
+    ],
+    "answer": "ai tenu",
+    "why": "The passé composé marks the single reactive act of grabbing the rail; the imparfait would describe an ongoing background state.",
+    "verb": "tenir",
+    "category": "background"
+  },
+  {
+    "id": "ch-021",
+    "sentence": "Chaque matin, il ___ devant la boulangerie avant d'aller au travail.",
+    "options": [
+      "passait",
+      "a passé"
+    ],
+    "answer": "passait",
+    "why": "'Chaque matin' signals a repeated routine, requiring the imparfait; the passé composé would mark a single completed pass.",
+    "verb": "passer",
+    "category": "habit"
+  },
+  {
+    "id": "ch-022",
+    "sentence": "Ce matin-là, nous lui ___ toute la vérité sur l'accident.",
+    "options": [
+      "disions",
+      "avons dit"
+    ],
+    "answer": "avons dit",
+    "why": "'Ce matin-là' points to one specific occasion, so the passé composé fits; the imparfait would imply a habit.",
+    "verb": "dire",
+    "category": "habit"
+  },
+  {
+    "id": "ch-023",
+    "sentence": "À cette époque, je ___ toujours ma journée par un café.",
+    "options": [
+      "commençais",
+      "ai commencé"
+    ],
+    "answer": "commençais",
+    "why": "'Toujours' and 'à cette époque' mark a habitual action, requiring the imparfait, not a one-time event.",
+    "verb": "commencer",
+    "category": "habit"
+  },
+  {
+    "id": "ch-024",
+    "sentence": "Hier soir, tu ___ un film magnifique au cinéma du centre.",
+    "options": [
+      "voyais",
+      "as vu"
+    ],
+    "answer": "as vu",
+    "why": "'Hier soir' identifies one specific occasion, so the passé composé is correct, not a repeated habit.",
+    "verb": "voir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-025",
+    "sentence": "Quand ils étaient petits, les enfants ___ souvent de leurs rêves.",
+    "options": [
+      "parlaient",
+      "ont parlé"
+    ],
+    "answer": "parlaient",
+    "why": "'Souvent' plus 'quand ils étaient petits' describes a recurring habit, requiring the imparfait.",
+    "verb": "parler",
+    "category": "habit"
+  },
+  {
+    "id": "ch-026",
+    "sentence": "Ce jour-là, ils ___ le train de sept heures pour partir.",
+    "options": [
+      "prenaient",
+      "ont pris"
+    ],
+    "answer": "ont pris",
+    "why": "'Ce jour-là' marks one identifiable occasion, so the passé composé fits, not a habitual action.",
+    "verb": "prendre",
+    "category": "habit"
+  },
+  {
+    "id": "ch-027",
+    "sentence": "Chaque nuit, il ___ le vieux chien aboyer dans le jardin voisin.",
+    "options": [
+      "entendait",
+      "a entendu"
+    ],
+    "answer": "entendait",
+    "why": "'Chaque nuit' signals a repeated occurrence, requiring the imparfait rather than a single event.",
+    "verb": "entendre",
+    "category": "habit"
+  },
+  {
+    "id": "ch-028",
+    "sentence": "La semaine dernière, ils ___ ensemble sur un projet urgent.",
+    "options": [
+      "travaillaient",
+      "ont travaillé"
+    ],
+    "answer": "ont travaillé",
+    "why": "'La semaine dernière' bounds one specific instance, so the passé composé is correct, not a habit.",
+    "verb": "travailler",
+    "category": "habit"
+  },
+  {
+    "id": "ch-029",
+    "sentence": "Quand il était jeune, il ___ courir dix kilomètres sans effort.",
+    "options": [
+      "pouvait",
+      "a pu"
+    ],
+    "answer": "pouvait",
+    "why": "'Quand il était jeune' describes an ongoing ability, requiring the imparfait, not a single moment.",
+    "verb": "pouvoir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-030",
+    "sentence": "Ce soir-là, nous ___ beaucoup le concert au théâtre municipal.",
+    "options": [
+      "aimions",
+      "avons aimé"
+    ],
+    "answer": "avons aimé",
+    "why": "'Ce soir-là' points to one specific evening, so the passé composé fits, not a general habit.",
+    "verb": "aimer",
+    "category": "habit"
+  },
+  {
+    "id": "ch-031",
+    "sentence": "Tous les étés, tu ___ à la mer avec tes grands-parents.",
+    "options": [
+      "allais",
+      "es allé(e)"
+    ],
+    "answer": "allais",
+    "why": "'Tous les étés' marks a recurring habit, requiring the imparfait, not a one-time trip.",
+    "verb": "aller",
+    "category": "habit"
+  },
+  {
+    "id": "ch-032",
+    "sentence": "Samedi dernier, vous ___ en boîte avec vos collègues de bureau.",
+    "options": [
+      "sortiez",
+      "êtes sorti(e)(s)"
+    ],
+    "answer": "êtes sorti(e)(s)",
+    "why": "'Samedi dernier' identifies one specific night, so the passé composé is correct, not a habit.",
+    "verb": "sortir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-033",
+    "sentence": "D'habitude, ma sœur et moi ___ nos devoirs après le dîner.",
+    "options": [
+      "faisions",
+      "avons fait"
+    ],
+    "answer": "faisions",
+    "why": "'D'habitude' signals a routine, requiring the imparfait, not a single completed action.",
+    "verb": "faire",
+    "category": "habit"
+  },
+  {
+    "id": "ch-034",
+    "sentence": "Ce matin, mon frère et moi ___ en retard à cause du bus.",
+    "options": [
+      "arrivions",
+      "sommes arrivé(e)s"
+    ],
+    "answer": "sommes arrivé(e)s",
+    "why": "'Ce matin' marks one specific occasion, so the passé composé fits, not a repeated habit.",
+    "verb": "arriver",
+    "category": "habit"
+  },
+  {
+    "id": "ch-035",
+    "sentence": "À l'époque, nous ___ déjà tout ce qu'il fallait faire.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "savions",
+    "why": "'À l'époque' describes an ongoing state of knowledge, requiring the imparfait, not a discovery moment.",
+    "verb": "savoir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-036",
+    "sentence": "Hier après-midi, il ___ me voir sans prévenir personne.",
+    "options": [
+      "venait",
+      "est venu(e)"
+    ],
+    "answer": "est venu(e)",
+    "why": "'Hier après-midi' points to one specific visit, so the passé composé is correct, not a habit.",
+    "verb": "venir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-037",
+    "sentence": "Chaque année, tu ___ un cadeau à ta voisine pour Noël.",
+    "options": [
+      "donnais",
+      "as donné"
+    ],
+    "answer": "donnais",
+    "why": "'Chaque année' signals a recurring habit, requiring the imparfait, not a single gift.",
+    "verb": "donner",
+    "category": "habit"
+  },
+  {
+    "id": "ch-038",
+    "sentence": "Cette fois-là, les invités ___ énormément le dessert au chocolat.",
+    "options": [
+      "aimaient",
+      "ont aimé"
+    ],
+    "answer": "ont aimé",
+    "why": "'Cette fois-là' marks one specific occasion, so the passé composé fits, not a general habit.",
+    "verb": "aimer",
+    "category": "habit"
+  },
+  {
+    "id": "ch-039",
+    "sentence": "Autrefois, je ___ toujours aux histoires que mon oncle racontait.",
+    "options": [
+      "croyais",
+      "ai cru"
+    ],
+    "answer": "croyais",
+    "why": "'Autrefois' plus 'toujours' describes a habitual belief, requiring the imparfait, not a single moment.",
+    "verb": "croire",
+    "category": "habit"
+  },
+  {
+    "id": "ch-040",
+    "sentence": "En un seul jour, je ___ complètement accro à cette série télé.",
+    "options": [
+      "devenais",
+      "suis devenu(e)"
+    ],
+    "answer": "suis devenu(e)",
+    "why": "'En un seul jour' marks a specific transformation, so the passé composé fits, not an ongoing habit.",
+    "verb": "devenir",
+    "category": "habit"
+  },
+  {
+    "id": "ch-041",
+    "sentence": "Petit, il ___ déjà lire l'heure sans aucune difficulté.",
+    "options": [
+      "savait",
+      "a su"
+    ],
+    "answer": "savait",
+    "why": "Imparfait describes his ongoing ability as a child; \"a su\" would mean the single moment he found out, which doesn't fit \"déjà\".",
+    "verb": "savoir",
+    "category": "state"
+  },
+  {
+    "id": "ch-042",
+    "sentence": "Hier soir, tu ___ tout ton plat en cinq minutes seulement.",
+    "options": [
+      "mangeais",
+      "as mangé"
+    ],
+    "answer": "as mangé",
+    "why": "\"Hier soir\" and the completed action mark a single finished event; the imparfait would wrongly suggest an ongoing background scene.",
+    "verb": "manger",
+    "category": "state"
+  },
+  {
+    "id": "ch-043",
+    "sentence": "Chaque matin, je t'___ patiemment devant l'école pendant que tu jouais.",
+    "options": [
+      "attendais",
+      "ai attendu"
+    ],
+    "answer": "attendais",
+    "why": "\"Chaque matin\" plus the ongoing waiting is a repeated background state; the passé composé would mark it as one finished act.",
+    "verb": "attendre",
+    "category": "state"
+  },
+  {
+    "id": "ch-044",
+    "sentence": "Ce matin-là, vous ___ précipitamment sans même dire au revoir.",
+    "options": [
+      "partiez",
+      "êtes parti(e)(s)"
+    ],
+    "answer": "êtes parti(e)(s)",
+    "why": "\"Ce matin-là\" points to one specific completed departure; the imparfait would describe a habit rather than that single event.",
+    "verb": "partir",
+    "category": "state"
+  },
+  {
+    "id": "ch-045",
+    "sentence": "À cette époque, nous ___ toujours en vacances au bord de la mer.",
+    "options": [
+      "partions",
+      "sommes parti(e)s"
+    ],
+    "answer": "partions",
+    "why": "\"À cette époque\" plus \"toujours\" describe a recurring situation; the passé composé would mark a single completed trip.",
+    "verb": "partir",
+    "category": "state"
+  },
+  {
+    "id": "ch-046",
+    "sentence": "C'est seulement ce jour-là que nous ___ la vérité sur l'accident.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "avons su",
+    "why": "\"Ce jour-là\" marks the precise moment of finding out, so passé composé; the imparfait would mean we already knew it as background.",
+    "verb": "savoir",
+    "category": "state"
+  },
+  {
+    "id": "ch-047",
+    "sentence": "Avant l'annonce, nous ___ que tout se passerait bien pour l'équipe.",
+    "options": [
+      "pensions",
+      "avons pensé"
+    ],
+    "answer": "pensions",
+    "why": "Imparfait gives our ongoing belief before the news; the passé composé would signal a single sudden thought, which \"avant\" contradicts.",
+    "verb": "penser",
+    "category": "state"
+  },
+  {
+    "id": "ch-048",
+    "sentence": "Le week-end dernier, je ___ devant chez toi vers midi.",
+    "options": [
+      "passais",
+      "ai passé"
+    ],
+    "answer": "ai passé",
+    "why": "\"Le week-end dernier\" and a punctual passing mark a single completed event; the imparfait would suggest a habitual or ongoing scene.",
+    "verb": "passer",
+    "category": "state"
+  },
+  {
+    "id": "ch-049",
+    "sentence": "Autrefois, nous nous ___ des lettres chaque semaine sans faute.",
+    "options": [
+      "écrivions",
+      "avons écrit"
+    ],
+    "answer": "écrivions",
+    "why": "\"Autrefois\" and \"chaque semaine\" signal a repeated habit in imparfait; the passé composé would mark one single completed writing.",
+    "verb": "écrire",
+    "category": "state"
+  },
+  {
+    "id": "ch-050",
+    "sentence": "En partant hier, les enfants ___ leurs jouets partout dans le salon.",
+    "options": [
+      "laissaient",
+      "ont laissé"
+    ],
+    "answer": "ont laissé",
+    "why": "\"Hier\" and the single act of leaving things mark a completed event; the imparfait would describe an ongoing background habit.",
+    "verb": "laisser",
+    "category": "state"
+  },
+  {
+    "id": "ch-051",
+    "sentence": "Quand nous étions jeunes, nous ___ toujours l'uniforme de l'école.",
+    "options": [
+      "portions",
+      "avons porté"
+    ],
+    "answer": "portions",
+    "why": "\"Quand nous étions jeunes\" plus \"toujours\" describe an ongoing habit; the passé composé would mark a single completed instance.",
+    "verb": "porter",
+    "category": "state"
+  },
+  {
+    "id": "ch-052",
+    "sentence": "Nous ne ___ pas encore la nouvelle quand elle est arrivée soudain.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "avons su",
+    "why": "Imparfait? No—here the moment of learning is punctual: passé composé marks finding out just as she arrived; imparfait would mean ongoing prior knowledge, contradicting \"pas encore\".",
+    "verb": "savoir",
+    "category": "state"
+  },
+  {
+    "id": "ch-053",
+    "sentence": "Chaque dimanche, je ___ chez ma grand-mère pour déjeuner en famille.",
+    "options": [
+      "venais",
+      "suis venu(e)"
+    ],
+    "answer": "venais",
+    "why": "\"Chaque dimanche\" marks a habitual routine in imparfait; the passé composé would signal a single completed visit.",
+    "verb": "venir",
+    "category": "state"
+  },
+  {
+    "id": "ch-054",
+    "sentence": "En courant vers le bus, je ___ brutalement sur le trottoir mouillé.",
+    "options": [
+      "tombais",
+      "suis tombé(e)"
+    ],
+    "answer": "suis tombé(e)",
+    "why": "The sudden fall is a single completed event, so passé composé; the imparfait would wrongly present it as an ongoing background action.",
+    "verb": "tomber",
+    "category": "state"
+  },
+  {
+    "id": "ch-055",
+    "sentence": "À vingt ans, vous ___ chaque année un peu plus indépendant et sûr.",
+    "options": [
+      "deveniez",
+      "êtes devenu(e)(s)"
+    ],
+    "answer": "deveniez",
+    "why": "\"Chaque année\" describes a gradual ongoing change in imparfait; the passé composé would mark one abrupt completed transformation.",
+    "verb": "devenir",
+    "category": "state"
+  },
+  {
+    "id": "ch-056",
+    "sentence": "Hier, nous ___ la banderole en l'air pendant toute la cérémonie officielle.",
+    "options": [
+      "tenions",
+      "avons tenu"
+    ],
+    "answer": "avons tenu",
+    "why": "\"Hier\" and \"pendant toute la cérémonie\" bound the holding as a completed episode; the imparfait would leave it as unframed background.",
+    "verb": "tenir",
+    "category": "state"
+  },
+  {
+    "id": "ch-057",
+    "sentence": "Quand j'étais petit, ils ___ souvent leurs étés à la campagne.",
+    "options": [
+      "passaient",
+      "ont passé"
+    ],
+    "answer": "passaient",
+    "why": "\"Quand j'étais petit\" plus \"souvent\" mark a repeated habit in imparfait; the passé composé would signal one specific finished summer.",
+    "verb": "passer",
+    "category": "state"
+  },
+  {
+    "id": "ch-058",
+    "sentence": "Hier soir, ils ___ leurs clés partout avant de les retrouver.",
+    "options": [
+      "cherchaient",
+      "ont cherché"
+    ],
+    "answer": "ont cherché",
+    "why": "\"Hier soir\" plus the concluded search mark a single completed event; the imparfait would describe an ongoing background action instead.",
+    "verb": "chercher",
+    "category": "state"
+  },
+  {
+    "id": "ch-059",
+    "sentence": "Pendant que je cuisinais, il ___ tranquillement ses devoirs à table.",
+    "options": [
+      "finissait",
+      "a fini"
+    ],
+    "answer": "finissait",
+    "why": "Imparfait shows the finishing as ongoing background parallel to my cooking; the passé composé would mark it as a single interrupting event.",
+    "verb": "finir",
+    "category": "state"
+  },
+  {
+    "id": "ch-060",
+    "sentence": "L'an dernier, il ___ un cours de photographie du début à la fin.",
+    "options": [
+      "suivait",
+      "a suivi"
+    ],
+    "answer": "a suivi",
+    "why": "\"L'an dernier\" and \"du début à la fin\" frame the course as a completed whole; the imparfait would present it as ongoing background.",
+    "verb": "suivre",
+    "category": "state"
+  },
+  {
+    "id": "ch-061",
+    "sentence": "Hier soir, tu ___ ton manteau pendant deux heures avant de sortir.",
+    "options": [
+      "mettais",
+      "as mis"
+    ],
+    "answer": "as mis",
+    "why": "The explicit boundary 'pendant deux heures' frames the action as completed, so passé composé fits; imparfait would suggest an unbounded ongoing action.",
+    "verb": "mettre",
+    "category": "duration"
+  },
+  {
+    "id": "ch-062",
+    "sentence": "Vous ___ le train chaque matin pendant tout le mois de juin.",
+    "options": [
+      "preniez",
+      "avez pris"
+    ],
+    "answer": "avez pris",
+    "why": "'pendant tout le mois de juin' sets a closed time span, requiring passé composé; imparfait would imply an open-ended routine without limit.",
+    "verb": "prendre",
+    "category": "duration"
+  },
+  {
+    "id": "ch-063",
+    "sentence": "Nous ___ la vérité seulement pendant quelques minutes avant de tout oublier.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "avons su",
+    "why": "The bounded 'pendant quelques minutes' marks a completed episode, so passé composé fits; imparfait would describe ongoing knowledge without end.",
+    "verb": "savoir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-064",
+    "sentence": "Vous ___ vos clés chez nous pendant trois jours entiers.",
+    "options": [
+      "laissiez",
+      "avez laissé"
+    ],
+    "answer": "avez laissé",
+    "why": "'pendant trois jours entiers' closes the time frame, forcing passé composé; imparfait would suggest a habitual or ongoing state.",
+    "verb": "laisser",
+    "category": "duration"
+  },
+  {
+    "id": "ch-065",
+    "sentence": "Tu ___ en retard trois fois cette semaine-là.",
+    "options": [
+      "arrivais",
+      "es arrivé(e)"
+    ],
+    "answer": "es arrivé(e)",
+    "why": "'trois fois' counts completed occurrences, requiring passé composé; imparfait cannot express a finite number of events.",
+    "verb": "arriver",
+    "category": "duration"
+  },
+  {
+    "id": "ch-066",
+    "sentence": "Il ___ à l'hôtel pendant toute la semaine dernière.",
+    "options": [
+      "restait",
+      "est resté(e)"
+    ],
+    "answer": "est resté(e)",
+    "why": "'pendant toute la semaine dernière' bounds the stay, so passé composé fits; imparfait would leave the duration open.",
+    "verb": "rester",
+    "category": "duration"
+  },
+  {
+    "id": "ch-067",
+    "sentence": "Il ___ froid pendant tout le week-end à la montagne.",
+    "options": [
+      "faisait",
+      "a fait"
+    ],
+    "answer": "a fait",
+    "why": "The closed span 'pendant tout le week-end' requires passé composé; imparfait would describe weather as merely ongoing background.",
+    "verb": "faire",
+    "category": "duration"
+  },
+  {
+    "id": "ch-068",
+    "sentence": "Tu ___ en voyage pendant deux longues années.",
+    "options": [
+      "partais",
+      "es parti(e)"
+    ],
+    "answer": "es parti(e)",
+    "why": "'pendant deux longues années' bounds the absence, forcing passé composé; imparfait would imply an incomplete or habitual departure.",
+    "verb": "partir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-069",
+    "sentence": "Tu ___ ce médicament pendant tout l'hiver dernier.",
+    "options": [
+      "prenais",
+      "as pris"
+    ],
+    "answer": "as pris",
+    "why": "'pendant tout l'hiver dernier' closes the period, so passé composé fits; imparfait would describe an unbounded habit.",
+    "verb": "prendre",
+    "category": "duration"
+  },
+  {
+    "id": "ch-070",
+    "sentence": "J'___ travailler pendant six mois pour payer mes études.",
+    "options": [
+      "devais",
+      "ai dû"
+    ],
+    "answer": "ai dû",
+    "why": "'pendant six mois' sets a finished duration, requiring passé composé; imparfait would present the obligation as ongoing background.",
+    "verb": "devoir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-071",
+    "sentence": "Tu ___ chez tes grands-parents pendant tout l'été.",
+    "options": [
+      "restais",
+      "es resté(e)"
+    ],
+    "answer": "es resté(e)",
+    "why": "'pendant tout l'été' bounds the stay, forcing passé composé; imparfait would leave it as an open-ended situation.",
+    "verb": "rester",
+    "category": "duration"
+  },
+  {
+    "id": "ch-072",
+    "sentence": "Nous ___ à ce problème pendant plusieurs jours sans solution.",
+    "options": [
+      "pensions",
+      "avons pensé"
+    ],
+    "answer": "avons pensé",
+    "why": "'pendant plusieurs jours' closes the time frame, so passé composé fits; imparfait would describe ongoing reflection without limit.",
+    "verb": "penser",
+    "category": "duration"
+  },
+  {
+    "id": "ch-073",
+    "sentence": "Vous ___ le projet à trois reprises avant de réussir.",
+    "options": [
+      "commenciez",
+      "avez commencé"
+    ],
+    "answer": "avez commencé",
+    "why": "'à trois reprises' counts finite completed attempts, requiring passé composé; imparfait cannot express bounded repetitions.",
+    "verb": "commencer",
+    "category": "duration"
+  },
+  {
+    "id": "ch-074",
+    "sentence": "Nous ___ la nouvelle pendant à peine une heure avant qu'elle change.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "avons su",
+    "why": "The bounded 'pendant à peine une heure' marks a completed span, so passé composé fits; imparfait would suggest continuous knowledge.",
+    "verb": "savoir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-075",
+    "sentence": "J'___ rester au lit pendant toute la journée de dimanche.",
+    "options": [
+      "devais",
+      "ai dû"
+    ],
+    "answer": "ai dû",
+    "why": "'pendant toute la journée de dimanche' bounds the obligation, forcing passé composé; imparfait would present it as ongoing background.",
+    "verb": "devoir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-076",
+    "sentence": "Il ___ à cette histoire pendant des années avant de comprendre.",
+    "options": [
+      "croyait",
+      "a cru"
+    ],
+    "answer": "a cru",
+    "why": "'pendant des années' closes the belief's duration, requiring passé composé; imparfait would leave the belief open-ended.",
+    "verb": "croire",
+    "category": "duration"
+  },
+  {
+    "id": "ch-077",
+    "sentence": "Vous ___ mal à la tête pendant toute la réunion d'hier.",
+    "options": [
+      "aviez",
+      "avez eu"
+    ],
+    "answer": "avez eu",
+    "why": "'pendant toute la réunion d'hier' bounds the state, so passé composé fits; imparfait would describe it as unbounded background.",
+    "verb": "avoir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-078",
+    "sentence": "Nous ___ de l'aide plusieurs fois pendant cette dure période.",
+    "options": [
+      "demandions",
+      "avons demandé"
+    ],
+    "answer": "avons demandé",
+    "why": "'plusieurs fois' within a closed period requires passé composé; imparfait cannot express bounded repeated requests.",
+    "verb": "demander",
+    "category": "duration"
+  },
+  {
+    "id": "ch-079",
+    "sentence": "Il ___ la corde fermement pendant vingt minutes sans lâcher.",
+    "options": [
+      "tenait",
+      "a tenu"
+    ],
+    "answer": "a tenu",
+    "why": "'pendant vingt minutes' bounds the holding, forcing passé composé; imparfait would leave the action open-ended.",
+    "verb": "tenir",
+    "category": "duration"
+  },
+  {
+    "id": "ch-080",
+    "sentence": "Tu ___ la télévision pendant trois heures hier soir.",
+    "options": [
+      "regardais",
+      "as regardé"
+    ],
+    "answer": "as regardé",
+    "why": "'pendant trois heures' closes the viewing time, so passé composé fits; imparfait would present it as ongoing background.",
+    "verb": "regarder",
+    "category": "duration"
+  },
+  {
+    "id": "ch-081",
+    "sentence": "Quand vous étiez enfant, vous ___ très timide, paraît-il.",
+    "options": [
+      "étiez",
+      "avez été"
+    ],
+    "answer": "étiez",
+    "why": "Imparfait describes an ongoing childhood trait; 'avez été' would frame it as a completed, bounded period rather than a lasting characteristic.",
+    "verb": "être",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-082",
+    "sentence": "Quand j'ai vu la note, j'___ tellement surpris que j'ai crié.",
+    "options": [
+      "étais",
+      "ai été"
+    ],
+    "answer": "ai été",
+    "why": "Passé composé marks the sudden reaction at that moment; 'étais' would just describe a background state without the burst of surprise.",
+    "verb": "être",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-083",
+    "sentence": "À l'époque, vous ___ toujours de bonne humeur le matin.",
+    "options": [
+      "étiez",
+      "avez été"
+    ],
+    "answer": "étiez",
+    "why": "Imparfait describes an ongoing, habitual state; 'avez été' would imply a single bounded episode, contradicting 'à l'époque, toujours'.",
+    "verb": "être",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-084",
+    "sentence": "En apprenant la nouvelle, les voisins ___ furieux d'un coup.",
+    "options": [
+      "étaient",
+      "ont été"
+    ],
+    "answer": "ont été",
+    "why": "Passé composé captures the abrupt shift into anger at the moment; 'étaient' would describe a pre-existing state, not the reaction.",
+    "verb": "être",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-085",
+    "sentence": "Enfants, ils ___ toujours peur de l'orage la nuit.",
+    "options": [
+      "avaient",
+      "ont eu"
+    ],
+    "answer": "avaient",
+    "why": "Imparfait describes an ongoing recurring fear; 'ont eu' would signal one single moment of fear, clashing with 'toujours'.",
+    "verb": "avoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-086",
+    "sentence": "Hier soir, les enfants ___ soudain peur en entendant ce bruit.",
+    "options": [
+      "avaient",
+      "ont eu"
+    ],
+    "answer": "ont eu",
+    "why": "Passé composé marks the sudden onset of fear at one instant; 'avaient' would describe an ongoing state, not that reaction.",
+    "verb": "avoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-087",
+    "sentence": "Quand tu étais petit, tu ___ les cheveux blonds et bouclés.",
+    "options": [
+      "avais",
+      "as eu"
+    ],
+    "answer": "avais",
+    "why": "Imparfait describes an ongoing physical description; 'as eu' would frame it as a single completed event, which makes no sense here.",
+    "verb": "avoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-088",
+    "sentence": "En ouvrant la lettre, j'___ soudain une idée géniale.",
+    "options": [
+      "avais",
+      "ai eu"
+    ],
+    "answer": "ai eu",
+    "why": "Passé composé captures the idea arriving at one specific moment; 'avais' would describe merely having an idea in the background.",
+    "verb": "avoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-089",
+    "sentence": "Je ___ déjà la réponse bien avant qu'il me la donne.",
+    "options": [
+      "savais",
+      "ai su"
+    ],
+    "answer": "savais",
+    "why": "Imparfait describes ongoing knowledge already possessed; 'ai su' would mean the moment I found out, contradicting 'déjà bien avant'.",
+    "verb": "savoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-090",
+    "sentence": "C'est seulement hier que tu ___ la vérité sur elle.",
+    "options": [
+      "savais",
+      "as su"
+    ],
+    "answer": "as su",
+    "why": "Passé composé marks the moment of finding out; 'savais' would describe knowledge already held, contradicting 'seulement hier'.",
+    "verb": "savoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-091",
+    "sentence": "À ce moment-là, il ne ___ pas encore que sa mère était malade.",
+    "options": [
+      "savait",
+      "a su"
+    ],
+    "answer": "savait",
+    "why": "Imparfait describes a lasting state of not-knowing; 'a su' would mean the instant of learning, which doesn't fit 'pas encore'.",
+    "verb": "savoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-092",
+    "sentence": "Nous ___ la nouvelle par un ami le jour même.",
+    "options": [
+      "savions",
+      "avons su"
+    ],
+    "answer": "avons su",
+    "why": "Passé composé marks the specific moment we found out; 'savions' would imply we already knew, contradicting learning it that day.",
+    "verb": "savoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-093",
+    "sentence": "Petits, nous ___ toujours devenir astronautes plus tard.",
+    "options": [
+      "voulions",
+      "avons voulu"
+    ],
+    "answer": "voulions",
+    "why": "Imparfait describes an ongoing childhood wish; 'avons voulu' would signal a single momentary decision, clashing with 'toujours'.",
+    "verb": "vouloir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-094",
+    "sentence": "Ce soir-là, vous ___ absolument partir avant la fin.",
+    "options": [
+      "vouliez",
+      "avez voulu"
+    ],
+    "answer": "avez voulu",
+    "why": "Passé composé marks a decisive wish acted on at that moment; 'vouliez' would describe a mere ongoing desire without the resolve.",
+    "verb": "vouloir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-095",
+    "sentence": "Les invités ___ rester encore, mais il se faisait tard.",
+    "options": [
+      "voulaient",
+      "ont voulu"
+    ],
+    "answer": "voulaient",
+    "why": "Imparfait describes their ongoing desire in the background; 'ont voulu' would imply a decisive attempt at one point, not the lingering wish.",
+    "verb": "vouloir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-096",
+    "sentence": "Quand on leur a proposé, les élèves ___ tout de suite essayer.",
+    "options": [
+      "voulaient",
+      "ont voulu"
+    ],
+    "answer": "ont voulu",
+    "why": "Passé composé marks the immediate decision to try at that moment; 'voulaient' would describe a background desire, not the reaction.",
+    "verb": "vouloir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-097",
+    "sentence": "À vingt ans, il ___ courir un marathon sans effort.",
+    "options": [
+      "pouvait",
+      "a pu"
+    ],
+    "answer": "pouvait",
+    "why": "Imparfait describes an ongoing ability he had; 'a pu' would mean he managed it once on a specific occasion.",
+    "verb": "pouvoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-098",
+    "sentence": "Après plusieurs essais, j'___ enfin ouvrir la porte hier.",
+    "options": [
+      "pouvais",
+      "ai pu"
+    ],
+    "answer": "ai pu",
+    "why": "Passé composé marks the moment I succeeded in doing it; 'pouvais' would describe a general ability, not the successful accomplishment.",
+    "verb": "pouvoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-099",
+    "sentence": "Quand il était jeune, il ___ lire sans lunettes.",
+    "options": [
+      "pouvait",
+      "a pu"
+    ],
+    "answer": "pouvait",
+    "why": "Imparfait describes an ongoing capacity in the past; 'a pu' would signal a single successful instance, not a lasting ability.",
+    "verb": "pouvoir",
+    "category": "meaning"
+  },
+  {
+    "id": "ch-100",
+    "sentence": "Malgré la foule, j'___ finalement trouver une place assise.",
+    "options": [
+      "pouvais",
+      "ai pu"
+    ],
+    "answer": "ai pu",
+    "why": "Passé composé marks the specific successful outcome; 'pouvais' would describe a general capacity rather than actually managing it this time.",
+    "verb": "pouvoir",
+    "category": "meaning"
+  }
+]

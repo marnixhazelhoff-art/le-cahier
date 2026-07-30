@@ -144,6 +144,23 @@ nav.tabs a[aria-current="page"] {
   margin-bottom: var(--rule);
 }
 
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--rule);
+}
+
+.choices button.correct {
+  border-color: var(--juste);
+  color: var(--juste);
+}
+
+.choices button.incorrect {
+  border-color: var(--marge);
+  color: var(--marge);
+}
+
 .drill form {
   display: flex;
   flex-direction: column;

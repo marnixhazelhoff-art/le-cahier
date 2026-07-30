@@ -10,8 +10,8 @@ import { renderSettingsView } from './views/settings.js';
 const ROUTES = {
   '#/home': (main) => renderHomeView(main),
   '#/verbs': (main, data) => renderVerbsView(main, data),
-  '#/vocab': (main) => renderVocabView(main),
-  '#/chooser': (main) => renderChooserView(main),
+  '#/vocab': (main, data) => renderVocabView(main, data),
+  '#/chooser': (main, data) => renderChooserView(main, data),
   '#/progress': (main) => renderProgressView(main),
   '#/settings': (main) => renderSettingsView(main),
 };
@@ -30,16 +30,18 @@ async function start() {
   clear(root);
   root.append(h('p', {}, 'Loading…'));
 
-  let verbs;
+  let verbs, vocab, chooser;
   try {
     ({ verbs } = await fetchJSON('./data/verbs.json'));
+    vocab = await fetchJSON('./data/vocab.json').catch(() => []);
+    chooser = await fetchJSON('./data/chooser.json').catch(() => []);
   } catch (err) {
     clear(root);
     root.append(h('div', { class: 'page' }, h('p', { class: 'incorrect' }, err.message)));
     return;
   }
 
-  const data = { verbs };
+  const data = { verbs, vocab, chooser };
 
   const nav = h('nav', { class: 'tabs' },
     TABS.map(([href, label]) => h('a', { href }, label)));

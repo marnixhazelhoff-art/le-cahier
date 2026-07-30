@@ -1,5 +1,5 @@
 {
-  "cursor": 40,
+  "cursor": 622,
   "rejected": [
     {
       "rank": 1,
@@ -120,317 +120,891 @@
       "rank": 40,
       "reason": "duplicate",
       "batch": "2026-07-30"
+    },
+    {
+      "rank": 45,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 57,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 69,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 75,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 79,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 80,
+      "reason": "duplicate",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 54,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 68,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 82,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 84,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 90,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 92,
+      "reason": "interjection",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 93,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 97,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 99,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 101,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 105,
+      "reason": "verb",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 107,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 110,
+      "reason": "duplicate",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 111,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 115,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 118,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 81,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 96,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 126,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 128,
+      "reason": "function-word",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 136,
+      "reason": "missing",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 147,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 125,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 129,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 148,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 165,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 175,
+      "reason": "verb",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 177,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 189,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 190,
+      "reason": "interjection",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 196,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 194,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 214,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 213,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 214,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 224,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 229,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 230,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 254,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 259,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 293,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 323,
+      "reason": "artefact",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 293,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 311,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 329,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 340,
+      "reason": "function",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 355,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 349,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 368,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 368,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 406,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 423,
+      "reason": "crude",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 423,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 426,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 452,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 503,
+      "reason": "duplicate",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 523,
+      "reason": "abbreviation",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 526,
+      "reason": "artefact",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 513,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 545,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 547,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 607,
+      "reason": "letter",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 612,
+      "reason": "letter",
+      "batch": "2026-07-30"
+    },
+    {
+      "rank": 604,
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-07-30"
     }
   ],
   "lastBatch": {
     "added": [
       {
-        "fr": "bien",
-        "article": null,
-        "nl": "goed, wel",
-        "pos": "adv",
-        "gender": null,
-        "example": "Ça va bien.",
-        "exampleNl": "Het gaat goed.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 11,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "plus",
-        "article": null,
-        "nl": "meer, plus",
-        "pos": "adv",
-        "gender": null,
-        "example": "Je veux plus de café.",
-        "exampleNl": "Ik wil meer koffie.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": "Slot-s wordt soms wel, soms niet uitgesproken afhankelijk van betekenis.",
-        "rank": 12,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "tout",
-        "article": null,
-        "nl": "heel, al, alles",
-        "pos": "adj",
-        "gender": "m",
-        "example": "Tout le monde est là.",
-        "exampleNl": "Iedereen is er.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 16,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "ici",
-        "article": null,
-        "nl": "hier",
-        "pos": "adv",
-        "gender": null,
-        "example": "Viens ici, s'il te plaît.",
-        "exampleNl": "Kom hier, alsjeblieft.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 18,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "là",
-        "article": null,
-        "nl": "daar, er",
-        "pos": "adv",
-        "gender": null,
-        "example": "Il est là.",
-        "exampleNl": "Hij is daar.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 21,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "alors",
-        "article": null,
-        "nl": "dan, dus",
-        "pos": "adv",
-        "gender": null,
-        "example": "Alors, on y va?",
-        "exampleNl": "Dan, gaan we?",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 23,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "chose",
-        "article": "une",
-        "nl": "ding, zaak",
+        "fr": "mademoiselle",
+        "article": "la",
+        "nl": "juffrouw, mejuffrouw",
         "pos": "noun",
         "gender": "f",
-        "example": "C'est une chose importante.",
-        "exampleNl": "Het is een belangrijk ding.",
+        "example": "Bonjour, mademoiselle!",
+        "exampleNl": "Goedendag, juffrouw!",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 24,
+        "rank": 580,
         "batch": "2026-07-30"
       },
       {
-        "fr": "très",
-        "article": null,
-        "nl": "heel, erg",
-        "pos": "adv",
-        "gender": null,
-        "example": "Elle est très gentille.",
-        "exampleNl": "Ze is erg aardig.",
+        "fr": "adresse",
+        "article": "une",
+        "nl": "adres",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Quelle est ton adresse?",
+        "exampleNl": "Wat is jouw adres?",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 26,
+        "rank": 581,
         "batch": "2026-07-30"
       },
       {
-        "fr": "bon",
-        "article": null,
-        "nl": "goed, lekker",
-        "pos": "adj",
-        "gender": "m",
-        "example": "Ce gâteau est bon.",
-        "exampleNl": "Deze taart is lekker.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 29,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "aussi",
-        "article": null,
-        "nl": "ook, eveneens",
-        "pos": "adv",
-        "gender": null,
-        "example": "Moi aussi, j'aime ça.",
-        "exampleNl": "Ik ook, ik hou daarvan.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 30,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "jamais",
-        "article": null,
-        "nl": "nooit, ooit",
-        "pos": "adv",
-        "gender": null,
-        "example": "Je ne mange jamais ça.",
-        "exampleNl": "Ik eet dat nooit.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 32,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "encore",
-        "article": null,
-        "nl": "nog, weer",
-        "pos": "adv",
-        "gender": null,
-        "example": "Tu veux encore du pain?",
-        "exampleNl": "Wil je nog brood?",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 34,
-        "batch": "2026-07-30"
-      },
-      {
-        "fr": "homme",
+        "fr": "cousin",
         "article": "un",
-        "nl": "man, mens",
+        "nl": "neef",
         "pos": "noun",
         "gender": "m",
-        "example": "Cet homme est mon voisin.",
-        "exampleNl": "Die man is mijn buurman.",
+        "example": "Mon cousin habite à Paris.",
+        "exampleNl": "Mijn neef woont in Parijs.",
         "familiar": false,
         "falseFriend": null,
-        "note": "De h is stom: \"un homme\" klinkt als \"unnomme\".",
-        "rank": 36,
+        "note": "Vrouwelijke vorm: cousine (nicht).",
+        "rank": 582,
         "batch": "2026-07-30"
       },
       {
-        "fr": "petit",
+        "fr": "riche",
         "article": null,
-        "nl": "klein",
+        "nl": "rijk",
         "pos": "adj",
-        "gender": "m",
-        "example": "J'ai un petit chien.",
-        "exampleNl": "Ik heb een kleine hond.",
+        "gender": null,
+        "example": "Il est très riche.",
+        "exampleNl": "Hij is heel rijk.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 37,
+        "rank": 583,
         "batch": "2026-07-30"
       },
       {
-        "fr": "jour",
-        "article": "un",
-        "nl": "dag",
+        "fr": "compagnie",
+        "article": "une",
+        "nl": "gezelschap, bedrijf",
         "pos": "noun",
-        "gender": "m",
-        "example": "Bonne journée, à demain!",
-        "exampleNl": "Fijne dag, tot morgen!",
+        "gender": "f",
+        "example": "Je travaille pour une compagnie.",
+        "exampleNl": "Ik werk voor een bedrijf.",
         "familiar": false,
         "falseFriend": null,
-        "note": "Naast \"jour\" bestaat \"journée\" voor de duur van een dag.",
-        "rank": 39,
+        "note": null,
+        "rank": 584,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "chaussure",
+        "article": "une",
+        "nl": "schoen",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai acheté des chaussures.",
+        "exampleNl": "Ik heb schoenen gekocht.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 585,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "oreille",
+        "article": "une",
+        "nl": "oor",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai mal à l'oreille.",
+        "exampleNl": "Ik heb oorpijn.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 586,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "grand-mère",
+        "article": "la",
+        "nl": "grootmoeder, oma",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Ma grand-mère est gentille.",
+        "exampleNl": "Mijn oma is lief.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 589,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "ancien",
+        "article": null,
+        "nl": "oud, voormalig",
+        "pos": "adj",
+        "gender": "m",
+        "example": "C'est un ancien élève.",
+        "exampleNl": "Het is een oud-leerling.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Voor het zelfstandig naamwoord = voormalig; erna = oud/antiek.",
+        "rank": 590,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "art",
+        "article": "l'",
+        "nl": "kunst",
+        "pos": "noun",
+        "gender": "m",
+        "example": "J'aime l'art moderne.",
+        "exampleNl": "Ik hou van moderne kunst.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 591,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "inutile",
+        "article": null,
+        "nl": "nutteloos, onnodig",
+        "pos": "adj",
+        "gender": null,
+        "example": "C'est complètement inutile.",
+        "exampleNl": "Het is volstrekt nutteloos.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 592,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "blague",
+        "article": "une",
+        "nl": "grap, mop",
+        "pos": "noun",
+        "gender": "f",
+        "example": "C'était juste une blague.",
+        "exampleNl": "Het was maar een grapje.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 593,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "avenir",
+        "article": "l'",
+        "nl": "toekomst",
+        "pos": "noun",
+        "gender": "m",
+        "example": "L'avenir est incertain.",
+        "exampleNl": "De toekomst is onzeker.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 594,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "beauté",
+        "article": "la",
+        "nl": "schoonheid",
+        "pos": "noun",
+        "gender": "f",
+        "example": "La beauté de la nature.",
+        "exampleNl": "De schoonheid van de natuur.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 595,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "laisse",
+        "article": "une",
+        "nl": "riem, hondenlijn",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Le chien est en laisse.",
+        "exampleNl": "De hond zit aan de lijn.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 596,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "course",
+        "article": "une",
+        "nl": "race, boodschap",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Je fais les courses.",
+        "exampleNl": "Ik doe boodschappen.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Meervoud \"les courses\" = boodschappen; enkelvoud = wedloop/rit.",
+        "rank": 597,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "manière",
+        "article": "une",
+        "nl": "manier, wijze",
+        "pos": "noun",
+        "gender": "f",
+        "example": "De quelle manière?",
+        "exampleNl": "Op welke manier?",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 598,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "expérience",
+        "article": "une",
+        "nl": "ervaring, experiment",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai beaucoup d'expérience.",
+        "exampleNl": "Ik heb veel ervaring.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 599,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "soin",
+        "article": "le",
+        "nl": "zorg, verzorging",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Prends soin de toi.",
+        "exampleNl": "Zorg goed voor jezelf.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 600,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "hors",
+        "article": null,
+        "nl": "buiten, behalve",
+        "pos": "prep",
+        "gender": null,
+        "example": "C'est hors de prix.",
+        "exampleNl": "Dat is onbetaalbaar.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 601,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "cour",
+        "article": "une",
+        "nl": "binnenplaats, hof",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Les enfants jouent dans la cour.",
+        "exampleNl": "De kinderen spelen op de binnenplaats.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Niet verwarren met \"court\" (kort) of \"cours\" (les).",
+        "rank": 602,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "stupide",
+        "article": null,
+        "nl": "dom, stom",
+        "pos": "adj",
+        "gender": null,
+        "example": "C'est une idée stupide.",
+        "exampleNl": "Dat is een dom idee.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 605,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "liste",
+        "article": "une",
+        "nl": "lijst",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai fait une liste.",
+        "exampleNl": "Ik heb een lijst gemaakt.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 606,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "courage",
+        "article": "le",
+        "nl": "moed",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Il faut du courage.",
+        "exampleNl": "Je hebt moed nodig.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 608,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "bleu",
+        "article": null,
+        "nl": "blauw, blauwe plek",
+        "pos": "adj",
+        "gender": null,
+        "example": "Le ciel est bleu.",
+        "exampleNl": "De lucht is blauw.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 609,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "secours",
+        "article": "le",
+        "nl": "hulp, redding",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Au secours!",
+        "exampleNl": "Help!",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 610,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "milieu",
+        "article": "le",
+        "nl": "midden, milieu",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Au milieu de la nuit.",
+        "exampleNl": "Midden in de nacht.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 611,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "contact",
+        "article": "le",
+        "nl": "contact",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Reste en contact.",
+        "exampleNl": "Blijf in contact.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 613,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "inspecteur",
+        "article": "un",
+        "nl": "inspecteur",
+        "pos": "noun",
+        "gender": "m",
+        "example": "L'inspecteur pose des questions.",
+        "exampleNl": "De inspecteur stelt vragen.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 614,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "mignon",
+        "article": null,
+        "nl": "schattig, lief",
+        "pos": "adj",
+        "gender": "m",
+        "example": "Ton chat est mignon.",
+        "exampleNl": "Jouw kat is schattig.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 615,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "projet",
+        "article": "un",
+        "nl": "plan, project",
+        "pos": "noun",
+        "gender": "m",
+        "example": "J'ai un nouveau projet.",
+        "exampleNl": "Ik heb een nieuw plan.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 616,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "probablement",
+        "article": null,
+        "nl": "waarschijnlijk",
+        "pos": "adv",
+        "gender": null,
+        "example": "Il va probablement pleuvoir.",
+        "exampleNl": "Het gaat waarschijnlijk regenen.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 617,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "rôle",
+        "article": "le",
+        "nl": "rol",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Il joue un rôle important.",
+        "exampleNl": "Hij speelt een belangrijke rol.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 618,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "risque",
+        "article": "le",
+        "nl": "risico",
+        "pos": "noun",
+        "gender": "m",
+        "example": "C'est trop risqué... quel risque.",
+        "exampleNl": "Wat een risico.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 619,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "action",
+        "article": "une",
+        "nl": "actie, daad, aandeel",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Il faut passer à l'action.",
+        "exampleNl": "We moeten in actie komen.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 620,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "ange",
+        "article": "un",
+        "nl": "engel",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Tu es un ange.",
+        "exampleNl": "Je bent een engel.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 621,
+        "batch": "2026-07-30"
+      },
+      {
+        "fr": "avance",
+        "article": "une",
+        "nl": "voorsprong, voorschot",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Merci d'avance.",
+        "exampleNl": "Bij voorbaat dank.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "\"à l'avance\" / \"d'avance\" = van tevoren.",
+        "rank": 622,
         "batch": "2026-07-30"
       }
     ],
     "skipped": [
       {
-        "rank": 1,
-        "reason": "function"
+        "rank": 607,
+        "reason": "letter"
       },
       {
-        "rank": 2,
-        "reason": "function"
+        "rank": 612,
+        "reason": "letter"
       },
       {
-        "rank": 3,
-        "reason": "function"
-      },
-      {
-        "rank": 4,
-        "reason": "function"
-      },
-      {
-        "rank": 5,
-        "reason": "function"
-      },
-      {
-        "rank": 6,
-        "reason": "function"
-      },
-      {
-        "rank": 7,
-        "reason": "function"
-      },
-      {
-        "rank": 8,
-        "reason": "function"
-      },
-      {
-        "rank": 9,
-        "reason": "function"
-      },
-      {
-        "rank": 10,
-        "reason": "function"
-      },
-      {
-        "rank": 13,
-        "reason": "function"
-      },
-      {
-        "rank": 14,
-        "reason": "function"
-      },
-      {
-        "rank": 15,
-        "reason": "function"
-      },
-      {
-        "rank": 17,
-        "reason": "function"
-      },
-      {
-        "rank": 19,
-        "reason": "function"
-      },
-      {
-        "rank": 20,
-        "reason": "function"
-      },
-      {
-        "rank": 22,
-        "reason": "function"
-      },
-      {
-        "rank": 25,
-        "reason": "function"
-      },
-      {
-        "rank": 27,
-        "reason": "function"
-      },
-      {
-        "rank": 28,
-        "reason": "function"
-      },
-      {
-        "rank": 31,
-        "reason": "function"
-      },
-      {
-        "rank": 33,
-        "reason": "function"
-      },
-      {
-        "rank": 35,
-        "reason": "function"
-      },
-      {
-        "rank": 40,
-        "reason": "duplicate"
+        "rank": 604,
+        "reason": "rejected: noun missing gender or article"
       }
     ]
   }
