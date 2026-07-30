@@ -25,6 +25,16 @@ const TABS = [
   ['#/settings', 'Settings'],
 ];
 
+// Relative so it registers under a GitHub Pages subpath. Service workers need a
+// secure context, so this stays silent over file:// and over a plain LAN IP
+// instead of reporting a failure the learner cannot act on.
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js', { scope: './' }).catch(() => {});
+  });
+}
+
 async function start() {
   const root = document.getElementById('app');
   clear(root);
@@ -64,4 +74,5 @@ async function start() {
   render();
 }
 
+registerServiceWorker();
 start();
