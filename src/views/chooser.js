@@ -55,7 +55,8 @@ function renderCard(container, queue, index, onDone) {
       h('p', {}, item.why),
     );
     const next = h('button', { type: 'button', onclick: () => renderCard(container, queue, index + 1, onDone) }, 'Next');
-    feedback.append(next);
+    clear(actions);
+    actions.append(next);
     next.focus();
   };
 
@@ -64,11 +65,15 @@ function renderCard(container, queue, index, onDone) {
     button.addEventListener('click', () => choose(item.options[i], button, buttons));
   });
 
+  // The two options are the whole interaction here, so they take the thumb zone
+  // and hand it over to Next once the justification is on screen.
+  const actions = h('div', { class: 'actions choices' }, buttons);
+
   container.append(
     h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left`),
     h('h2', { class: 'mono' }, [before, h('span', { class: 'ending' }, '___'), after]),
-    h('div', { class: 'choices' }, buttons),
     feedback,
+    actions,
   );
 }
 

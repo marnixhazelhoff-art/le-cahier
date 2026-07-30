@@ -51,6 +51,7 @@ function renderCard(container, queue, index, verbs, onDone) {
   });
 
   const feedback = h('div', { class: 'feedback', 'aria-live': 'polite' });
+  const actions = h('div', { class: 'actions' }, h('button', { type: 'submit' }, 'Check'));
 
   const form = h('form', {
     onsubmit: (e) => {
@@ -80,7 +81,8 @@ function renderCard(container, queue, index, verbs, onDone) {
           : queue;
         renderCard(container, nextQueue, index + 1, verbs, onDone);
       } }, 'Next');
-      feedback.append(next);
+      clear(actions);
+      actions.append(next);
       next.focus();
     },
   });
@@ -92,8 +94,8 @@ function renderCard(container, queue, index, verbs, onDone) {
     h('h2', {}, spec.prompt),
     input,
     accentRow,
-    h('button', { type: 'submit' }, 'Check'),
     feedback,
+    actions,
   ].filter(Boolean));
 
   container.append(form);

@@ -45,7 +45,7 @@ function renderRecallCard(container, spec, card, onGraded) {
   const showButton = h('button', { type: 'button' }, 'Show answer');
   const playButton = h('button', { type: 'button', onclick: () => speak(spec.prompt) }, 'Play');
 
-  const grading = h('div', { class: 'feedback' });
+  const actions = h('div', { class: 'actions' }, showButton);
   showButton.addEventListener('click', () => {
     clear(revealed);
     // native Element.append coerces null/undefined arguments to the text
@@ -56,8 +56,8 @@ function renderRecallCard(container, spec, card, onGraded) {
       spec.falseFriend ? h('p', {}, `Let op: ${spec.falseFriend}`) : null,
       spec.note ? h('p', {}, spec.note) : null,
     ].filter(Boolean));
-    clear(grading);
-    grading.append(
+    clear(actions);
+    actions.append(
       h('button', { type: 'button', onclick: () => onGraded('again') }, 'Again'),
       h('button', { type: 'button', onclick: () => onGraded('good') }, 'Good'),
       h('button', { type: 'button', onclick: () => onGraded('easy') }, 'Easy'),
@@ -66,10 +66,9 @@ function renderRecallCard(container, spec, card, onGraded) {
 
   container.append(
     h('h2', {}, spec.prompt),
-    showButton,
     playButton,
     revealed,
-    grading,
+    actions,
   );
 }
 
@@ -79,6 +78,7 @@ function renderProduceCard(container, spec, card, onGraded) {
     'aria-label': 'Type the French word, with its article if it is a noun',
   });
   const feedback = h('div', { class: 'feedback' });
+  const actions = h('div', { class: 'actions' }, h('button', { type: 'submit' }, 'Check'));
 
   const form = h('form', {
     onsubmit: (e) => {
@@ -95,7 +95,8 @@ function renderProduceCard(container, spec, card, onGraded) {
       );
       if (spec.note) feedback.append(h('p', {}, spec.note));
       const next = h('button', { type: 'button', onclick: () => onGraded(result.grade) }, 'Next');
-      feedback.append(next);
+      clear(actions);
+      actions.append(next);
       next.focus();
     },
   });
@@ -105,8 +106,8 @@ function renderProduceCard(container, spec, card, onGraded) {
     h('h2', {}, spec.prompt),
     input,
     accentRow,
-    h('button', { type: 'submit' }, 'Check'),
     feedback,
+    actions,
   ].filter(Boolean));
   container.append(form);
   input.focus();
