@@ -8,11 +8,13 @@ import { newCard, isDue, today } from './scheduler.js';
 
 const PRODUCE_UNLOCK_INTERVAL = 21;
 
-function withState(ids, familiarById = {}) {
+// Exported so src/modules.js can build per-module and per-exercise stats
+// from the same two functions Home and Progress use, and never disagree.
+export function withState(ids, familiarById = {}) {
   return ids.map((id) => getCard(id) ?? newCard(id, { familiar: familiarById[id] ?? false }));
 }
 
-function tally(cards, day) {
+export function tally(cards, day) {
   const states = { new: 0, learning: 0, review: 0, learned: 0, leech: 0 };
   let due = 0;
   for (const card of cards) {

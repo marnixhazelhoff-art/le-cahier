@@ -3,9 +3,17 @@ import { newCard, grade } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
 import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
 import { buildVerbCardDeck } from '../verb-cards.js';
+import { groupVerbExercises, statsFor, idsOf } from '../modules.js';
 import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
 import { attachAccentHelper } from '../accent-helper.js';
+
+const PRACTICE_MORE_BATCH = 10;
+
+const EXERCISE_NOTES = {
+  'passe-compose': "Redesigned: one card asks for the whole form, j'ai mangé or je suis allé(e), not the auxiliary by itself. Choosing avoir or être happens as part of producing the real answer.",
+  imparfait: 'Only two cards, on purpose: the soft-consonant rule, plus être, the one verb that breaks it. Every other person in every other verb is just the présent nous stem minus -ons, already drilled inside Present.',
+};
 
 const TENSE_LABEL = {
   present: 'présent',
@@ -20,13 +28,13 @@ function today() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-function buildQueue(deck, settings) {
+function buildQueue(deck, settings, extraNew = 0) {
   const withState = deck.map((spec) => ({ spec, card: getCard(spec.id) ?? newCard(spec.id) }));
   const due = withState.filter((c) => c.card.state !== 'new' && c.card.due <= today());
   const fresh = withState
     .filter((c) => c.card.state === 'new')
     .sort((a, b) => a.spec.id.localeCompare(b.spec.id))
-    .slice(0, newCardAllowance('verbs', settings.newCardsPerDay));
+    .slice(0, newCardAllowance('verbs', settings.newCardsPerDay + extraNew));
   return [...shuffle(due), ...shuffle(fresh)];
 }
 
@@ -108,13 +116,55 @@ function renderCard(container, queue, index, verbs, onDone) {
   input.focus();
 }
 
-function renderDrill(container, verbs) {
-  const deck = buildVerbCardDeck(verbs);
+function runDrill(container, verbs, deck, extraNew, onBack) {
+  clear(container);
+  container.append(h('p', {}, h('button', { type: 'button', onclick: onBack }, '← Back to exercises')));
   const settings = getSettings();
-  const queue = buildQueue(deck, settings);
+  const queue = buildQueue(deck, settings, extraNew);
   const session = h('div', { class: 'drill' });
   container.append(session);
   renderCard(session, queue, 0, verbs, () => {});
+}
+
+function statLine(stats) {
+  const introduced = stats.total - stats.states.new;
+  const parts = [`${introduced}/${stats.total} introduced`];
+  if (stats.due) parts.push(`${stats.due} due today`);
+  if (stats.states.learned) parts.push(`${stats.states.learned} learned`);
+  if (stats.states.leech) parts.push(`${stats.states.leech} leech${stats.states.leech === 1 ? '' : 'es'}`);
+  return parts.join(', ');
+}
+
+function renderExercises(container, verbs) {
+  const deck = buildVerbCardDeck(verbs);
+  const exercises = groupVerbExercises(deck);
+  const t = today();
+
+  function backHere() { clear(container); renderExercises(container, verbs); }
+
+  container.append(
+    h('p', {}, 'The same fixed 50 verbs as always: no modules to unlock here, just a few kinds of practice, plus Browse for reference.'),
+    h('div', { class: 'button-row' }, h('button', {
+      type: 'button',
+      onclick: () => runDrill(container, verbs, deck, 0, backHere),
+    }, "Start today's session (all verbs, mixed)")),
+  );
+
+  for (const ex of exercises) {
+    if (ex.cards.length === 0) continue;
+    const stats = statsFor(idsOf(ex.cards), t);
+    // native Element.append coerces a null argument to the text "null"
+    // instead of skipping it, unlike this file's h() helper — filter first.
+    container.append(...[
+      h('h3', {}, ex.label),
+      h('p', { class: 'gloss' }, statLine(stats)),
+      h('div', { class: 'button-row' }, [
+        h('button', { type: 'button', onclick: () => runDrill(container, verbs, ex.cards, 0, backHere) }, "Continue today's session"),
+        h('button', { type: 'button', onclick: () => runDrill(container, verbs, ex.cards, PRACTICE_MORE_BATCH, backHere) }, `Practice ${PRACTICE_MORE_BATCH} more today`),
+      ]),
+      EXERCISE_NOTES[ex.id] ? h('p', { class: 'gloss' }, EXERCISE_NOTES[ex.id]) : null,
+    ].filter(Boolean));
+  }
 }
 
 function renderBrowse(container, verbs) {
@@ -157,14 +207,14 @@ export function renderVerbsView(container, { verbs }) {
   const tabs = h('div', { class: 'subtabs' });
   const body = h('div', {});
 
-  const showDrill = () => { clear(body); renderDrill(body, verbs); };
+  const showExercises = () => { clear(body); renderExercises(body, verbs); };
   const showBrowse = () => { clear(body); renderBrowse(body, verbs); };
 
   tabs.append(
-    h('button', { type: 'button', onclick: showDrill }, 'Drill'),
+    h('button', { type: 'button', onclick: showExercises }, 'Exercises'),
     h('button', { type: 'button', onclick: showBrowse }, 'Browse'),
   );
 
   container.append(h('h1', {}, 'Verbs'), tabs, body);
-  showDrill();
+  showExercises();
 }
