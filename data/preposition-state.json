@@ -1,0 +1,144 @@
+{
+  "lastRun": [
+    {
+      "id": "ch-261",
+      "sentence": "Ma sœur habite ___ Allemagne depuis trois ans.",
+      "sentenceNl": "Mijn zus woont al drie jaar in Duitsland.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "en",
+      "why": "Allemagne is a feminine country, so the correct preposition is en.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-262",
+      "sentence": "Nous allons ___ Berlin cet été.",
+      "sentenceNl": "Wij gaan deze zomer naar Berlijn.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "à",
+      "why": "Berlin is a city, so the correct preposition is à.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-263",
+      "sentence": "Il travaille ___ Danemark depuis janvier.",
+      "sentenceNl": "Hij werkt sinds januari in Denemarken.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "au",
+      "why": "Danemark is a masculine country, so the correct preposition is au.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-264",
+      "sentence": "Elle voyage ___ Irlande avec ses amis.",
+      "sentenceNl": "Zij reist met haar vrienden naar Ierland.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "en",
+      "why": "Irlande is a feminine country, so the correct preposition is en.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-265",
+      "sentence": "Mes parents vivent ___ Pérou maintenant.",
+      "sentenceNl": "Mijn ouders wonen nu in Peru.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "au",
+      "why": "Pérou is a masculine country, so the correct preposition is au.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-266",
+      "sentence": "Je voudrais aller ___ Chine un jour.",
+      "sentenceNl": "Ik zou ooit naar China willen gaan.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "en",
+      "why": "Chine is a feminine country, so the correct preposition is en.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-267",
+      "sentence": "Ils habitent ___ New York depuis longtemps.",
+      "sentenceNl": "Zij wonen al lang in New York.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "à",
+      "why": "New York is a city, so the correct preposition is à.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-268",
+      "sentence": "Nous partons ___ Madrid demain matin.",
+      "sentenceNl": "Wij vertrekken morgenochtend naar Madrid.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "à",
+      "why": "Madrid is a city, so the correct preposition is à.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-269",
+      "sentence": "Elle passe ses vacances ___ Grèce.",
+      "sentenceNl": "Zij brengt haar vakantie door in Griekenland.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "en",
+      "why": "Grèce is a feminine country, so the correct preposition is en.",
+      "category": "preposition"
+    },
+    {
+      "id": "ch-270",
+      "sentence": "Nous voyageons ___ Mexique cet hiver.",
+      "sentenceNl": "Wij reizen deze winter naar Mexico.",
+      "options": [
+        "à",
+        "au",
+        "en",
+        "aux"
+      ],
+      "answer": "au",
+      "why": "Mexique is a masculine country, so the correct preposition is au.",
+      "category": "preposition"
+    }
+  ]
+}
