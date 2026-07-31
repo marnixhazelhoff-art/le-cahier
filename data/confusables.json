@@ -1,0 +1,17 @@
+[
+  { "group": "bon-bien", "words": ["bon", "bien"], "note": "bon is an adjective (agrees with a noun); bien is an adverb (modifies a verb)." },
+  { "group": "an-annee", "words": ["an", "année"], "note": "an for a plain count (deux ans); année when the duration itself is felt (toute l'année, une bonne année)." },
+  { "group": "jour-journee", "words": ["jour", "journée"], "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)." },
+  { "group": "soir-soiree", "words": ["soir", "soirée"], "note": "soir for a plain point in time; soirée when the span or the event itself is felt (une bonne soirée, une soirée entre amis)." },
+  { "group": "matin-matinee", "words": ["matin", "matinée"], "note": "matin for a plain point in time; matinée when the span is felt (toute la matinée)." },
+  { "group": "depuis-pendant", "words": ["depuis", "pendant"], "note": "depuis names the starting point of something still going on; pendant names a bounded span, often finished." },
+  { "group": "trop-tres", "words": ["trop", "très"], "note": "très intensifies; trop means an excessive amount, often with a negative or limiting sense." },
+  { "group": "encore-toujours", "words": ["encore", "toujours"], "note": "encore means still or again, often about something expected to end; toujours means always, or still in the sense of persisting." },
+  { "group": "savoir-connaitre", "words": ["savoir", "connaître"], "note": "savoir for facts, information and skills (savoir + infinitive, savoir que); connaître for people, places and things you are familiar with." },
+  { "group": "apporter-emporter", "words": ["apporter", "emporter"], "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it." },
+  { "group": "amener-emmener", "words": ["amener", "emmener"], "note": "amener brings a person or animal toward the point of reference; emmener takes them away from it." },
+  { "group": "emprunter-preter", "words": ["emprunter", "prêter"], "note": "emprunter is to borrow (take); prêter is to lend (give temporarily)." },
+  { "group": "partir-sortir-quitter", "words": ["partir", "sortir", "quitter"], "note": "partir leaves with no object (partir de Paris); sortir is to go out or exit; quitter always needs a direct object (quitter la maison, quitter quelqu'un)." },
+  { "group": "chez-a", "words": ["chez", "à"], "note": "chez is at or to a person's home or practice (chez le médecin); à is at or to a place or institution (à l'école)." },
+  { "group": "visiter-rendre-visite-a", "words": ["visiter", "rendre visite à"], "note": "visiter is for a place; rendre visite à is for a person." }
+]

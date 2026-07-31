@@ -88,6 +88,7 @@ const CHOOSER_CATEGORY_LABELS = {
   duration: 'Bounded duration',
   meaning: 'Verbs that shift meaning',
   agreement: 'Adjective agreement',
+  confusable: 'Best word fits',
 };
 
 // Chooser items already carry the BRIEF section 9 contrast category.

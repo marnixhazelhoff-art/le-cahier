@@ -53,6 +53,31 @@ h1, h2, h3 {
   line-height: var(--rule);
 }
 
+/* Larger titles plus a rule below each new section (the margin line's own
+   colour, quieter than the red) so a page reads as distinct blocks rather
+   than one run of paragraphs. Line-heights stay whole multiples of --rule
+   so text baselines keep landing on the Seyès ruling. */
+h1 {
+  font-size: 1.9rem;
+  line-height: calc(var(--rule) * 2);
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: calc(var(--rule) * 1.5);
+  padding-bottom: calc(var(--rule) / 4);
+  border-bottom: 1px solid var(--seyes-faint);
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: var(--rule);
+}
+
 p, ul, ol {
   margin: 0 0 var(--rule) 0;
 }
