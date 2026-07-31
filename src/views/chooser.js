@@ -129,12 +129,23 @@ function statLine(stats) {
   return parts.join(', ');
 }
 
-function renderCategories(container, chooser) {
-  const categories = groupChooserCategories(chooser);
+// Random and every category on one page: pressing any of them goes straight
+// into that exercise, no tab switch needed to see what's available first.
+function renderList(container, chooser, onBack) {
   const t = today();
+  const allRemaining = eligiblePool(chooser).length;
 
-  function backHere() { clear(container); renderCategories(container, chooser); }
+  container.append(...[
+    h('h3', {}, 'Random (all categories)'),
+    allRemaining > 0
+      ? h('div', { class: 'button-row' }, h('button', {
+        type: 'button',
+        onclick: () => runLoop(container, chooser, onBack),
+      }, `Practice ${Math.min(BATCH_SIZE, allRemaining)}`))
+      : h('p', { class: 'gloss' }, 'Nothing to practice right now.'),
+  ].filter(Boolean));
 
+  const categories = groupChooserCategories(chooser);
   for (const cat of categories) {
     const stats = statsFor(cat.ids, t);
     const remaining = eligiblePool(cat.items).length;
@@ -146,7 +157,7 @@ function renderCategories(container, chooser) {
       remaining > 0
         ? h('div', { class: 'button-row' }, h('button', {
           type: 'button',
-          onclick: () => runLoop(container, cat.items, backHere),
+          onclick: () => runLoop(container, cat.items, onBack),
         }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
         : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'),
     ].filter(Boolean));
@@ -165,19 +176,9 @@ export function renderChooserView(container, { chooser }) {
     return;
   }
 
-  const tabs = h('div', { class: 'subtabs' });
   const body = h('div', {});
+  container.append(body);
 
-  // The tab bar above stays the way back out, so the loop itself does not
-  // need its own back button here.
-  const showToday = () => { clear(body); runLoop(body, chooser, null); };
-  const showCategories = () => { clear(body); renderCategories(body, chooser); };
-
-  tabs.append(
-    h('button', { type: 'button', onclick: showToday }, 'Random'),
-    h('button', { type: 'button', onclick: showCategories }, 'Categories'),
-  );
-
-  container.append(tabs, body);
-  showToday();
+  function showList() { clear(body); renderList(body, chooser, showList); }
+  showList();
 }
