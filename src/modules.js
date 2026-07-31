@@ -81,21 +81,23 @@ export function groupVerbExercises(verbCards) {
   return VERB_EXERCISE_IDS.map((id) => ({ id, label: VERB_EXERCISE_LABELS[id], cards: byId.get(id) }));
 }
 
+// The five BRIEF section 9 contrast types (background/habit/state/duration/
+// meaning) are all still imparfait-vs-passé-composé to a learner picking a
+// category to practice — they exist as separate tags for generation
+// coverage, not as separate skills, so they group into one category here.
+const TENSE_CATEGORIES = new Set(['background', 'habit', 'state', 'duration', 'meaning']);
+
 const CHOOSER_CATEGORY_LABELS = {
-  background: 'Background vs. event',
-  habit: 'Habit vs. one occurrence',
-  state: 'State of mind vs. change of state',
-  duration: 'Bounded duration',
-  meaning: 'Verbs that shift meaning',
+  tense: 'Imparfait vs passé composé',
   agreement: 'Adjective agreement',
   confusable: 'Best word fits',
 };
 
-// Chooser items already carry the BRIEF section 9 contrast category.
 export function groupChooserCategories(chooser) {
   const byCategory = new Map();
   for (const item of chooser) {
-    const category = item.category ?? 'other';
+    const raw = item.category ?? 'other';
+    const category = TENSE_CATEGORIES.has(raw) ? 'tense' : raw;
     if (!byCategory.has(category)) byCategory.set(category, []);
     byCategory.get(category).push(item);
   }
