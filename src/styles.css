@@ -69,13 +69,21 @@ h2 {
   border-bottom: 1px solid var(--seyes-faint);
 }
 
-h2:first-child {
+h2:first-of-type {
   margin-top: 0;
 }
 
 h3 {
-  font-size: 1.05rem;
-  margin-top: var(--rule);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 calc(var(--rule) / 2) 0;
+  padding-top: var(--rule);
+  border-top: 1px solid var(--seyes-faint);
+}
+
+h3:first-of-type {
+  padding-top: 0;
+  border-top: none;
 }
 
 p, ul, ol {

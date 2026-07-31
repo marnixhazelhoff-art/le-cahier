@@ -135,8 +135,6 @@ function renderCategories(container, chooser) {
 
   function backHere() { clear(container); renderCategories(container, chooser); }
 
-  container.append(h('p', {}, 'Every item has two grammatically valid answers: only one fits the meaning. These are the five contrasts from BRIEF.md section 9. Picking a category here just narrows which items come up, same as everywhere else in the app: the item itself never announces which grammar point it is testing.'));
-
   for (const cat of categories) {
     const stats = statsFor(cat.ids, t);
     const remaining = eligiblePool(cat.items).length;

@@ -4,9 +4,7 @@
 import { buildVerbCardDeck } from './verb-cards.js';
 import { buildVocabCardDeck } from './vocab-cards.js';
 import { getCard } from './store.js';
-import { newCard, isDue, today } from './scheduler.js';
-
-const PRODUCE_UNLOCK_INTERVAL = 21;
+import { newCard, isDue, today, PRODUCE_UNLOCK_INTERVAL } from './scheduler.js';
 
 // Exported so src/modules.js can build per-module and per-exercise stats
 // from the same two functions Home and Progress use, and never disagree.

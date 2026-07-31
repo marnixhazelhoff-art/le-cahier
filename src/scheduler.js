@@ -5,6 +5,7 @@ export const GRADUATING_INTERVAL = 2;
 export const FAMILIAR_INTERVAL = 12;
 export const LEARNED_THRESHOLD = 30;
 export const LEECH_THRESHOLD = 6;
+export const PRODUCE_UNLOCK_INTERVAL = 12;
 
 function pad(n) {
   return String(n).padStart(2, '0');

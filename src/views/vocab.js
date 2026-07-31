@@ -1,4 +1,4 @@
-import { newCard, grade } from '../scheduler.js';
+import { newCard, grade, PRODUCE_UNLOCK_INTERVAL } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
 import { getCard, putCard, recordReview } from '../store.js';
 import { buildVocabCardDeck } from '../vocab-cards.js';
@@ -7,9 +7,6 @@ import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
 import { attachAccentHelper } from '../accent-helper.js';
 
-const PRODUCE_UNLOCK_INTERVAL = 21;
-// There is no daily cap on any mode. Practice always comes in batches of
-// this size instead, repeated on request until nothing is eligible left.
 const BATCH_SIZE = 10;
 
 function today() {
@@ -22,9 +19,10 @@ function cardState(spec) {
 }
 
 // Everything due, plus everything not yet seen (recall always, produce only
-// once its matching receptive card has matured to 21+ days, section 8.5).
-// No daily cap: practicing a deck to the end just means nothing here is
-// eligible again until a due date or an unlock genuinely arrives tomorrow.
+// once its matching receptive card has matured to PRODUCE_UNLOCK_INTERVAL
+// days, section 8.5). No daily cap: practicing a deck to the end just means
+// nothing here is eligible again until a due date or an unlock genuinely
+// arrives tomorrow.
 function eligiblePool(deck) {
   const t = today();
   return deck
@@ -183,22 +181,23 @@ function statLine(stats) {
   return parts.join(', ');
 }
 
-function exerciseTile(container, { title, deck, note, onBack }) {
+// Appends directly to container (rather than returning a wrapped node) so
+// each tile's h3 is a plain sibling of the others: CSS :first-of-type then
+// correctly finds the one true first heading on the page, not one per tile.
+function exerciseTile(container, { title, deck, onBack }) {
   const stats = statsFor(idsOf(deck), today());
   const remaining = eligiblePool(deck).length;
 
-  const parts = [
+  container.append(
     h('h3', {}, title),
     h('p', { class: 'gloss' }, statLine(stats)),
-  ];
-  parts.push(remaining > 0
-    ? h('div', { class: 'button-row' }, h('button', {
-      type: 'button',
-      onclick: () => runLoop(container, deck, onBack),
-    }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
-    : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'));
-  if (note) parts.push(h('p', { class: 'gloss' }, note));
-  return h('div', {}, parts);
+    remaining > 0
+      ? h('div', { class: 'button-row' }, h('button', {
+        type: 'button',
+        onclick: () => runLoop(container, deck, onBack),
+      }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
+      : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'),
+  );
 }
 
 function table(head, rows) {
@@ -220,19 +219,17 @@ function renderModuleDetail(container, vocab, moduleId, onBack) {
     container.append(
       h('p', {}, h('button', { type: 'button', onclick: onBack }, '← Vocabulary modules')),
       h('h1', {}, `Module ${mod.id}: ranks ${mod.rankStart}–${mod.rankEnd}`),
-      exerciseTile(container, {
-        title: 'Receptive: see French, know the Dutch',
-        deck: mod.recallCards,
-        onBack: showOverview,
-      }),
-      exerciseTile(container, {
-        title: 'Productive: see Dutch, write the French',
-        deck: mod.produceCards,
-        note: 'Unlocks per word once its receptive card reaches a 21-day interval. Production is roughly three times harder than recognition, so it trails behind word by word, not module by module.',
-        onBack: showOverview,
-      }),
-      h('p', { class: 'gloss' }, "Finishing this module once does not mark it done. These words stay in rotation like everything else: the counts above keep moving, in both directions, for as long as you use the app."),
     );
+    exerciseTile(container, {
+      title: 'Receptive: see French, know the Dutch',
+      deck: mod.recallCards,
+      onBack: showOverview,
+    });
+    exerciseTile(container, {
+      title: 'Productive: see Dutch, write the French',
+      deck: mod.produceCards,
+      onBack: showOverview,
+    });
   }
 
   showOverview();
@@ -257,10 +254,7 @@ function renderModuleList(container, vocab, onOpenModule) {
         ['Writing', String(produceBuckets.new), ...INTERVAL_RUNGS.map((r) => String(produceBuckets[r]))],
       ],
     ),
-    h('p', { class: 'gloss' }, 'Each column is a rung on the interval ladder (section 8.2): a word moves right as it sticks, and back toward New if it lapses.'),
   );
-
-  container.append(h('p', {}, `${vocab.length} words banked so far. Modules are fixed 50-word blocks in frequency order: a module only fills in as the words before it are already in your deck. New words still enter one at a time, in rank order, same as always.`));
 
   const rows = modules.map((mod) => {
     const stats = statsFor(idsOf(mod.recallCards), t);

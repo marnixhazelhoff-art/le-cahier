@@ -8,14 +8,7 @@ import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
 import { attachAccentHelper } from '../accent-helper.js';
 
-// There is no daily cap on any mode. Practice always comes in batches of
-// this size instead, repeated on request until nothing is eligible left.
 const BATCH_SIZE = 10;
-
-const EXERCISE_NOTES = {
-  'passe-compose': "Redesigned: one card asks for the whole form, j'ai mangé or je suis allé(e), not the auxiliary by itself. Choosing avoir or être happens as part of producing the real answer.",
-  imparfait: 'Only two cards, on purpose: the soft-consonant rule, plus être, the one verb that breaks it. Every other person in every other verb is just the présent nous stem minus -ons, already drilled inside Present.',
-};
 
 const TENSE_LABEL = {
   present: 'présent',
@@ -173,22 +166,20 @@ function renderExercises(container, verbs) {
 
   const allRemaining = eligiblePool(deck).length;
   container.append(...[
-    h('p', {}, 'The same fixed 50 verbs as always: no modules to unlock here, just a few kinds of practice, plus Browse for reference.'),
+    h('h3', {}, 'All verbs, mixed'),
     allRemaining > 0
       ? h('div', { class: 'button-row' }, h('button', {
         type: 'button',
         onclick: () => runLoop(container, verbs, deck, backHere),
-      }, `Practice ${Math.min(BATCH_SIZE, allRemaining)} (all verbs, mixed)`))
-      : h('p', { class: 'gloss' }, 'Nothing to practice across all verbs right now.'),
+      }, `Practice ${Math.min(BATCH_SIZE, allRemaining)}`))
+      : h('p', { class: 'gloss' }, 'Nothing to practice right now.'),
   ].filter(Boolean));
 
   for (const ex of exercises) {
     if (ex.cards.length === 0) continue;
     const stats = statsFor(idsOf(ex.cards), t);
     const remaining = eligiblePool(ex.cards).length;
-    // native Element.append coerces a null argument to the text "null"
-    // instead of skipping it, unlike this file's h() helper — filter first.
-    container.append(...[
+    container.append(
       h('h3', {}, ex.label),
       h('p', { class: 'gloss' }, statLine(stats)),
       remaining > 0
@@ -197,8 +188,7 @@ function renderExercises(container, verbs) {
           onclick: () => runLoop(container, verbs, ex.cards, backHere),
         }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
         : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'),
-      EXERCISE_NOTES[ex.id] ? h('p', { class: 'gloss' }, EXERCISE_NOTES[ex.id]) : null,
-    ].filter(Boolean));
+    );
   }
 }
 
