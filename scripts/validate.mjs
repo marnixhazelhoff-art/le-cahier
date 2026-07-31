@@ -140,8 +140,13 @@ for (const card of deck) {
   ok(`card ${card.id} has a unique id`, !ids.has(card.id));
   ids.add(card.id);
   ok(`card ${card.id} references a real verb`, card.infinitive in byName || card.infinitive === 'être');
+  // expected is usually a single string, but a card can offer several
+  // accepted answers (e.g. je suis allé / je suis allée) — gradeAnswer in
+  // src/grade.js has always accepted an array here, see its docstring.
   ok(`card ${card.id} has a non-empty expected answer`,
-    typeof card.expected === 'string' && card.expected.length > 0);
+    Array.isArray(card.expected)
+      ? card.expected.length > 0 && card.expected.every((e) => typeof e === 'string' && e.length > 0)
+      : typeof card.expected === 'string' && card.expected.length > 0);
 }
 
 // --- Vocabulary bank (if it exists yet) -------------------------------------

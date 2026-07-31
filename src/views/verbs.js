@@ -64,14 +64,19 @@ function renderCard(container, queue, index, verbs, onDone) {
       // card is the pre-grade state, so reps 0 means this review introduced it.
       recordReview('verbs', result.grade, { introduced: card.reps === 0 });
 
-      speak(spec.expected);
+      // expected is usually one string, but a card can offer several accepted
+      // answers (je suis allé / je suis allée) — speak and show the display
+      // form (which keeps the (e) notation) rather than stringifying an array.
+      const spoken = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
+      const correctionText = spec.display ?? spoken;
+      speak(spoken);
 
       clear(feedback);
       feedback.append(
         h('p', { class: result.grade === 'again' ? 'incorrect' : 'correct' },
           result.grade === 'good' ? 'Correct.'
-            : result.grade === 'almost' ? `Almost: ${spec.expected}`
-              : `${spec.expected}`),
+            : result.grade === 'almost' ? `Almost: ${correctionText}`
+              : correctionText),
       );
       if (spec.note) feedback.append(h('p', { class: 'mono' }, spec.note));
 

@@ -2,7 +2,7 @@
 // Card types are derived from verbs.json by rule, not hand-picked, so this
 // file stays correct if verbs.json ever changes without a matching rewrite
 // here. Never generates the full 50 x 4 x 6 grid; see section 7 for why.
-import { conjugate, SUBJECTS } from './conjugate.js';
+import { conjugate, subject, SUBJECTS } from './conjugate.js';
 
 const REGULAR_MODELS = ['parler', 'finir', 'entendre'];
 
@@ -27,8 +27,30 @@ function ilsIntroducesNewStem(verb) {
   return ils !== je && ils !== nous;
 }
 
-function makeCard(id, { infinitive, en, kind, tense, person, prompt, expected, note }) {
-  return { id, infinitive, en, kind, tense, person, prompt, expected, note: note ?? null };
+function makeCard(id, { infinitive, en, kind, tense, person, prompt, expected, note, display }) {
+  return { id, infinitive, en, kind, tense, person, prompt, expected, note: note ?? null, display: display ?? null };
+}
+
+// Full passé composé for one person: "j'ai mangé", "je suis allé(e)". Where
+// agreement applies, conjugate() encodes it as a literal "(e)" marker meant
+// for display (BRIEF.md 6: show the rule, not one arbitrary gender) — this
+// expands that marker into the two accepted answers gradeAnswer needs, while
+// keeping the parenthesised form as the display/correction text.
+function passeComposeForm(verb, person) {
+  const form = conjugate(verb, 'passe-compose')[person];
+  const space = form.indexOf(' ');
+  const auxForm = form.slice(0, space);
+  const rest = form.slice(space + 1);
+  const subj = subject(person, auxForm);
+  if (!rest.includes('(')) {
+    return { display: `${subj}${auxForm} ${rest}`, accepted: [`${subj}${auxForm} ${rest}`] };
+  }
+  const masculine = rest.replace('(e)', '');
+  const feminine = rest.replace('(e)', 'e');
+  return {
+    display: `${subj}${auxForm} ${masculine}(e)`,
+    accepted: [`${subj}${auxForm} ${masculine}`, `${subj}${auxForm} ${feminine}`],
+  };
 }
 
 function presentCard(verb, person) {
@@ -71,24 +93,24 @@ export function buildVerbCardDeck(verbs) {
     }
   }
 
-  // --- Auxiliary choice: être verbs, plus the passer special case ---------
+  // --- Passé composé, full production ------------------------------------
+  // One card per verb that needs one: every être-aux verb (the auxiliary is
+  // never optional there), every verb whose participle isn't predictable
+  // from its group, and passer (its auxiliary depends on meaning, not form,
+  // flagged via its note rather than a fabricated context-free être answer).
+  // Asks for the whole form, so choosing avoir or être happens as part of
+  // producing the real answer, never as its own multiple-choice step.
   for (const verb of verbs) {
-    if (verb.aux !== 'être' && verb.infinitive !== 'passer') continue;
-    cards.push(makeCard(`c:${verb.infinitive}:aux:choice`, {
-      infinitive: verb.infinitive, en: verb.en, kind: 'aux-choice', tense: 'passe-compose', person: null,
-      prompt: `${verb.infinitive} (${verb.en}): avoir or être in the passé composé?`,
-      expected: verb.aux,
-      note: verb.note,
-    }));
-  }
-
-  // --- Irregular participle: only where not predictable from the group ----
-  for (const verb of verbs) {
-    if (predictedParticiple(verb) === verb.participle) continue;
-    cards.push(makeCard(`c:${verb.infinitive}:participle`, {
-      infinitive: verb.infinitive, en: verb.en, kind: 'participle', tense: 'passe-compose', person: null,
-      prompt: `${verb.infinitive} (${verb.en}): past participle`,
-      expected: verb.participle,
+    const irregularParticiple = predictedParticiple(verb) !== verb.participle;
+    if (verb.aux !== 'être' && verb.infinitive !== 'passer' && !irregularParticiple) continue;
+    const person = verb.impersonal ? 2 : 0;
+    const label = verb.impersonal ? 'il' : 'je';
+    const { display, accepted } = passeComposeForm(verb, person);
+    cards.push(makeCard(`c:${verb.infinitive}:passe-compose`, {
+      infinitive: verb.infinitive, en: verb.en, kind: 'passe-compose-produce', tense: 'passe-compose', person,
+      prompt: `${verb.infinitive} (${verb.en}): passé composé, ${label}`,
+      expected: accepted,
+      display,
       note: verb.note,
     }));
   }

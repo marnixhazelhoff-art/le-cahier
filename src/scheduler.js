@@ -72,7 +72,12 @@ export function newCard(id, { familiar = false, due = today() } = {}) {
  */
 export function grade(card, outcome) {
   const now = today();
-  const isNew = card.reps === 0;
+  // Not card.reps === 0: an 'almost' grade bumps reps without moving interval
+  // off its starting 0, so a card that ever got "almost" on its first attempt
+  // would look graduated (reps > 0) on every later grade while still computing
+  // round(0 * ease) = 0, permanently stuck at "due today". interval only ever
+  // leaves 0 via a real graduation, so that is the correct new-card test.
+  const isNew = card.interval === 0;
 
   if (outcome === 'almost') {
     // Interval, ease and due stay put, so the card is still "due" and
