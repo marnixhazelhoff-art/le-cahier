@@ -59,10 +59,10 @@ function renderCard(container, queue, index, onDone) {
     // native Element.append coerces a null argument to the text "null"
     // instead of skipping it, unlike this file's h() helper — filter first.
     feedback.append(...[
+      item.sentenceNl ? h('p', { class: 'gloss' }, item.sentenceNl) : null,
       h('p', { class: correct ? 'correct' : 'incorrect' },
         correct ? 'Correct.' : `Not quite: ${item.answer}`),
       h('p', {}, item.why),
-      item.sentenceNl ? h('p', { class: 'gloss' }, item.sentenceNl) : null,
       item.note ? h('p', { class: 'gloss' }, item.note) : null,
     ].filter(Boolean));
     const next = h('button', { type: 'button', onclick: () => renderCard(container, queue, index + 1, onDone) }, 'Next');
