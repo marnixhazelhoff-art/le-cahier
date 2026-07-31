@@ -71,6 +71,19 @@ p, ul, ol {
   font-family: var(--mono);
 }
 
+.update-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: calc(var(--rule) / 2) 1.5rem;
+  background: var(--paper-sheet);
+  border-bottom: 1px solid var(--seyes);
+  color: var(--ink-soft);
+}
+
 .ending {
   color: var(--marge);
 }

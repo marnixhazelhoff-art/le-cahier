@@ -29,8 +29,30 @@ const TABS = [
 // Relative so it registers under a GitHub Pages subpath. Service workers need a
 // secure context, so this stays silent over file:// and over a plain LAN IP
 // instead of reporting a failure the learner cannot act on.
+// Serving from cache first means a deploy lands one launch late: the new worker
+// installs in the background while the page keeps the files it already loaded.
+// That reads as "my change did not ship", so say so instead. Offering a reload
+// rather than forcing one keeps it out of the way mid card.
+function showUpdateNotice() {
+  if (document.querySelector('.update-notice')) return;
+  const root = document.getElementById('app');
+  if (!root) return;
+  root.prepend(h('div', { class: 'update-notice', role: 'status' }, [
+    'An update is ready. ',
+    h('button', { type: 'button', onclick: () => location.reload() }, 'Reload'),
+  ]));
+}
+
 function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
+
+  // On a first ever visit the worker claims the page with nothing stale on
+  // screen, so that handover is not an update and needs no notice.
+  const hadController = Boolean(navigator.serviceWorker.controller);
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (hadController) showUpdateNotice();
+  });
+
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./service-worker.js', { scope: './' }).catch(() => {});
   });
