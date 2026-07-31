@@ -63,6 +63,7 @@ function renderCard(container, queue, index, onDone) {
         correct ? 'Correct.' : `Not quite: ${item.answer}`),
       h('p', {}, item.why),
       item.sentenceNl ? h('p', { class: 'gloss' }, item.sentenceNl) : null,
+      item.note ? h('p', { class: 'gloss' }, item.note) : null,
     ].filter(Boolean));
     const next = h('button', { type: 'button', onclick: () => renderCard(container, queue, index + 1, onDone) }, 'Next');
     clear(actions);

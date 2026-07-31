@@ -1,0 +1,22 @@
+[
+  { "base": "beau", "en": "beautiful, handsome", "ms": "beau", "fs": "belle", "note": "bel before a vowel or mute h: un bel homme." },
+  { "base": "nouveau", "en": "new", "ms": "nouveau", "fs": "nouvelle", "note": "nouvel before a vowel or mute h: un nouvel ami." },
+  { "base": "vieux", "en": "old", "ms": "vieux", "fs": "vieille", "note": "vieil before a vowel or mute h: un vieil arbre." },
+  { "base": "blanc", "en": "white", "ms": "blanc", "fs": "blanche", "note": null },
+  { "base": "long", "en": "long", "ms": "long", "fs": "longue", "note": null },
+  { "base": "doux", "en": "soft, sweet, mild", "ms": "doux", "fs": "douce", "note": null },
+  { "base": "faux", "en": "false, fake", "ms": "faux", "fs": "fausse", "note": null },
+  { "base": "roux", "en": "red-haired, russet", "ms": "roux", "fs": "rousse", "note": null },
+  { "base": "sec", "en": "dry", "ms": "sec", "fs": "sèche", "note": null },
+  { "base": "frais", "en": "fresh, cool", "ms": "frais", "fs": "fraîche", "note": null },
+  { "base": "public", "en": "public", "ms": "public", "fs": "publique", "note": null },
+  { "base": "gentil", "en": "kind, nice", "ms": "gentil", "fs": "gentille", "note": null },
+  { "base": "bon", "en": "good", "ms": "bon", "fs": "bonne", "note": null },
+  { "base": "gros", "en": "big, fat", "ms": "gros", "fs": "grosse", "note": null },
+  { "base": "épais", "en": "thick", "ms": "épais", "fs": "épaisse", "note": null },
+  { "base": "complet", "en": "complete, full", "ms": "complet", "fs": "complète", "note": null },
+  { "base": "cher", "en": "dear, expensive", "ms": "cher", "fs": "chère", "note": null },
+  { "base": "premier", "en": "first", "ms": "premier", "fs": "première", "note": null },
+  { "base": "dernier", "en": "last", "ms": "dernier", "fs": "dernière", "note": null },
+  { "base": "bas", "en": "low", "ms": "bas", "fs": "basse", "note": null }
+]

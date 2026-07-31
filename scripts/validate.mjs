@@ -200,7 +200,11 @@ if (chooser.length > 0) {
     ok(`${label}: answer is one of the options`, item.options.includes(item.answer));
     ok(`${label}: options are distinct`, new Set(item.options).size === item.options.length);
     ok(`${label}: has a non-empty why`, typeof item.why === 'string' && item.why.trim().length > 0);
-    ok(`${label}: verb exists in verbs.json`, item.verb in byName);
+    // Only the tense-contrast items are keyed to a verb; the agreement
+    // category (noun + adjective) has no verb at all.
+    if (item.verb != null) {
+      ok(`${label}: verb exists in verbs.json`, item.verb in byName);
+    }
     if (item.sentenceNl !== undefined) {
       ok(`${label}: sentenceNl is a non-empty string`, typeof item.sentenceNl === 'string' && item.sentenceNl.trim().length > 0);
     }

@@ -87,6 +87,7 @@ const CHOOSER_CATEGORY_LABELS = {
   state: 'State of mind vs. change of state',
   duration: 'Bounded duration',
   meaning: 'Verbs that shift meaning',
+  agreement: 'Adjective agreement',
 };
 
 // Chooser items already carry the BRIEF section 9 contrast category.
