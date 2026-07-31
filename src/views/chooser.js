@@ -174,7 +174,7 @@ export function renderChooserView(container, { chooser }) {
   const showCategories = () => { clear(body); renderCategories(body, chooser); };
 
   tabs.append(
-    h('button', { type: 'button', onclick: showToday }, "Today's session"),
+    h('button', { type: 'button', onclick: showToday }, 'Random'),
     h('button', { type: 'button', onclick: showCategories }, 'Categories'),
   );
 

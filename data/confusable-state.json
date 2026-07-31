@@ -1,0 +1,95 @@
+{
+  "lastRun": [
+    {
+      "id": "ch-151",
+      "sentence": "J'ai rendez-vous ___ le dentiste demain matin.",
+      "sentenceNl": "Ik heb morgenochtend een afspraak bij de tandarts.",
+      "options": [
+        "chez",
+        "à"
+      ],
+      "answer": "chez",
+      "why": "'chez' is used before a person or practitioner (the dentist), whereas 'à' would need a place or institution.",
+      "category": "confusable",
+      "note": "chez is at or to a person's home or practice (chez le médecin); à is at or to a place or institution (à l'école)."
+    },
+    {
+      "id": "ch-155",
+      "sentence": "Il a plu toute la ___ sans s'arrêter.",
+      "sentenceNl": "Het heeft de hele dag door geregend.",
+      "options": [
+        "jour",
+        "journée"
+      ],
+      "answer": "journée",
+      "why": "The expression 'toute la journée' stresses the whole span of the day, requiring 'journée'.",
+      "category": "confusable",
+      "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+    },
+    {
+      "id": "ch-156",
+      "sentence": "Nous nous verrons un autre ___.",
+      "sentenceNl": "We zien elkaar wel een andere dag.",
+      "options": [
+        "jour",
+        "journée"
+      ],
+      "answer": "jour",
+      "why": "'un autre jour' refers to a point in time, so 'jour' fits, not the duration-focused 'journée'.",
+      "category": "confusable",
+      "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+    },
+    {
+      "id": "ch-157",
+      "sentence": "Cet été, nous allons ___ le musée du Louvre.",
+      "sentenceNl": "Deze zomer gaan we het Louvre bezoeken.",
+      "options": [
+        "visiter",
+        "rendre visite à"
+      ],
+      "answer": "visiter",
+      "why": "The object is a place (a museum), so 'visiter' is correct; 'rendre visite à' is only for people.",
+      "category": "confusable",
+      "note": "visiter is for a place; rendre visite à is for a person."
+    },
+    {
+      "id": "ch-158",
+      "sentence": "Ce week-end, je vais ___ les enfants à la mer.",
+      "sentenceNl": "Dit weekend neem ik de kinderen mee naar zee.",
+      "options": [
+        "amener",
+        "emmener"
+      ],
+      "answer": "emmener",
+      "why": "The children are taken away to another place (the sea), so 'emmener' fits, not 'amener'.",
+      "category": "confusable",
+      "note": "amener brings a person or animal toward the point of reference; emmener takes them away from it."
+    },
+    {
+      "id": "ch-159",
+      "sentence": "Le premier ___ du mois, je paie mon loyer.",
+      "sentenceNl": "Op de eerste dag van de maand betaal ik mijn huur.",
+      "options": [
+        "jour",
+        "journée"
+      ],
+      "answer": "jour",
+      "why": "This marks a specific point/date in time, so 'jour' fits, not the span-focused 'journée'.",
+      "category": "confusable",
+      "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+    },
+    {
+      "id": "ch-160",
+      "sentence": "N'oublie pas d'___ ton parapluie, il va pleuvoir.",
+      "sentenceNl": "Vergeet je paraplu niet mee te nemen, het gaat regenen.",
+      "options": [
+        "apporter",
+        "emporter"
+      ],
+      "answer": "emporter",
+      "why": "The umbrella is taken away with you when leaving, so 'emporter' fits, not 'apporter'.",
+      "category": "confusable",
+      "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it."
+    }
+  ]
+}

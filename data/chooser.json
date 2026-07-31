@@ -9,7 +9,8 @@
     "answer": "entendait",
     "why": "The imparfait sets the ongoing action of hearing music that was in progress, interrupted by the phone ringing; the passé composé would wrongly mark a single completed event.",
     "verb": "entendre",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Hij hoorde muziek toen de telefoon ging."
   },
   {
     "id": "ch-002",
@@ -21,7 +22,8 @@
     "answer": "as vécu",
     "why": "The passé composé marks a completed, bounded stay of three years; the imparfait would describe it as an unbounded ongoing situation.",
     "verb": "vivre",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Je hebt drie jaar in Lyon gewoond voordat je naar Parijs verhuisde."
   },
   {
     "id": "ch-003",
@@ -33,7 +35,8 @@
     "answer": "prenions",
     "why": "The imparfait shows the meal in progress as background; the passé composé would make it a punctual event rather than the interrupted action.",
     "verb": "prendre",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "We waren aan het ontbijten toen de gasten aankwamen."
   },
   {
     "id": "ch-004",
@@ -45,7 +48,8 @@
     "answer": "as fait",
     "why": "The passé composé reports a single completed action finished within a set time; the imparfait would frame it as an ongoing habit instead.",
     "verb": "faire",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Gisteravond heb je je huiswerk in maar één uur gemaakt."
   },
   {
     "id": "ch-005",
@@ -57,7 +61,8 @@
     "answer": "faisait",
     "why": "The imparfait describes the ongoing weather as background; the passé composé would mark a completed weather event rather than the setting.",
     "verb": "faire",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Het was heel mooi weer vanochtend toen ik wakker werd."
   },
   {
     "id": "ch-006",
@@ -69,7 +74,8 @@
     "answer": "ai trouvé",
     "why": "The passé composé marks the single moment of finding the keys; the imparfait would wrongly suggest a repeated or ongoing searching.",
     "verb": "trouver",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Vanochtend heb ik eindelijk mijn sleutels onder de bank gevonden."
   },
   {
     "id": "ch-007",
@@ -81,7 +87,8 @@
     "answer": "regardaient",
     "why": "The imparfait shows the watching in progress as background to the other ongoing action; the passé composé would mark a single completed event.",
     "verb": "regarder",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "De kinderen keken tv terwijl ik het avondeten klaarmaakte."
   },
   {
     "id": "ch-008",
@@ -93,7 +100,8 @@
     "answer": "ont eu",
     "why": "The passé composé marks the sudden onset of fear as a reaction; the imparfait would describe a continuous, ongoing state instead.",
     "verb": "avoir",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Toen ze het nieuws hoorden, werden ze opeens heel bang."
   },
   {
     "id": "ch-009",
@@ -105,7 +113,8 @@
     "answer": "pouvions",
     "why": "The imparfait describes an ongoing background ability during that period; the passé composé would mark a single completed instance.",
     "verb": "pouvoir",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "In die tijd konden we de zee vanuit ons raam zien."
   },
   {
     "id": "ch-010",
@@ -117,7 +126,8 @@
     "answer": "as donné",
     "why": "The passé composé marks the single completed act of giving yesterday; the imparfait would frame it as a repeated or ongoing action.",
     "verb": "donner",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Gisteren heb je je oude fiets aan je kleine broertje gegeven."
   },
   {
     "id": "ch-011",
@@ -129,7 +139,8 @@
     "answer": "mangeaient",
     "why": "The imparfait shows the eating in progress as background, interrupted by the storm; the passé composé would mark it as a punctual event.",
     "verb": "manger",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "De gasten waren rustig aan het eten toen het onweer losbarstte."
   },
   {
     "id": "ch-012",
@@ -141,7 +152,8 @@
     "answer": "a lu",
     "why": "The passé composé reports a completed action bounded to one night; the imparfait would describe an ongoing or habitual reading.",
     "verb": "lire",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Hij heeft de hele roman in één nacht gelezen."
   },
   {
     "id": "ch-013",
@@ -153,7 +165,8 @@
     "answer": "mettiez",
     "why": "The imparfait describes a habitual, ongoing background action with 'toujours'; the passé composé would mark one specific completed event.",
     "verb": "mettre",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Jullie trokken altijd je jassen aan als het koud was."
   },
   {
     "id": "ch-014",
@@ -165,7 +178,8 @@
     "answer": "sommes arrivé(e)s",
     "why": "The passé composé marks the single completed arrival at a precise moment; the imparfait would wrongly describe an ongoing situation.",
     "verb": "arriver",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "We kwamen op het station aan net voordat de trein vertrok."
   },
   {
     "id": "ch-015",
@@ -177,7 +191,8 @@
     "answer": "allait",
     "why": "The imparfait describes a repeated habitual action with 'chaque été'; the passé composé would mark a single specific trip.",
     "verb": "aller",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Elke zomer ging hij naar zijn grootouders op het platteland."
   },
   {
     "id": "ch-016",
@@ -189,7 +204,8 @@
     "answer": "as donné",
     "why": "The passé composé marks a single completed act at a specific time; the imparfait would suggest a repeated or ongoing giving.",
     "verb": "donner",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Vorige week heb je de leraar een duidelijk antwoord gegeven."
   },
   {
     "id": "ch-017",
@@ -201,7 +217,8 @@
     "answer": "entendions",
     "why": "The imparfait describes a repeated ongoing background situation each night; the passé composé would mark a single completed event.",
     "verb": "entendre",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "We hoorden elke nacht vreemde geluiden op de zolder."
   },
   {
     "id": "ch-018",
@@ -213,7 +230,8 @@
     "answer": "as fait",
     "why": "The passé composé marks the single completed act of making the cake; the imparfait would frame it as habitual or ongoing.",
     "verb": "faire",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Dit weekend heb je een heerlijke taart voor het verjaardagsfeest gemaakt."
   },
   {
     "id": "ch-019",
@@ -225,7 +243,8 @@
     "answer": "tenions",
     "why": "The imparfait shows the ongoing holding as background to the passing crowd; the passé composé would mark a punctual completed action.",
     "verb": "tenir",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "We hielden het spandoek vast terwijl de menigte langs ons trok."
   },
   {
     "id": "ch-020",
@@ -237,7 +256,8 @@
     "answer": "ai tenu",
     "why": "The passé composé marks the single reactive act of grabbing the rail; the imparfait would describe an ongoing background state.",
     "verb": "tenir",
-    "category": "background"
+    "category": "background",
+    "sentenceNl": "Toen ik uitgleed, hield ik de leuning stevig vast om niet te vallen."
   },
   {
     "id": "ch-021",
@@ -249,7 +269,8 @@
     "answer": "passait",
     "why": "'Chaque matin' signals a repeated routine, requiring the imparfait; the passé composé would mark a single completed pass.",
     "verb": "passer",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Elke ochtend liep hij langs de bakkerij voordat hij naar zijn werk ging."
   },
   {
     "id": "ch-022",
@@ -261,7 +282,8 @@
     "answer": "avons dit",
     "why": "'Ce matin-là' points to one specific occasion, so the passé composé fits; the imparfait would imply a habit.",
     "verb": "dire",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Die ochtend vertelden we hem de hele waarheid over het ongeluk."
   },
   {
     "id": "ch-023",
@@ -273,7 +295,8 @@
     "answer": "commençais",
     "why": "'Toujours' and 'à cette époque' mark a habitual action, requiring the imparfait, not a one-time event.",
     "verb": "commencer",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "In die tijd begon ik mijn dag altijd met een kop koffie."
   },
   {
     "id": "ch-024",
@@ -285,7 +308,8 @@
     "answer": "as vu",
     "why": "'Hier soir' identifies one specific occasion, so the passé composé is correct, not a repeated habit.",
     "verb": "voir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Gisteravond zag je een prachtige film in de bioscoop in het centrum."
   },
   {
     "id": "ch-025",
@@ -297,7 +321,8 @@
     "answer": "parlaient",
     "why": "'Souvent' plus 'quand ils étaient petits' describes a recurring habit, requiring the imparfait.",
     "verb": "parler",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Toen ze klein waren, praatten de kinderen vaak over hun dromen."
   },
   {
     "id": "ch-026",
@@ -309,7 +334,8 @@
     "answer": "ont pris",
     "why": "'Ce jour-là' marks one identifiable occasion, so the passé composé fits, not a habitual action.",
     "verb": "prendre",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Die dag namen ze de trein van zeven uur om te vertrekken."
   },
   {
     "id": "ch-027",
@@ -321,7 +347,8 @@
     "answer": "entendait",
     "why": "'Chaque nuit' signals a repeated occurrence, requiring the imparfait rather than a single event.",
     "verb": "entendre",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Elke nacht hoorde hij de oude hond blaffen in de tuin van de buren."
   },
   {
     "id": "ch-028",
@@ -333,7 +360,8 @@
     "answer": "ont travaillé",
     "why": "'La semaine dernière' bounds one specific instance, so the passé composé is correct, not a habit.",
     "verb": "travailler",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Vorige week hebben ze samen aan een dringend project gewerkt."
   },
   {
     "id": "ch-029",
@@ -345,7 +373,8 @@
     "answer": "pouvait",
     "why": "'Quand il était jeune' describes an ongoing ability, requiring the imparfait, not a single moment.",
     "verb": "pouvoir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Toen hij jong was, kon hij moeiteloos tien kilometer hardlopen."
   },
   {
     "id": "ch-030",
@@ -357,7 +386,8 @@
     "answer": "avons aimé",
     "why": "'Ce soir-là' points to one specific evening, so the passé composé fits, not a general habit.",
     "verb": "aimer",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Die avond genoten we enorm van het concert in het stadstheater."
   },
   {
     "id": "ch-031",
@@ -369,7 +399,8 @@
     "answer": "allais",
     "why": "'Tous les étés' marks a recurring habit, requiring the imparfait, not a one-time trip.",
     "verb": "aller",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Elke zomer ging je met je grootouders naar zee."
   },
   {
     "id": "ch-032",
@@ -381,7 +412,8 @@
     "answer": "êtes sorti(e)(s)",
     "why": "'Samedi dernier' identifies one specific night, so the passé composé is correct, not a habit.",
     "verb": "sortir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Afgelopen zaterdag ben je met je collega's naar de disco geweest."
   },
   {
     "id": "ch-033",
@@ -393,7 +425,8 @@
     "answer": "faisions",
     "why": "'D'habitude' signals a routine, requiring the imparfait, not a single completed action.",
     "verb": "faire",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Meestal maakten mijn zus en ik onze huiswerk na het avondeten."
   },
   {
     "id": "ch-034",
@@ -405,7 +438,8 @@
     "answer": "sommes arrivé(e)s",
     "why": "'Ce matin' marks one specific occasion, so the passé composé fits, not a repeated habit.",
     "verb": "arriver",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Vanochtend kwamen mijn broer en ik te laat door de bus."
   },
   {
     "id": "ch-035",
@@ -417,7 +451,8 @@
     "answer": "savions",
     "why": "'À l'époque' describes an ongoing state of knowledge, requiring the imparfait, not a discovery moment.",
     "verb": "savoir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "In die tijd wisten we al alles wat er gedaan moest worden."
   },
   {
     "id": "ch-036",
@@ -429,7 +464,8 @@
     "answer": "est venu(e)",
     "why": "'Hier après-midi' points to one specific visit, so the passé composé is correct, not a habit.",
     "verb": "venir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Gistermiddag kwam hij me opzoeken zonder iemand te waarschuwen."
   },
   {
     "id": "ch-037",
@@ -441,7 +477,8 @@
     "answer": "donnais",
     "why": "'Chaque année' signals a recurring habit, requiring the imparfait, not a single gift.",
     "verb": "donner",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Elk jaar gaf je je buurvrouw een cadeau voor Kerstmis."
   },
   {
     "id": "ch-038",
@@ -453,7 +490,8 @@
     "answer": "ont aimé",
     "why": "'Cette fois-là' marks one specific occasion, so the passé composé fits, not a general habit.",
     "verb": "aimer",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Die keer vonden de gasten het chocoladedessert enorm lekker."
   },
   {
     "id": "ch-039",
@@ -465,7 +503,8 @@
     "answer": "croyais",
     "why": "'Autrefois' plus 'toujours' describes a habitual belief, requiring the imparfait, not a single moment.",
     "verb": "croire",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "Vroeger geloofde ik altijd de verhalen die mijn oom vertelde."
   },
   {
     "id": "ch-040",
@@ -477,7 +516,8 @@
     "answer": "suis devenu(e)",
     "why": "'En un seul jour' marks a specific transformation, so the passé composé fits, not an ongoing habit.",
     "verb": "devenir",
-    "category": "habit"
+    "category": "habit",
+    "sentenceNl": "In één dag ben ik helemaal verslaafd geraakt aan die tv-serie."
   },
   {
     "id": "ch-041",
@@ -489,7 +529,8 @@
     "answer": "savait",
     "why": "Imparfait describes his ongoing ability as a child; \"a su\" would mean the single moment he found out, which doesn't fit \"déjà\".",
     "verb": "savoir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Als kleine jongen kon hij al zonder enige moeite klokkijken."
   },
   {
     "id": "ch-042",
@@ -501,7 +542,8 @@
     "answer": "as mangé",
     "why": "\"Hier soir\" and the completed action mark a single finished event; the imparfait would wrongly suggest an ongoing background scene.",
     "verb": "manger",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Gisteravond heb je je hele bord in slechts vijf minuten opgegeten."
   },
   {
     "id": "ch-043",
@@ -513,7 +555,8 @@
     "answer": "attendais",
     "why": "\"Chaque matin\" plus the ongoing waiting is a repeated background state; the passé composé would mark it as one finished act.",
     "verb": "attendre",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Elke ochtend wachtte ik geduldig op je voor de school terwijl jij speelde."
   },
   {
     "id": "ch-044",
@@ -525,7 +568,8 @@
     "answer": "êtes parti(e)(s)",
     "why": "\"Ce matin-là\" points to one specific completed departure; the imparfait would describe a habit rather than that single event.",
     "verb": "partir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Die ochtend ben je haastig vertrokken zonder zelfs maar gedag te zeggen."
   },
   {
     "id": "ch-045",
@@ -537,7 +581,8 @@
     "answer": "partions",
     "why": "\"À cette époque\" plus \"toujours\" describe a recurring situation; the passé composé would mark a single completed trip.",
     "verb": "partir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "In die tijd gingen we altijd op vakantie aan zee."
   },
   {
     "id": "ch-046",
@@ -549,7 +594,8 @@
     "answer": "avons su",
     "why": "\"Ce jour-là\" marks the precise moment of finding out, so passé composé; the imparfait would mean we already knew it as background.",
     "verb": "savoir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Pas op die dag kwamen we de waarheid over het ongeval te weten."
   },
   {
     "id": "ch-047",
@@ -561,7 +607,8 @@
     "answer": "pensions",
     "why": "Imparfait gives our ongoing belief before the news; the passé composé would signal a single sudden thought, which \"avant\" contradicts.",
     "verb": "penser",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Voor de aankondiging dachten we dat alles goed zou gaan voor het team."
   },
   {
     "id": "ch-048",
@@ -573,7 +620,8 @@
     "answer": "ai passé",
     "why": "\"Le week-end dernier\" and a punctual passing mark a single completed event; the imparfait would suggest a habitual or ongoing scene.",
     "verb": "passer",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Afgelopen weekend ben ik rond het middaguur langs jouw huis gekomen."
   },
   {
     "id": "ch-049",
@@ -585,7 +633,8 @@
     "answer": "écrivions",
     "why": "\"Autrefois\" and \"chaque semaine\" signal a repeated habit in imparfait; the passé composé would mark one single completed writing.",
     "verb": "écrire",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Vroeger schreven we elkaar zonder mankeren elke week brieven."
   },
   {
     "id": "ch-050",
@@ -597,7 +646,8 @@
     "answer": "ont laissé",
     "why": "\"Hier\" and the single act of leaving things mark a completed event; the imparfait would describe an ongoing background habit.",
     "verb": "laisser",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Toen ze gisteren vertrokken, lieten de kinderen hun speelgoed overal in de woonkamer achter."
   },
   {
     "id": "ch-051",
@@ -609,7 +659,8 @@
     "answer": "portions",
     "why": "\"Quand nous étions jeunes\" plus \"toujours\" describe an ongoing habit; the passé composé would mark a single completed instance.",
     "verb": "porter",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Toen we jong waren, droegen we altijd het schooluniform."
   },
   {
     "id": "ch-052",
@@ -621,7 +672,8 @@
     "answer": "avons su",
     "why": "Imparfait? No—here the moment of learning is punctual: passé composé marks finding out just as she arrived; imparfait would mean ongoing prior knowledge, contradicting \"pas encore\".",
     "verb": "savoir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "We wisten het nieuws nog niet toen ze plotseling aankwam."
   },
   {
     "id": "ch-053",
@@ -633,7 +685,8 @@
     "answer": "venais",
     "why": "\"Chaque dimanche\" marks a habitual routine in imparfait; the passé composé would signal a single completed visit.",
     "verb": "venir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Elke zondag kwam ik bij mijn oma om samen met de familie te lunchen."
   },
   {
     "id": "ch-054",
@@ -645,7 +698,8 @@
     "answer": "suis tombé(e)",
     "why": "The sudden fall is a single completed event, so passé composé; the imparfait would wrongly present it as an ongoing background action.",
     "verb": "tomber",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Terwijl ik naar de bus rende, viel ik hard op de natte stoep."
   },
   {
     "id": "ch-055",
@@ -657,7 +711,8 @@
     "answer": "deveniez",
     "why": "\"Chaque année\" describes a gradual ongoing change in imparfait; the passé composé would mark one abrupt completed transformation.",
     "verb": "devenir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Op je twintigste werd je elk jaar wat onafhankelijker en zelfverzekerder."
   },
   {
     "id": "ch-056",
@@ -669,7 +724,8 @@
     "answer": "avons tenu",
     "why": "\"Hier\" and \"pendant toute la cérémonie\" bound the holding as a completed episode; the imparfait would leave it as unframed background.",
     "verb": "tenir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Gisteren hielden we het spandoek de hele officiële ceremonie omhoog."
   },
   {
     "id": "ch-057",
@@ -681,7 +737,8 @@
     "answer": "passaient",
     "why": "\"Quand j'étais petit\" plus \"souvent\" mark a repeated habit in imparfait; the passé composé would signal one specific finished summer.",
     "verb": "passer",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Toen ik klein was, brachten ze hun zomers vaak op het platteland door."
   },
   {
     "id": "ch-058",
@@ -693,7 +750,8 @@
     "answer": "ont cherché",
     "why": "\"Hier soir\" plus the concluded search mark a single completed event; the imparfait would describe an ongoing background action instead.",
     "verb": "chercher",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Gisteravond hebben ze overal naar hun sleutels gezocht voordat ze die terugvonden."
   },
   {
     "id": "ch-059",
@@ -705,7 +763,8 @@
     "answer": "finissait",
     "why": "Imparfait shows the finishing as ongoing background parallel to my cooking; the passé composé would mark it as a single interrupting event.",
     "verb": "finir",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Terwijl ik kookte, maakte hij rustig zijn huiswerk aan tafel af."
   },
   {
     "id": "ch-060",
@@ -717,7 +776,8 @@
     "answer": "a suivi",
     "why": "\"L'an dernier\" and \"du début à la fin\" frame the course as a completed whole; the imparfait would present it as ongoing background.",
     "verb": "suivre",
-    "category": "state"
+    "category": "state",
+    "sentenceNl": "Vorig jaar heeft hij een cursus fotografie van begin tot eind gevolgd."
   },
   {
     "id": "ch-061",
@@ -729,7 +789,8 @@
     "answer": "as mis",
     "why": "The explicit boundary 'pendant deux heures' frames the action as completed, so passé composé fits; imparfait would suggest an unbounded ongoing action.",
     "verb": "mettre",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Gisteravond had je twee uur lang je jas aan voordat je naar buiten ging."
   },
   {
     "id": "ch-062",
@@ -741,7 +802,8 @@
     "answer": "avez pris",
     "why": "'pendant tout le mois de juin' sets a closed time span, requiring passé composé; imparfait would imply an open-ended routine without limit.",
     "verb": "prendre",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Jullie namen de hele maand juni elke ochtend de trein."
   },
   {
     "id": "ch-063",
@@ -753,7 +815,8 @@
     "answer": "avons su",
     "why": "The bounded 'pendant quelques minutes' marks a completed episode, so passé composé fits; imparfait would describe ongoing knowledge without end.",
     "verb": "savoir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "We kenden de waarheid maar een paar minuten voordat we alles weer vergaten."
   },
   {
     "id": "ch-064",
@@ -765,7 +828,8 @@
     "answer": "avez laissé",
     "why": "'pendant trois jours entiers' closes the time frame, forcing passé composé; imparfait would suggest a habitual or ongoing state.",
     "verb": "laisser",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Jullie hebben je sleutels drie hele dagen bij ons laten liggen."
   },
   {
     "id": "ch-065",
@@ -777,7 +841,8 @@
     "answer": "es arrivé(e)",
     "why": "'trois fois' counts completed occurrences, requiring passé composé; imparfait cannot express a finite number of events.",
     "verb": "arriver",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Je bent die week drie keer te laat gekomen."
   },
   {
     "id": "ch-066",
@@ -789,7 +854,8 @@
     "answer": "est resté(e)",
     "why": "'pendant toute la semaine dernière' bounds the stay, so passé composé fits; imparfait would leave the duration open.",
     "verb": "rester",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Hij is de hele afgelopen week in het hotel gebleven."
   },
   {
     "id": "ch-067",
@@ -801,7 +867,8 @@
     "answer": "a fait",
     "why": "The closed span 'pendant tout le week-end' requires passé composé; imparfait would describe weather as merely ongoing background.",
     "verb": "faire",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Het was het hele weekend koud in de bergen."
   },
   {
     "id": "ch-068",
@@ -813,7 +880,8 @@
     "answer": "es parti(e)",
     "why": "'pendant deux longues années' bounds the absence, forcing passé composé; imparfait would imply an incomplete or habitual departure.",
     "verb": "partir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Je bent twee lange jaren op reis geweest."
   },
   {
     "id": "ch-069",
@@ -825,7 +893,8 @@
     "answer": "as pris",
     "why": "'pendant tout l'hiver dernier' closes the period, so passé composé fits; imparfait would describe an unbounded habit.",
     "verb": "prendre",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Je hebt dat medicijn de hele afgelopen winter geslikt."
   },
   {
     "id": "ch-070",
@@ -837,7 +906,8 @@
     "answer": "ai dû",
     "why": "'pendant six mois' sets a finished duration, requiring passé composé; imparfait would present the obligation as ongoing background.",
     "verb": "devoir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Ik heb zes maanden moeten werken om mijn studie te betalen."
   },
   {
     "id": "ch-071",
@@ -849,7 +919,8 @@
     "answer": "es resté(e)",
     "why": "'pendant tout l'été' bounds the stay, forcing passé composé; imparfait would leave it as an open-ended situation.",
     "verb": "rester",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Je bent de hele zomer bij je grootouders gebleven."
   },
   {
     "id": "ch-072",
@@ -861,7 +932,8 @@
     "answer": "avons pensé",
     "why": "'pendant plusieurs jours' closes the time frame, so passé composé fits; imparfait would describe ongoing reflection without limit.",
     "verb": "penser",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "We hebben meerdere dagen over dat probleem nagedacht zonder oplossing."
   },
   {
     "id": "ch-073",
@@ -873,7 +945,8 @@
     "answer": "avez commencé",
     "why": "'à trois reprises' counts finite completed attempts, requiring passé composé; imparfait cannot express bounded repetitions.",
     "verb": "commencer",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Jullie zijn drie keer aan het project begonnen voordat het lukte."
   },
   {
     "id": "ch-074",
@@ -885,7 +958,8 @@
     "answer": "avons su",
     "why": "The bounded 'pendant à peine une heure' marks a completed span, so passé composé fits; imparfait would suggest continuous knowledge.",
     "verb": "savoir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "We kenden het nieuws amper een uur voordat het veranderde."
   },
   {
     "id": "ch-075",
@@ -897,7 +971,8 @@
     "answer": "ai dû",
     "why": "'pendant toute la journée de dimanche' bounds the obligation, forcing passé composé; imparfait would present it as ongoing background.",
     "verb": "devoir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Ik heb de hele zondag in bed moeten blijven."
   },
   {
     "id": "ch-076",
@@ -909,7 +984,8 @@
     "answer": "a cru",
     "why": "'pendant des années' closes the belief's duration, requiring passé composé; imparfait would leave the belief open-ended.",
     "verb": "croire",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Hij heeft jarenlang in dat verhaal geloofd voordat hij het doorhad."
   },
   {
     "id": "ch-077",
@@ -921,7 +997,8 @@
     "answer": "avez eu",
     "why": "'pendant toute la réunion d'hier' bounds the state, so passé composé fits; imparfait would describe it as unbounded background.",
     "verb": "avoir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Jullie hadden de hele vergadering van gisteren hoofdpijn."
   },
   {
     "id": "ch-078",
@@ -933,7 +1010,8 @@
     "answer": "avons demandé",
     "why": "'plusieurs fois' within a closed period requires passé composé; imparfait cannot express bounded repeated requests.",
     "verb": "demander",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "We hebben tijdens die zware periode meerdere keren om hulp gevraagd."
   },
   {
     "id": "ch-079",
@@ -945,7 +1023,8 @@
     "answer": "a tenu",
     "why": "'pendant vingt minutes' bounds the holding, forcing passé composé; imparfait would leave the action open-ended.",
     "verb": "tenir",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Hij hield het touw twintig minuten stevig vast zonder los te laten."
   },
   {
     "id": "ch-080",
@@ -957,7 +1036,8 @@
     "answer": "as regardé",
     "why": "'pendant trois heures' closes the viewing time, so passé composé fits; imparfait would present it as ongoing background.",
     "verb": "regarder",
-    "category": "duration"
+    "category": "duration",
+    "sentenceNl": "Je hebt gisteravond drie uur televisie gekeken."
   },
   {
     "id": "ch-081",
@@ -969,7 +1049,8 @@
     "answer": "étiez",
     "why": "Imparfait describes an ongoing childhood trait; 'avez été' would frame it as a completed, bounded period rather than a lasting characteristic.",
     "verb": "être",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen je klein was, was je heel verlegen, naar het schijnt."
   },
   {
     "id": "ch-082",
@@ -981,7 +1062,8 @@
     "answer": "ai été",
     "why": "Passé composé marks the sudden reaction at that moment; 'étais' would just describe a background state without the burst of surprise.",
     "verb": "être",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen ik het cijfer zag, was ik zo verrast dat ik het uitschreeuwde."
   },
   {
     "id": "ch-083",
@@ -993,7 +1075,8 @@
     "answer": "étiez",
     "why": "Imparfait describes an ongoing, habitual state; 'avez été' would imply a single bounded episode, contradicting 'à l'époque, toujours'.",
     "verb": "être",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "In die tijd had je 's ochtends altijd een goed humeur."
   },
   {
     "id": "ch-084",
@@ -1005,7 +1088,8 @@
     "answer": "ont été",
     "why": "Passé composé captures the abrupt shift into anger at the moment; 'étaient' would describe a pre-existing state, not the reaction.",
     "verb": "être",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen ze het nieuws hoorden, werden de buren opeens woedend."
   },
   {
     "id": "ch-085",
@@ -1017,7 +1101,8 @@
     "answer": "avaient",
     "why": "Imparfait describes an ongoing recurring fear; 'ont eu' would signal one single moment of fear, clashing with 'toujours'.",
     "verb": "avoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Als kind waren ze 's nachts altijd bang voor onweer."
   },
   {
     "id": "ch-086",
@@ -1029,7 +1114,8 @@
     "answer": "ont eu",
     "why": "Passé composé marks the sudden onset of fear at one instant; 'avaient' would describe an ongoing state, not that reaction.",
     "verb": "avoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Gisteravond werden de kinderen plotseling bang toen ze dat geluid hoorden."
   },
   {
     "id": "ch-087",
@@ -1041,7 +1127,8 @@
     "answer": "avais",
     "why": "Imparfait describes an ongoing physical description; 'as eu' would frame it as a single completed event, which makes no sense here.",
     "verb": "avoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen je klein was, had je blond, krullend haar."
   },
   {
     "id": "ch-088",
@@ -1053,7 +1140,8 @@
     "answer": "ai eu",
     "why": "Passé composé captures the idea arriving at one specific moment; 'avais' would describe merely having an idea in the background.",
     "verb": "avoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen ik de brief opende, kreeg ik opeens een geniaal idee."
   },
   {
     "id": "ch-089",
@@ -1065,7 +1153,8 @@
     "answer": "savais",
     "why": "Imparfait describes ongoing knowledge already possessed; 'ai su' would mean the moment I found out, contradicting 'déjà bien avant'.",
     "verb": "savoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Ik wist het antwoord al lang voordat hij het me gaf."
   },
   {
     "id": "ch-090",
@@ -1077,7 +1166,8 @@
     "answer": "as su",
     "why": "Passé composé marks the moment of finding out; 'savais' would describe knowledge already held, contradicting 'seulement hier'.",
     "verb": "savoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Pas gisteren kwam je de waarheid over haar te weten."
   },
   {
     "id": "ch-091",
@@ -1089,7 +1179,8 @@
     "answer": "savait",
     "why": "Imparfait describes a lasting state of not-knowing; 'a su' would mean the instant of learning, which doesn't fit 'pas encore'.",
     "verb": "savoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Op dat moment wist hij nog niet dat zijn moeder ziek was."
   },
   {
     "id": "ch-092",
@@ -1101,7 +1192,8 @@
     "answer": "avons su",
     "why": "Passé composé marks the specific moment we found out; 'savions' would imply we already knew, contradicting learning it that day.",
     "verb": "savoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "We hoorden het nieuws diezelfde dag nog van een vriend."
   },
   {
     "id": "ch-093",
@@ -1113,7 +1205,8 @@
     "answer": "voulions",
     "why": "Imparfait describes an ongoing childhood wish; 'avons voulu' would signal a single momentary decision, clashing with 'toujours'.",
     "verb": "vouloir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Als kind wilden we later altijd astronaut worden."
   },
   {
     "id": "ch-094",
@@ -1125,7 +1218,8 @@
     "answer": "avez voulu",
     "why": "Passé composé marks a decisive wish acted on at that moment; 'vouliez' would describe a mere ongoing desire without the resolve.",
     "verb": "vouloir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Die avond wilde je per se weg voordat het afgelopen was."
   },
   {
     "id": "ch-095",
@@ -1137,7 +1231,8 @@
     "answer": "voulaient",
     "why": "Imparfait describes their ongoing desire in the background; 'ont voulu' would imply a decisive attempt at one point, not the lingering wish.",
     "verb": "vouloir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "De gasten wilden nog blijven, maar het werd al laat."
   },
   {
     "id": "ch-096",
@@ -1149,7 +1244,8 @@
     "answer": "ont voulu",
     "why": "Passé composé marks the immediate decision to try at that moment; 'voulaient' would describe a background desire, not the reaction.",
     "verb": "vouloir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen het hun werd voorgesteld, wilden de leerlingen het meteen proberen."
   },
   {
     "id": "ch-097",
@@ -1161,7 +1257,8 @@
     "answer": "pouvait",
     "why": "Imparfait describes an ongoing ability he had; 'a pu' would mean he managed it once on a specific occasion.",
     "verb": "pouvoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Op zijn twintigste kon hij moeiteloos een marathon lopen."
   },
   {
     "id": "ch-098",
@@ -1173,7 +1270,8 @@
     "answer": "ai pu",
     "why": "Passé composé marks the moment I succeeded in doing it; 'pouvais' would describe a general ability, not the successful accomplishment.",
     "verb": "pouvoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Na verschillende pogingen kon ik gisteren eindelijk de deur openen."
   },
   {
     "id": "ch-099",
@@ -1185,7 +1283,8 @@
     "answer": "pouvait",
     "why": "Imparfait describes an ongoing capacity in the past; 'a pu' would signal a single successful instance, not a lasting ability.",
     "verb": "pouvoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Toen hij jong was, kon hij zonder bril lezen."
   },
   {
     "id": "ch-100",
@@ -1197,6 +1296,698 @@
     "answer": "ai pu",
     "why": "Passé composé marks the specific successful outcome; 'pouvais' would describe a general capacity rather than actually managing it this time.",
     "verb": "pouvoir",
-    "category": "meaning"
+    "category": "meaning",
+    "sentenceNl": "Ondanks de drukte kon ik uiteindelijk toch een zitplaats vinden."
+  },
+  {
+    "id": "ch-101",
+    "sentence": "C'était un spectacle ___ dans le parc.",
+    "sentenceNl": "Het was een openbare voorstelling in het park.",
+    "options": [
+      "public",
+      "publique"
+    ],
+    "answer": "public",
+    "why": "\"Spectacle\" is masculine, so the adjective takes the masculine form \"public\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-102",
+    "sentence": "Cette star a une ___ carrière.",
+    "sentenceNl": "Die ster heeft een lange carrière.",
+    "options": [
+      "long",
+      "longue"
+    ],
+    "answer": "longue",
+    "why": "\"Star\" is feminine, so the adjective takes the feminine form \"longue\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-103",
+    "sentence": "La ___ mademoiselle est arrivée hier.",
+    "sentenceNl": "De eerste juffrouw is gisteren aangekomen.",
+    "options": [
+      "premier",
+      "première"
+    ],
+    "answer": "première",
+    "why": "\"Mademoiselle\" is feminine, so the adjective takes the feminine form \"première\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-104",
+    "sentence": "J'ai reçu une ___ note ce matin.",
+    "sentenceNl": "Ik heb vanochtend een nieuw bericht gekregen.",
+    "options": [
+      "nouveau",
+      "nouvelle"
+    ],
+    "answer": "nouvelle",
+    "why": "\"Note\" is feminine, so the adjective takes the feminine form \"nouvelle\".",
+    "category": "agreement",
+    "note": "nouvel before a vowel or mute h: un nouvel ami."
+  },
+  {
+    "id": "ch-105",
+    "sentence": "Nous marchons sur le chemin ___ du matin.",
+    "sentenceNl": "We lopen over het koele pad in de ochtend.",
+    "options": [
+      "frais",
+      "fraîche"
+    ],
+    "answer": "frais",
+    "why": "\"Chemin\" is masculine, so the adjective takes the masculine form \"frais\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-106",
+    "sentence": "Ils ont posé le ___ toit hier.",
+    "sentenceNl": "Ze hebben gisteren het nieuwe dak geplaatst.",
+    "options": [
+      "nouveau",
+      "nouvelle"
+    ],
+    "answer": "nouveau",
+    "why": "\"Toit\" is masculine, so the adjective takes the masculine form \"nouveau\".",
+    "category": "agreement",
+    "note": "nouvel before a vowel or mute h: un nouvel ami."
+  },
+  {
+    "id": "ch-107",
+    "sentence": "Les pirates ont trouvé le ___ trésor.",
+    "sentenceNl": "De piraten hebben de nieuwe schat gevonden.",
+    "options": [
+      "nouveau",
+      "nouvelle"
+    ],
+    "answer": "nouveau",
+    "why": "\"Trésor\" is masculine, so the adjective takes the masculine form \"nouveau\".",
+    "category": "agreement",
+    "note": "nouvel before a vowel or mute h: un nouvel ami."
+  },
+  {
+    "id": "ch-108",
+    "sentence": "Le poulet ___ cuit lentement au four.",
+    "sentenceNl": "De lange kip gaart langzaam in de oven.",
+    "options": [
+      "long",
+      "longue"
+    ],
+    "answer": "long",
+    "why": "\"Poulet\" is masculine, so the adjective takes the masculine form \"long\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-109",
+    "sentence": "Le bruit ___ dérange tout le quartier.",
+    "sentenceNl": "Het openbare lawaai stoort de hele buurt.",
+    "options": [
+      "public",
+      "publique"
+    ],
+    "answer": "public",
+    "why": "\"Bruit\" is masculine, so the adjective takes the masculine form \"public\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-110",
+    "sentence": "Sa théorie est ___ et bien expliquée.",
+    "sentenceNl": "Zijn theorie is volledig en goed uitgelegd.",
+    "options": [
+      "complet",
+      "complète"
+    ],
+    "answer": "complète",
+    "why": "\"Théorie\" is feminine, so the adjective takes the feminine form \"complète\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-111",
+    "sentence": "Le goût ___ de la sauce me plaît.",
+    "sentenceNl": "De dikke smaak van de saus bevalt me.",
+    "options": [
+      "épais",
+      "épaisse"
+    ],
+    "answer": "épais",
+    "why": "\"Goût\" is masculine, so the adjective takes the masculine form \"épais\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-112",
+    "sentence": "C'est un tueur ___ recherché partout.",
+    "sentenceNl": "Het is een publiekelijk gezochte moordenaar.",
+    "options": [
+      "public",
+      "publique"
+    ],
+    "answer": "public",
+    "why": "\"Tueur\" is masculine, so the adjective takes the masculine form \"public\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-113",
+    "sentence": "Le plan ___ est posé sur la table.",
+    "sentenceNl": "Het roodbruine plan ligt op de tafel.",
+    "options": [
+      "roux",
+      "rousse"
+    ],
+    "answer": "roux",
+    "why": "\"Plan\" is masculine, so the adjective takes the masculine form \"roux\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-114",
+    "sentence": "Il a laissé une ___ note sur le frigo.",
+    "sentenceNl": "Hij heeft een groot briefje op de koelkast achtergelaten.",
+    "options": [
+      "gros",
+      "grosse"
+    ],
+    "answer": "grosse",
+    "why": "\"Note\" is feminine, so the adjective takes the feminine form \"grosse\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-115",
+    "sentence": "Attends encore une ___ minute, s'il te plaît.",
+    "sentenceNl": "Wacht nog even een rossig minuutje, alsjeblieft.",
+    "options": [
+      "roux",
+      "rousse"
+    ],
+    "answer": "rousse",
+    "why": "\"Minute\" is feminine, so the adjective takes the feminine form \"rousse\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-116",
+    "sentence": "Le tir ___ a raté la cible.",
+    "sentenceNl": "Het roodachtige schot miste het doel.",
+    "options": [
+      "roux",
+      "rousse"
+    ],
+    "answer": "roux",
+    "why": "\"Tir\" is masculine, so the adjective takes the masculine form \"roux\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-117",
+    "sentence": "C'est un avocat ___ dans la hiérarchie.",
+    "sentenceNl": "Het is een lage advocaat in de hiërarchie.",
+    "options": [
+      "bas",
+      "basse"
+    ],
+    "answer": "bas",
+    "why": "\"Avocat\" is masculine, so the adjective takes the masculine form \"bas\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-118",
+    "sentence": "Il a le bras ___ après la baignade.",
+    "sentenceNl": "Hij heeft een koele arm na het zwemmen.",
+    "options": [
+      "frais",
+      "fraîche"
+    ],
+    "answer": "frais",
+    "why": "\"Bras\" is masculine, so the adjective takes the masculine form \"frais\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-119",
+    "sentence": "C'est un ___ sorcier plein de sagesse.",
+    "sentenceNl": "Het is een oude tovenaar vol wijsheid.",
+    "options": [
+      "vieux",
+      "vieille"
+    ],
+    "answer": "vieux",
+    "why": "\"Sorcier\" is masculine, so the adjective takes the masculine form \"vieux\".",
+    "category": "agreement",
+    "note": "vieil before a vowel or mute h: un vieil arbre."
+  },
+  {
+    "id": "ch-120",
+    "sentence": "Il a écrit sur une note ___ hier soir.",
+    "sentenceNl": "Hij heeft gisteravond op een wit briefje geschreven.",
+    "options": [
+      "blanc",
+      "blanche"
+    ],
+    "answer": "blanche",
+    "why": "\"Note\" is feminine, so the adjective takes the feminine form \"blanche\".",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-121",
+    "sentence": "Le juge a répondu d'un ton ___.",
+    "sentenceNl": "De rechter antwoordde op droge toon.",
+    "options": [
+      "sec",
+      "sèche"
+    ],
+    "answer": "sec",
+    "why": "\"Juge\" is masculine, so the masculine form \"sec\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-122",
+    "sentence": "C'est un sujet ___ et sans intérêt.",
+    "sentenceNl": "Het is een droog en oninteressant onderwerp.",
+    "options": [
+      "sec",
+      "sèche"
+    ],
+    "answer": "sec",
+    "why": "\"Sujet\" is masculine, so the masculine form \"sec\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-123",
+    "sentence": "Il a chanté une ___ chanson toute la soirée.",
+    "sentenceNl": "Hij zong de hele avond een vals lied.",
+    "options": [
+      "faux",
+      "fausse"
+    ],
+    "answer": "fausse",
+    "why": "\"Chanson\" is feminine, so the feminine form \"fausse\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-124",
+    "sentence": "Il exerce une ___ autorité sur ses collègues.",
+    "sentenceNl": "Hij oefent een valse autoriteit uit over zijn collega's.",
+    "options": [
+      "faux",
+      "fausse"
+    ],
+    "answer": "fausse",
+    "why": "\"Autorité\" is feminine, so the feminine form \"fausse\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-125",
+    "sentence": "Ils ont installé une ___ fenêtre dans le salon.",
+    "sentenceNl": "Ze hebben een mooi raam in de woonkamer geplaatst.",
+    "options": [
+      "beau",
+      "belle"
+    ],
+    "answer": "belle",
+    "why": "\"Fenêtre\" is feminine, so the feminine form \"belle\" is used, and \"beau\" precedes the noun.",
+    "category": "agreement",
+    "note": "bel before a vowel or mute h: un bel homme."
+  },
+  {
+    "id": "ch-126",
+    "sentence": "Elle m'a confié un secret ___ comme neige.",
+    "sentenceNl": "Ze vertelde me een onschuldig geheimpje.",
+    "options": [
+      "blanc",
+      "blanche"
+    ],
+    "answer": "blanc",
+    "why": "\"Secret\" is masculine, so the masculine form \"blanc\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-127",
+    "sentence": "Nous avons accepté une ___ condition pour ce contrat.",
+    "sentenceNl": "We hebben een grote voorwaarde voor dit contract aanvaard.",
+    "options": [
+      "gros",
+      "grosse"
+    ],
+    "answer": "grosse",
+    "why": "\"Condition\" is feminine, so the feminine form \"grosse\" is used, and \"gros\" precedes the noun.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-128",
+    "sentence": "Mon voisin parle toujours d'un ton ___.",
+    "sentenceNl": "Mijn buurman spreekt altijd met een zachte stem.",
+    "options": [
+      "bas",
+      "basse"
+    ],
+    "answer": "bas",
+    "why": "\"Voisin\" is masculine, so the masculine form \"bas\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-129",
+    "sentence": "L'oiseau avait une ___ aile après la tempête.",
+    "sentenceNl": "De vogel had een droge vleugel na de storm.",
+    "options": [
+      "sec",
+      "sèche"
+    ],
+    "answer": "sèche",
+    "why": "\"Aile\" is feminine, so the feminine form \"sèche\" is used.",
+    "category": "agreement",
+    "note": null
+  },
+  {
+    "id": "ch-130",
+    "sentence": "Il y a un ___ tas de feuilles dans le jardin.",
+    "sentenceNl": "Er ligt een mooie hoop bladeren in de tuin.",
+    "options": [
+      "beau",
+      "belle"
+    ],
+    "answer": "beau",
+    "why": "\"Tas\" is masculine, so the masculine form \"beau\" is used, and \"beau\" precedes the noun.",
+    "category": "agreement",
+    "note": "bel before a vowel or mute h: un bel homme."
+  },
+  {
+    "id": "ch-131",
+    "sentence": "Le train va ___ dans cinq minutes, dépêchons-nous.",
+    "sentenceNl": "De trein vertrekt over vijf minuten, laten we opschieten.",
+    "options": [
+      "partir",
+      "sortir",
+      "quitter"
+    ],
+    "answer": "partir",
+    "why": "The train leaves with no direct object, which fits 'partir'; 'quitter' needs an object and 'sortir' would mean physically exiting a place.",
+    "category": "confusable",
+    "note": "partir leaves with no object (partir de Paris); sortir is to go out or exit; quitter always needs a direct object (quitter la maison, quitter quelqu'un)."
+  },
+  {
+    "id": "ch-132",
+    "sentence": "Il est minuit et les enfants ne dorment ___ pas.",
+    "sentenceNl": "Het is middernacht en de kinderen slapen nog steeds niet.",
+    "options": [
+      "encore",
+      "toujours"
+    ],
+    "answer": "encore",
+    "why": "'encore pas' means 'still not' about a state expected to change; 'toujours' would express permanent habit here.",
+    "category": "confusable",
+    "note": "encore means still or again, often about something expected to end; toujours means always, or still in the sense of persisting."
+  },
+  {
+    "id": "ch-133",
+    "sentence": "Nous avons passé une agréable ___ entre amis hier.",
+    "sentenceNl": "We hebben gisteren een gezellige avond met vrienden doorgebracht.",
+    "options": [
+      "soir",
+      "soirée"
+    ],
+    "answer": "soirée",
+    "why": "The whole evening as a lived span and event calls for 'soirée'; 'soir' is only a point in time.",
+    "category": "confusable",
+    "note": "soir for a plain point in time; soirée when the span or the event itself is felt (une bonne soirée, une soirée entre amis)."
+  },
+  {
+    "id": "ch-134",
+    "sentence": "Elle a décidé de ___ son mari après vingt ans.",
+    "sentenceNl": "Ze besloot haar man na twintig jaar te verlaten.",
+    "options": [
+      "partir",
+      "sortir",
+      "quitter"
+    ],
+    "answer": "quitter",
+    "why": "'son mari' is a direct object meaning to leave a person, which only 'quitter' takes; 'partir' and 'sortir' don't take a direct object this way.",
+    "category": "confusable",
+    "note": "partir leaves with no object (partir de Paris); sortir is to go out or exit; quitter always needs a direct object (quitter la maison, quitter quelqu'un)."
+  },
+  {
+    "id": "ch-135",
+    "sentence": "Je peux te ___ dix euros si tu me les rends demain.",
+    "sentenceNl": "Ik kan je tien euro lenen als je ze me morgen teruggeeft.",
+    "options": [
+      "emprunter",
+      "prêter"
+    ],
+    "answer": "prêter",
+    "why": "The speaker gives money temporarily to the other person, which is 'prêter'; 'emprunter' would be to take it.",
+    "category": "confusable",
+    "note": "emprunter is to borrow (take); prêter is to lend (give temporarily)."
+  },
+  {
+    "id": "ch-136",
+    "sentence": "J'ai travaillé toute la ___ sans faire de pause.",
+    "sentenceNl": "Ik heb de hele ochtend gewerkt zonder pauze te nemen.",
+    "options": [
+      "matin",
+      "matinée"
+    ],
+    "answer": "matinée",
+    "why": "'toute la' stresses the whole span of the morning, requiring 'matinée'; 'matin' marks only a point.",
+    "category": "confusable",
+    "note": "matin for a plain point in time; matinée when the span is felt (toute la matinée)."
+  },
+  {
+    "id": "ch-137",
+    "sentence": "N'oublie pas d'___ un cadeau quand tu viendras chez moi.",
+    "sentenceNl": "Vergeet niet een cadeau mee te brengen als je bij mij komt.",
+    "options": [
+      "apporter",
+      "emporter"
+    ],
+    "answer": "apporter",
+    "why": "The gift is brought toward the reference point (my place), which is 'apporter'; 'emporter' means to take away.",
+    "category": "confusable",
+    "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it."
+  },
+  {
+    "id": "ch-138",
+    "sentence": "Ce gâteau est vraiment ___, tu devrais goûter.",
+    "sentenceNl": "Deze taart is echt lekker, je zou hem moeten proeven.",
+    "options": [
+      "bon",
+      "bien"
+    ],
+    "answer": "bon",
+    "why": "It qualifies the noun 'gâteau' as an adjective, so 'bon'; 'bien' is an adverb and can't describe the cake here.",
+    "category": "confusable",
+    "note": "bon is an adjective (agrees with a noun); bien is an adverb (modifies a verb)."
+  },
+  {
+    "id": "ch-139",
+    "sentence": "Il a plu presque toute l'___ cette fois-ci.",
+    "sentenceNl": "Het heeft dit keer bijna het hele jaar geregend.",
+    "options": [
+      "an",
+      "année"
+    ],
+    "answer": "année",
+    "why": "'toute l'' emphasizes the whole duration, requiring 'année'; 'an' is a plain count and can't follow 'toute l''.",
+    "category": "confusable",
+    "note": "an for a plain count (deux ans); année when the duration itself is felt (toute l'année, une bonne année)."
+  },
+  {
+    "id": "ch-140",
+    "sentence": "Quand tu pars en pique-nique, ___ une couverture.",
+    "sentenceNl": "Als je gaat picknicken, neem dan een deken mee.",
+    "options": [
+      "apporter",
+      "emporter"
+    ],
+    "answer": "emporter",
+    "why": "The blanket is taken away with you from home, which is 'emporter'; 'apporter' implies bringing toward the speaker.",
+    "category": "confusable",
+    "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it."
+  },
+  {
+    "id": "ch-142",
+    "sentence": "J'ai attendu chez le médecin toute la ___.",
+    "sentenceNl": "Ik heb de hele dag bij de dokter gewacht.",
+    "options": [
+      "jour",
+      "journée"
+    ],
+    "answer": "journée",
+    "why": "'toute la' foregrounds the whole span of the day, so 'journée'; 'jour' marks only a point or a count.",
+    "category": "confusable",
+    "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+  },
+  {
+    "id": "ch-143",
+    "sentence": "Après tant d'années, elle m'aime ___ autant.",
+    "sentenceNl": "Na zoveel jaren houdt ze nog altijd evenveel van me.",
+    "options": [
+      "encore",
+      "toujours"
+    ],
+    "answer": "toujours",
+    "why": "Here it means love that persists unchanged over time, which is 'toujours'; 'encore' would suggest it might soon end.",
+    "category": "confusable",
+    "note": "encore means still or again, often about something expected to end; toujours means always, or still in the sense of persisting."
+  },
+  {
+    "id": "ch-144",
+    "sentence": "Je vais ___ les enfants à l'école ce matin.",
+    "sentenceNl": "Ik ga de kinderen vanochtend naar school brengen.",
+    "options": [
+      "amener",
+      "emmener"
+    ],
+    "answer": "emmener",
+    "why": "The children are taken away from home to school, so 'emmener'; 'amener' implies bringing them toward the reference point.",
+    "category": "confusable",
+    "note": "amener brings a person or animal toward the point of reference; emmener takes them away from it."
+  },
+  {
+    "id": "ch-145",
+    "sentence": "Le premier ___ de l'année, tout était fermé.",
+    "sentenceNl": "Op de eerste dag van het jaar was alles gesloten.",
+    "options": [
+      "jour",
+      "journée"
+    ],
+    "answer": "jour",
+    "why": "This is a single point in time, the first day, which takes 'jour'; 'journée' stresses the span.",
+    "category": "confusable",
+    "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+  },
+  {
+    "id": "ch-146",
+    "sentence": "Je te souhaite une très bonne ___ pleine de bonheur.",
+    "sentenceNl": "Ik wens je een heel goed jaar vol geluk.",
+    "options": [
+      "an",
+      "année"
+    ],
+    "answer": "année",
+    "why": "A wish for the whole year as a lived span takes 'année'; 'an' is only a plain count.",
+    "category": "confusable",
+    "note": "an for a plain count (deux ans); année when the duration itself is felt (toute l'année, une bonne année)."
+  },
+  {
+    "id": "ch-150",
+    "sentence": "Ce week-end, nous allons ___ ma grand-mère à l'hôpital.",
+    "sentenceNl": "Dit weekend gaan we mijn oma in het ziekenhuis bezoeken.",
+    "options": [
+      "visiter",
+      "rendre visite à"
+    ],
+    "answer": "rendre visite à",
+    "why": "The object is a person (grandmother), which requires 'rendre visite à'; 'visiter' is only for places.",
+    "category": "confusable",
+    "note": "visiter is for a place; rendre visite à is for a person."
+  },
+  {
+    "id": "ch-151",
+    "sentence": "J'ai rendez-vous ___ le dentiste demain matin.",
+    "sentenceNl": "Ik heb morgenochtend een afspraak bij de tandarts.",
+    "options": [
+      "chez",
+      "à"
+    ],
+    "answer": "chez",
+    "why": "'chez' is used before a person or practitioner (the dentist), whereas 'à' would need a place or institution.",
+    "category": "confusable",
+    "note": "chez is at or to a person's home or practice (chez le médecin); à is at or to a place or institution (à l'école)."
+  },
+  {
+    "id": "ch-155",
+    "sentence": "Il a plu toute la ___ sans s'arrêter.",
+    "sentenceNl": "Het heeft de hele dag door geregend.",
+    "options": [
+      "jour",
+      "journée"
+    ],
+    "answer": "journée",
+    "why": "The expression 'toute la journée' stresses the whole span of the day, requiring 'journée'.",
+    "category": "confusable",
+    "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+  },
+  {
+    "id": "ch-156",
+    "sentence": "Nous nous verrons un autre ___.",
+    "sentenceNl": "We zien elkaar wel een andere dag.",
+    "options": [
+      "jour",
+      "journée"
+    ],
+    "answer": "jour",
+    "why": "'un autre jour' refers to a point in time, so 'jour' fits, not the duration-focused 'journée'.",
+    "category": "confusable",
+    "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+  },
+  {
+    "id": "ch-157",
+    "sentence": "Cet été, nous allons ___ le musée du Louvre.",
+    "sentenceNl": "Deze zomer gaan we het Louvre bezoeken.",
+    "options": [
+      "visiter",
+      "rendre visite à"
+    ],
+    "answer": "visiter",
+    "why": "The object is a place (a museum), so 'visiter' is correct; 'rendre visite à' is only for people.",
+    "category": "confusable",
+    "note": "visiter is for a place; rendre visite à is for a person."
+  },
+  {
+    "id": "ch-158",
+    "sentence": "Ce week-end, je vais ___ les enfants à la mer.",
+    "sentenceNl": "Dit weekend neem ik de kinderen mee naar zee.",
+    "options": [
+      "amener",
+      "emmener"
+    ],
+    "answer": "emmener",
+    "why": "The children are taken away to another place (the sea), so 'emmener' fits, not 'amener'.",
+    "category": "confusable",
+    "note": "amener brings a person or animal toward the point of reference; emmener takes them away from it."
+  },
+  {
+    "id": "ch-159",
+    "sentence": "Le premier ___ du mois, je paie mon loyer.",
+    "sentenceNl": "Op de eerste dag van de maand betaal ik mijn huur.",
+    "options": [
+      "jour",
+      "journée"
+    ],
+    "answer": "jour",
+    "why": "This marks a specific point/date in time, so 'jour' fits, not the span-focused 'journée'.",
+    "category": "confusable",
+    "note": "jour for a plain count or a point in time; journée when the span of the day is felt (toute la journée)."
+  },
+  {
+    "id": "ch-160",
+    "sentence": "N'oublie pas d'___ ton parapluie, il va pleuvoir.",
+    "sentenceNl": "Vergeet je paraplu niet mee te nemen, het gaat regenen.",
+    "options": [
+      "apporter",
+      "emporter"
+    ],
+    "answer": "emporter",
+    "why": "The umbrella is taken away with you when leaving, so 'emporter' fits, not 'apporter'.",
+    "category": "confusable",
+    "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it."
   }
 ]

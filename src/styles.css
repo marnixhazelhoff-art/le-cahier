@@ -198,7 +198,7 @@ nav.tabs a[aria-current="page"] {
 .subtabs {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: var(--rule);
+  margin-bottom: calc(var(--rule) * 2);
 }
 
 .choices {

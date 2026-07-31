@@ -85,10 +85,10 @@ export function groupVerbExercises(verbCards) {
 // meaning) are all still imparfait-vs-passé-composé to a learner picking a
 // category to practice — they exist as separate tags for generation
 // coverage, not as separate skills, so they group into one category here.
-const TENSE_CATEGORIES = new Set(['background', 'habit', 'state', 'duration', 'meaning']);
+const TENSE_CATEGORIES = new Set(['background', 'habit', 'state', 'duration', 'meaning', 'tense-4way']);
 
 const CHOOSER_CATEGORY_LABELS = {
-  tense: 'Imparfait vs passé composé',
+  tense: 'Verbs (tenses)',
   agreement: 'Adjective agreement',
   confusable: 'Best word fits',
 };
