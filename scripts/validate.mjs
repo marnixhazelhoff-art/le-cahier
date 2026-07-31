@@ -193,11 +193,17 @@ if (chooser.length > 0) {
     ok(`${label}: id is unique`, !seenId.has(item.id));
     seenId.add(item.id);
     ok(`${label}: sentence has exactly one blank`, (item.sentence.match(/___/g) ?? []).length === 1);
-    ok(`${label}: has exactly two options`, Array.isArray(item.options) && item.options.length === 2);
-    ok(`${label}: answer is one of the two options`, item.options.includes(item.answer));
-    ok(`${label}: options are distinct`, item.options[0] !== item.options[1]);
+    // Two options today (imparfait vs passé composé); a future category (e.g.
+    // adjective agreement: beau/belle/beaux/belles) may offer more, so this
+    // checks "at least two, all distinct", not "exactly two".
+    ok(`${label}: has at least two options`, Array.isArray(item.options) && item.options.length >= 2);
+    ok(`${label}: answer is one of the options`, item.options.includes(item.answer));
+    ok(`${label}: options are distinct`, new Set(item.options).size === item.options.length);
     ok(`${label}: has a non-empty why`, typeof item.why === 'string' && item.why.trim().length > 0);
     ok(`${label}: verb exists in verbs.json`, item.verb in byName);
+    if (item.sentenceNl !== undefined) {
+      ok(`${label}: sentenceNl is a non-empty string`, typeof item.sentenceNl === 'string' && item.sentenceNl.trim().length > 0);
+    }
   }
   console.log(`\nchooser.json: ${chooser.length} items checked`);
 }

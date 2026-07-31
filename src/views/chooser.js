@@ -56,11 +56,14 @@ function renderCard(container, queue, index, onDone) {
     recordReview('chooser', correct ? 'good' : 'again', { introduced: card.reps === 0 });
 
     clear(feedback);
-    feedback.append(
+    // native Element.append coerces a null argument to the text "null"
+    // instead of skipping it, unlike this file's h() helper — filter first.
+    feedback.append(...[
       h('p', { class: correct ? 'correct' : 'incorrect' },
         correct ? 'Correct.' : `Not quite: ${item.answer}`),
       h('p', {}, item.why),
-    );
+      item.sentenceNl ? h('p', { class: 'gloss' }, item.sentenceNl) : null,
+    ].filter(Boolean));
     const next = h('button', { type: 'button', onclick: () => renderCard(container, queue, index + 1, onDone) }, 'Next');
     clear(actions);
     actions.append(next);
