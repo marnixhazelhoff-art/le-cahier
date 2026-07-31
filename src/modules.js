@@ -91,6 +91,7 @@ const CHOOSER_CATEGORY_LABELS = {
   tense: 'Verbs (tenses)',
   agreement: 'Adjective agreement',
   confusable: 'Best word fits',
+  preposition: 'Prepositions (à/au/en/aux)',
 };
 
 export function groupChooserCategories(chooser) {

@@ -1989,5 +1989,1205 @@
     "why": "The umbrella is taken away with you when leaving, so 'emporter' fits, not 'apporter'.",
     "category": "confusable",
     "note": "apporter brings a thing toward the point of reference; emporter takes a thing away from it."
+  },
+  {
+    "id": "ch-161",
+    "sentence": "En ce moment, je ___ enfin ce que le professeur explique.",
+    "sentenceNl": "Op dit moment begrijp ik eindelijk wat de leraar uitlegt.",
+    "options": [
+      "comprends",
+      "comprenais",
+      "comprendrai",
+      "ai compris"
+    ],
+    "answer": "comprends",
+    "why": "\"En ce moment\" marks something true right now, so the présent fits; imparfait and passé composé are past, and futur points ahead.",
+    "verb": "comprendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-162",
+    "sentence": "Quand vous étiez enfants, vous ___ du sport tous les mercredis.",
+    "sentenceNl": "Toen jullie kinderen waren, deden jullie elke woensdag aan sport.",
+    "options": [
+      "faites",
+      "faisiez",
+      "ferez",
+      "avez fait"
+    ],
+    "answer": "faisiez",
+    "why": "\"Quand vous étiez enfants\" plus \"tous les mercredis\" describes a repeated past habit, which needs the imparfait, not the one-time passé composé, present or future.",
+    "verb": "faire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-163",
+    "sentence": "Demain, tu ___ ta nouvelle veste pour la fête.",
+    "sentenceNl": "Morgen draag je je nieuwe jasje naar het feest.",
+    "options": [
+      "portes",
+      "portais",
+      "porteras",
+      "as porté"
+    ],
+    "answer": "porteras",
+    "why": "\"Demain\" points to a specific planned future action, so the futur is required; the other tenses cannot express tomorrow.",
+    "verb": "porter",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-164",
+    "sentence": "Hier, je ___ de l'aide à mon voisin pour déménager.",
+    "sentenceNl": "Gisteren heb ik mijn buurman om hulp gevraagd bij het verhuizen.",
+    "options": [
+      "demande",
+      "demandais",
+      "demanderai",
+      "ai demandé"
+    ],
+    "answer": "ai demandé",
+    "why": "\"Hier\" marks a single completed past action, so the passé composé fits; imparfait would imply habit, and present/future are wrong for yesterday.",
+    "verb": "demander",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-165",
+    "sentence": "D'habitude, ils ___ leurs grands-parents le dimanche.",
+    "sentenceNl": "Meestal zien ze hun grootouders op zondag.",
+    "options": [
+      "voient",
+      "voyaient",
+      "verront",
+      "ont vu"
+    ],
+    "answer": "voient",
+    "why": "\"D'habitude\" signals a present habit, so the présent is correct; imparfait and passé composé are past, and futur is not a habit.",
+    "verb": "voir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-166",
+    "sentence": "À cette époque-là, nous ___ souvent les oiseaux chanter le matin.",
+    "sentenceNl": "In die tijd hoorden we 's ochtends vaak de vogels zingen.",
+    "options": [
+      "entendons",
+      "entendions",
+      "entendrons",
+      "avons entendu"
+    ],
+    "answer": "entendions",
+    "why": "\"À cette époque-là\" with \"souvent\" describes a recurring past background, which the imparfait expresses, unlike the single-event passé composé or the non-past forms.",
+    "verb": "entendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-167",
+    "sentence": "Dans deux jours, tu ___ le résultat de ton examen.",
+    "sentenceNl": "Over twee dagen wacht je op de uitslag van je examen.",
+    "options": [
+      "attends",
+      "attendais",
+      "attendras",
+      "as attendu"
+    ],
+    "answer": "attendras",
+    "why": "\"Dans deux jours\" locates the action in the future, so the futur is needed; the other tenses can't express two days from now.",
+    "verb": "attendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-168",
+    "sentence": "La semaine dernière, il ___ trois jours à la campagne.",
+    "sentenceNl": "Vorige week heeft hij drie dagen op het platteland doorgebracht.",
+    "options": [
+      "passe",
+      "passait",
+      "passera",
+      "a passé"
+    ],
+    "answer": "a passé",
+    "why": "\"La semaine dernière\" marks a completed past stay, so the passé composé fits; imparfait would suggest habit, and present/future are wrong.",
+    "verb": "passer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-169",
+    "sentence": "En général, vous ___ toujours votre parapluie à la main.",
+    "sentenceNl": "Over het algemeen houden jullie altijd je paraplu in de hand.",
+    "options": [
+      "tenez",
+      "teniez",
+      "tiendrez",
+      "avez tenu"
+    ],
+    "answer": "tenez",
+    "why": "\"En général\" plus \"toujours\" signals a present habitual truth, so the présent fits, not the past or future forms.",
+    "verb": "tenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-170",
+    "sentence": "Quand j'étais petite, je ___ rentrer avant la nuit.",
+    "sentenceNl": "Toen ik klein was, moest ik voor het donker thuis zijn.",
+    "options": [
+      "dois",
+      "devais",
+      "devrai",
+      "ai dû"
+    ],
+    "answer": "devais",
+    "why": "\"Quand j'étais petite\" sets a habitual past obligation, which the imparfait conveys; the passé composé would mark one event, and present/future don't fit the past.",
+    "verb": "devoir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-171",
+    "sentence": "L'année prochaine, vous ___ dans une autre entreprise.",
+    "sentenceNl": "Volgend jaar werken jullie bij een ander bedrijf.",
+    "options": [
+      "travaillez",
+      "travailliez",
+      "travaillerez",
+      "avez travaillé"
+    ],
+    "answer": "travaillerez",
+    "why": "\"L'année prochaine\" indicates a specific future plan, requiring the futur; the other tenses can't refer to next year.",
+    "verb": "travailler",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-172",
+    "sentence": "Ce matin, vous ___ vos clés partout dans la maison.",
+    "sentenceNl": "Vanochtend hebben jullie overal in huis naar je sleutels gezocht.",
+    "options": [
+      "cherchez",
+      "cherchiez",
+      "chercherez",
+      "avez cherché"
+    ],
+    "answer": "avez cherché",
+    "why": "\"Ce matin\" marks a single completed past search, so the passé composé fits; imparfait implies habit, and present/future are wrong for this morning.",
+    "verb": "chercher",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-173",
+    "sentence": "Maintenant, tu ___ la mer depuis la fenêtre de ta chambre.",
+    "sentenceNl": "Nu zie je de zee vanuit het raam van je kamer.",
+    "options": [
+      "vois",
+      "voyais",
+      "verras",
+      "as vu"
+    ],
+    "answer": "vois",
+    "why": "\"Maintenant\" describes what is true right now, so the présent fits; the past and future forms don't match this present moment.",
+    "verb": "voir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-174",
+    "sentence": "Autrefois, les magasins ___ leurs portes dès six heures.",
+    "sentenceNl": "Vroeger openden de winkels hun deuren al om zes uur.",
+    "options": [
+      "ouvrent",
+      "ouvraient",
+      "ouvriront",
+      "ont ouvert"
+    ],
+    "answer": "ouvraient",
+    "why": "\"Autrefois\" describes a habitual past state, so the imparfait fits, not the single-event passé composé or the non-past forms.",
+    "verb": "ouvrir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-175",
+    "sentence": "Bientôt, je ___ à changer complètement de carrière.",
+    "sentenceNl": "Binnenkort zal ik erover denken om helemaal van carrière te veranderen.",
+    "options": [
+      "pense",
+      "pensais",
+      "penserai",
+      "ai pensé"
+    ],
+    "answer": "penserai",
+    "why": "\"Bientôt\" points to a future decision, so the futur fits; the past forms and the present don't express something upcoming.",
+    "verb": "penser",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-176",
+    "sentence": "Soudain, il ___ la porte et tout le monde s'est tu.",
+    "sentenceNl": "Plotseling opende hij de deur en iedereen viel stil.",
+    "options": [
+      "ouvre",
+      "ouvrait",
+      "ouvrira",
+      "a ouvert"
+    ],
+    "answer": "a ouvert",
+    "why": "\"Soudain\" plus the paired past event marks one completed action, so the passé composé fits, not the habitual imparfait or the non-past forms.",
+    "verb": "ouvrir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-177",
+    "sentence": "En ce moment, tu ___ courir plus vite qu'avant.",
+    "sentenceNl": "Op dit moment kun je sneller lopen dan vroeger.",
+    "options": [
+      "peux",
+      "pouvais",
+      "pourras",
+      "as pu"
+    ],
+    "answer": "peux",
+    "why": "\"En ce moment\" describes a present ability, so the présent fits; imparfait and passé composé are past, and futur is not now.",
+    "verb": "pouvoir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-178",
+    "sentence": "Quand vous étiez étudiants, vous ___ souvent au cinéma le soir.",
+    "sentenceNl": "Toen jullie studenten waren, gingen jullie 's avonds vaak naar de bioscoop.",
+    "options": [
+      "allez",
+      "alliez",
+      "irez",
+      "êtes allé(e)(s)"
+    ],
+    "answer": "alliez",
+    "why": "\"Quand vous étiez étudiants\" with \"souvent\" describes a repeated past habit, needing the imparfait rather than the one-time passé composé or the non-past forms.",
+    "verb": "aller",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-179",
+    "sentence": "Demain, ils ___ leurs bottes avant de partir en forêt.",
+    "sentenceNl": "Morgen trekken ze hun laarzen aan voordat ze het bos in gaan.",
+    "options": [
+      "mettent",
+      "mettaient",
+      "mettront",
+      "ont mis"
+    ],
+    "answer": "mettront",
+    "why": "\"Demain\" marks a planned future action, so the futur is required; the other tenses can't refer to tomorrow.",
+    "verb": "mettre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-180",
+    "sentence": "Hier soir, nous ___ dîner dans un petit restaurant italien.",
+    "sentenceNl": "Gisteravond zijn we uit eten gegaan in een klein Italiaans restaurant.",
+    "options": [
+      "sortons",
+      "sortions",
+      "sortirons",
+      "sommes sorti(e)s"
+    ],
+    "answer": "sommes sorti(e)s",
+    "why": "\"Hier soir\" marks a single completed past event, so the passé composé fits; imparfait implies habit, and present/future are wrong for last night.",
+    "verb": "sortir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-181",
+    "sentence": "En général, vous ___ un uniforme au bureau chaque jour de la semaine.",
+    "sentenceNl": "Over het algemeen draag je elke werkdag een uniform op kantoor.",
+    "options": [
+      "portez",
+      "portiez",
+      "porterez",
+      "avez porté"
+    ],
+    "answer": "portez",
+    "why": "The cues 'en général' and 'chaque jour' mark a present habit, so présent fits; imparfait and passé composé are past, futur is not yet happening.",
+    "verb": "porter",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-182",
+    "sentence": "À cette époque-là, nous ___ souvent à quitter la grande ville.",
+    "sentenceNl": "In die tijd dachten we er vaak aan om de grote stad te verlaten.",
+    "options": [
+      "pensons",
+      "pensions",
+      "penserons",
+      "avons pensé"
+    ],
+    "answer": "pensions",
+    "why": "'À cette époque-là' with 'souvent' signals a recurring past state, which is imparfait; présent and futur are non-past, and passé composé would mark a single event, not a recurring one.",
+    "verb": "penser",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-183",
+    "sentence": "Bientôt, tu ___ enfin tous mes amis de l'université.",
+    "sentenceNl": "Binnenkort zul je eindelijk al mijn vrienden van de universiteit kennen.",
+    "options": [
+      "connais",
+      "connaissais",
+      "connaîtras",
+      "as connu"
+    ],
+    "answer": "connaîtras",
+    "why": "'Bientôt' points to a future event, so futur simple fits; présent, imparfait and passé composé cannot express an action still to come.",
+    "verb": "connaître",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-184",
+    "sentence": "Ce matin, il ___ terminer son rapport avant la réunion importante.",
+    "sentenceNl": "Vanochtend kon hij zijn rapport afmaken vóór de belangrijke vergadering.",
+    "options": [
+      "peut",
+      "pouvait",
+      "pourra",
+      "a pu"
+    ],
+    "answer": "a pu",
+    "why": "'Ce matin' marks a single completed past action, so passé composé fits; présent and futur are non-past, and imparfait would describe an ongoing state, not the completed success.",
+    "verb": "pouvoir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-185",
+    "sentence": "En ce moment, nous ___ tous des lunettes de soleil à cause du soleil.",
+    "sentenceNl": "Op dit moment dragen we allemaal een zonnebril vanwege de zon.",
+    "options": [
+      "portons",
+      "portions",
+      "porterons",
+      "avons porté"
+    ],
+    "answer": "portons",
+    "why": "'En ce moment' anchors an action true right now, so présent fits; imparfait and passé composé are past, and futur would place it later.",
+    "verb": "porter",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-186",
+    "sentence": "Quand j'étais petit, il ___ toujours du café le matin.",
+    "sentenceNl": "Toen ik klein was, maakte hij 's ochtends altijd koffie.",
+    "options": [
+      "fait",
+      "faisait",
+      "fera",
+      "a fait"
+    ],
+    "answer": "faisait",
+    "why": "'Quand j'étais petit' with 'toujours' describes a repeated past habit, so imparfait fits; présent and futur are non-past, and passé composé would mark one single time.",
+    "verb": "faire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-187",
+    "sentence": "Dans deux jours, il ___ sûrement à notre histoire incroyable.",
+    "sentenceNl": "Over twee dagen zal hij ons ongelooflijke verhaal vast geloven.",
+    "options": [
+      "croit",
+      "croyait",
+      "croira",
+      "a cru"
+    ],
+    "answer": "croira",
+    "why": "'Dans deux jours' points to a predicted future action, so futur simple fits; présent, imparfait and passé composé cannot express something still to come.",
+    "verb": "croire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-188",
+    "sentence": "Hier, nous ___ un instant que la fête était annulée.",
+    "sentenceNl": "Gisteren dachten we even dat het feest was afgelast.",
+    "options": [
+      "croyons",
+      "croyions",
+      "croirons",
+      "avons cru"
+    ],
+    "answer": "avons cru",
+    "why": "'Hier' with 'un instant' marks a single completed past belief, so passé composé fits; présent and futur are non-past, and imparfait would suggest an ongoing state rather than a brief moment.",
+    "verb": "croire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-189",
+    "sentence": "D'habitude, je ___ mon manteau avant de sortir dans le froid.",
+    "sentenceNl": "Meestal trek ik mijn jas aan voordat ik de kou in ga.",
+    "options": [
+      "mets",
+      "mettais",
+      "mettrai",
+      "ai mis"
+    ],
+    "answer": "mets",
+    "why": "'D'habitude' signals a present habit, so présent fits; imparfait and passé composé are past, and futur would place it in the future.",
+    "verb": "mettre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-190",
+    "sentence": "Quand j'étais petite, je ___ plus timide à chaque nouvelle rentrée.",
+    "sentenceNl": "Toen ik klein was, werd ik bij elke nieuwe schoolstart verlegener.",
+    "options": [
+      "deviens",
+      "devenais",
+      "deviendrai",
+      "suis devenu(e)"
+    ],
+    "answer": "devenais",
+    "why": "'Quand j'étais petite' describes a repeated past development, so imparfait fits; présent and futur are non-past, and passé composé would mark a single completed change.",
+    "verb": "devenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-191",
+    "sentence": "Demain, tu ___ ton frère devant la gare centrale.",
+    "sentenceNl": "Morgen wacht je op je broer voor het centraal station.",
+    "options": [
+      "attends",
+      "attendais",
+      "attendras",
+      "as attendu"
+    ],
+    "answer": "attendras",
+    "why": "'Demain' marks a specific future action, so futur simple fits; présent, imparfait and passé composé cannot express something planned for tomorrow.",
+    "verb": "attendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-192",
+    "sentence": "La semaine dernière, nous ___ enfin à sa longue lettre.",
+    "sentenceNl": "Vorige week hebben we eindelijk op zijn lange brief geantwoord.",
+    "options": [
+      "répondons",
+      "répondions",
+      "répondrons",
+      "avons répondu"
+    ],
+    "answer": "avons répondu",
+    "why": "'La semaine dernière' marks a single completed past action, so passé composé fits; présent and futur are non-past, and imparfait would suggest a repeated or ongoing action.",
+    "verb": "répondre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-193",
+    "sentence": "En ce moment, je ___ avec le directeur de mon travail.",
+    "sentenceNl": "Op dit moment praat ik met de directeur van mijn werk.",
+    "options": [
+      "parle",
+      "parlais",
+      "parlerai",
+      "ai parlé"
+    ],
+    "answer": "parle",
+    "why": "'En ce moment' anchors an action happening right now, so présent fits; imparfait and passé composé are past, and futur would place it later.",
+    "verb": "parler",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-194",
+    "sentence": "À cette époque-là, tu ___ la mer depuis la fenêtre de ta chambre.",
+    "sentenceNl": "In die tijd zag je de zee vanuit het raam van je slaapkamer.",
+    "options": [
+      "vois",
+      "voyais",
+      "verras",
+      "as vu"
+    ],
+    "answer": "voyais",
+    "why": "'À cette époque-là' with an ongoing description signals background imparfait; présent and futur are non-past, and passé composé would mark a single completed action.",
+    "verb": "voir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-195",
+    "sentence": "L'année prochaine, tu ___ enfin la tour Eiffel de tes propres yeux.",
+    "sentenceNl": "Volgend jaar zul je de Eiffeltoren eindelijk met je eigen ogen zien.",
+    "options": [
+      "vois",
+      "voyais",
+      "verras",
+      "as vu"
+    ],
+    "answer": "verras",
+    "why": "'L'année prochaine' points to a specific future action, so futur simple fits; présent, imparfait and passé composé cannot express something planned for next year.",
+    "verb": "voir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-196",
+    "sentence": "Hier, tu ___ un joli cadeau de la part de ta grand-mère.",
+    "sentenceNl": "Gisteren heb je een mooi cadeau van je oma gekregen.",
+    "options": [
+      "reçois",
+      "recevais",
+      "recevras",
+      "as reçu"
+    ],
+    "answer": "as reçu",
+    "why": "'Hier' marks a single completed past event, so passé composé fits; présent and futur are non-past, and imparfait would suggest a repeated or ongoing action.",
+    "verb": "recevoir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-197",
+    "sentence": "En ce moment, il ___ dans une petite entreprise près d'ici.",
+    "sentenceNl": "Op dit moment werkt hij bij een klein bedrijf hier in de buurt.",
+    "options": [
+      "travaille",
+      "travaillait",
+      "travaillera",
+      "a travaillé"
+    ],
+    "answer": "travaille",
+    "why": "'En ce moment' anchors a situation true right now, so présent fits; imparfait and passé composé are past, and futur would place it later.",
+    "verb": "travailler",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-198",
+    "sentence": "Autrefois, ils ___ beaucoup se promener au bord de la rivière.",
+    "sentenceNl": "Vroeger hielden ze er erg van om langs de rivier te wandelen.",
+    "options": [
+      "aiment",
+      "aimaient",
+      "aimeront",
+      "ont aimé"
+    ],
+    "answer": "aimaient",
+    "why": "'Autrefois' signals a past habit, so imparfait fits; présent and futur are non-past, and passé composé would mark one single occasion.",
+    "verb": "aimer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-199",
+    "sentence": "L'année prochaine, ils ___ tout l'été chez leurs cousins espagnols.",
+    "sentenceNl": "Volgend jaar brengen ze de hele zomer bij hun Spaanse neven door.",
+    "options": [
+      "passent",
+      "passaient",
+      "passeront",
+      "ont passé"
+    ],
+    "answer": "passeront",
+    "why": "'L'année prochaine' points to a planned future action, so futur simple fits; présent, imparfait and passé composé cannot express a future plan.",
+    "verb": "passer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-200",
+    "sentence": "Soudain, nous ___ tous ensemble dans la boue glissante.",
+    "sentenceNl": "Plotseling vielen we allemaal samen in de gladde modder.",
+    "options": [
+      "tombons",
+      "tombions",
+      "tomberons",
+      "sommes tombé(e)s"
+    ],
+    "answer": "sommes tombé(e)s",
+    "why": "'Soudain' marks a single sudden past event, so passé composé fits; présent and futur are non-past, and imparfait would describe an ongoing rather than sudden action.",
+    "verb": "tomber",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-201",
+    "sentence": "En général, mes collègues ___ que le projet va réussir.",
+    "sentenceNl": "Over het algemeen denken mijn collega's dat het project gaat slagen.",
+    "options": [
+      "pensent",
+      "pensaient",
+      "penseront",
+      "ont pensé"
+    ],
+    "answer": "pensent",
+    "why": "\"En général\" signals a habitual present opinion, so présent fits; the past and future forms clash with this ongoing general statement.",
+    "verb": "penser",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-202",
+    "sentence": "Quand ils étaient enfants, ils ___ souvent leurs cousins l'été.",
+    "sentenceNl": "Toen ze kinderen waren, zagen ze 's zomers vaak hun neefjes en nichtjes.",
+    "options": [
+      "voient",
+      "voyaient",
+      "verront",
+      "ont vu"
+    ],
+    "answer": "voyaient",
+    "why": "\"Quand ils étaient enfants\" and \"souvent\" set a repeated past habit, which only the imparfait expresses here.",
+    "verb": "voir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-203",
+    "sentence": "Demain matin, il ___ son plus beau costume pour l'entretien.",
+    "sentenceNl": "Morgenochtend trekt hij zijn mooiste pak aan voor het gesprek.",
+    "options": [
+      "met",
+      "mettait",
+      "mettra",
+      "a mis"
+    ],
+    "answer": "mettra",
+    "why": "\"Demain matin\" points to a single planned future action, so futur fits and the other tenses don't match a future moment.",
+    "verb": "mettre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-204",
+    "sentence": "Il ___ à Paris pendant dix ans, puis il a déménagé.",
+    "sentenceNl": "Hij heeft tien jaar in Parijs gewoond en is toen verhuisd.",
+    "options": [
+      "vit",
+      "vivait",
+      "vivra",
+      "a vécu"
+    ],
+    "answer": "a vécu",
+    "why": "The completed period \"pendant dix ans\" followed by \"il a déménagé\" marks a finished past stay, so passé composé fits.",
+    "verb": "vivre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-205",
+    "sentence": "En ce moment, tu ___ chez moi presque tous les week-ends.",
+    "sentenceNl": "Op dit moment kom je bijna elk weekend bij mij langs.",
+    "options": [
+      "viens",
+      "venais",
+      "viendras",
+      "es venu(e)"
+    ],
+    "answer": "viens",
+    "why": "\"En ce moment\" anchors an ongoing present habit, so présent fits and the past/future forms don't.",
+    "verb": "venir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-206",
+    "sentence": "À cette époque-là, ils ___ dans une petite ferme isolée.",
+    "sentenceNl": "In die tijd woonden ze op een afgelegen boerderijtje.",
+    "options": [
+      "vivent",
+      "vivaient",
+      "vivront",
+      "ont vécu"
+    ],
+    "answer": "vivaient",
+    "why": "\"À cette époque-là\" describes an ongoing past situation, the background use of imparfait; a single completed act wouldn't fit.",
+    "verb": "vivre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-207",
+    "sentence": "Dans deux jours, les feuilles ___ toutes des arbres.",
+    "sentenceNl": "Over twee dagen vallen alle bladeren van de bomen.",
+    "options": [
+      "tombent",
+      "tombaient",
+      "tomberont",
+      "sont tombé(e)s"
+    ],
+    "answer": "tomberont",
+    "why": "\"Dans deux jours\" predicts a future event, so futur fits; present, past and completed-past forms contradict the future cue.",
+    "verb": "tomber",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-208",
+    "sentence": "Hier soir, nous ___ un gâteau au chocolat ensemble.",
+    "sentenceNl": "Gisteravond hebben we samen een chocoladetaart gemaakt.",
+    "options": [
+      "faisons",
+      "faisions",
+      "ferons",
+      "avons fait"
+    ],
+    "answer": "avons fait",
+    "why": "\"Hier soir\" marks a single completed past action, exactly the passé composé; the other tenses don't fit that finished moment.",
+    "verb": "faire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-209",
+    "sentence": "D'habitude, ils ___ à la piscine le mercredi après-midi.",
+    "sentenceNl": "Meestal gaan ze woensdagmiddag naar het zwembad.",
+    "options": [
+      "vont",
+      "allaient",
+      "iront",
+      "sont allé(e)s"
+    ],
+    "answer": "vont",
+    "why": "\"D'habitude\" signals a recurring present habit, which présent expresses; the past and future forms don't match this routine.",
+    "verb": "aller",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-210",
+    "sentence": "Quand j'étais petite, je ___ déjà notre vieux voisin.",
+    "sentenceNl": "Toen ik klein was, kende ik onze oude buurman al.",
+    "options": [
+      "connais",
+      "connaissais",
+      "connaîtrai",
+      "ai connu"
+    ],
+    "answer": "connaissais",
+    "why": "\"Quand j'étais petite\" sets an ongoing past state of knowing, the descriptive imparfait; a one-time completed act wouldn't fit here.",
+    "verb": "connaître",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-211",
+    "sentence": "Bientôt, il ___ le drapeau lors de la cérémonie d'ouverture.",
+    "sentenceNl": "Binnenkort houdt hij de vlag vast tijdens de openingsceremonie.",
+    "options": [
+      "tient",
+      "tenait",
+      "tiendra",
+      "a tenu"
+    ],
+    "answer": "tiendra",
+    "why": "\"Bientôt\" points to a specific upcoming action, so futur fits; the present, past and completed forms clash with the future cue.",
+    "verb": "tenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-212",
+    "sentence": "Ce matin, je ___ en retard à cause du train.",
+    "sentenceNl": "Vanochtend ben ik te laat aangekomen door de trein.",
+    "options": [
+      "arrive",
+      "arrivais",
+      "arriverai",
+      "suis arrivé(e)"
+    ],
+    "answer": "suis arrivé(e)",
+    "why": "\"Ce matin\" marks one completed past arrival, so passé composé fits and the ongoing or future forms don't.",
+    "verb": "arriver",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-213",
+    "sentence": "En ce moment, vous ___ vraiment un excellent musicien.",
+    "sentenceNl": "Op dit moment word je echt een uitstekende muzikant.",
+    "options": [
+      "devenez",
+      "deveniez",
+      "deviendrez",
+      "êtes devenu(e)(s)"
+    ],
+    "answer": "devenez",
+    "why": "\"En ce moment\" describes a state true right now, so présent fits; the past and future forms don't suit this present observation.",
+    "verb": "devenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-214",
+    "sentence": "Tous les étés, ils ___ des glaces sur la plage de leur enfance.",
+    "sentenceNl": "Elke zomer aten ze ijsjes op het strand van hun jeugd.",
+    "options": [
+      "mangent",
+      "mangeaient",
+      "mangeront",
+      "ont mangé"
+    ],
+    "answer": "mangeaient",
+    "why": "\"Tous les étés\" in a clearly past-set childhood scene marks a repeated past habit, so imparfait fits.",
+    "verb": "manger",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-215",
+    "sentence": "L'année prochaine, ils ___ une grande réunion de famille.",
+    "sentenceNl": "Volgend jaar houden ze een grote familiereünie.",
+    "options": [
+      "tiennent",
+      "tenaient",
+      "tiendront",
+      "ont tenu"
+    ],
+    "answer": "tiendront",
+    "why": "\"L'année prochaine\" points to a planned future event, so futur fits; the other three tenses don't match this future cue.",
+    "verb": "tenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-216",
+    "sentence": "Ce matin, il ___ tôt pour aller courir dans le parc.",
+    "sentenceNl": "Vanochtend is hij vroeg de deur uit gegaan om in het park te rennen.",
+    "options": [
+      "sort",
+      "sortait",
+      "sortira",
+      "est sorti(e)"
+    ],
+    "answer": "est sorti(e)",
+    "why": "\"Ce matin\" marks a single completed past action, exactly passé composé; the present, past-habit and future forms don't fit.",
+    "verb": "sortir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-217",
+    "sentence": "En général, vous ___ vos vacances à la montagne.",
+    "sentenceNl": "Meestal brengen jullie je vakantie in de bergen door.",
+    "options": [
+      "passez",
+      "passiez",
+      "passerez",
+      "avez passé"
+    ],
+    "answer": "passez",
+    "why": "\"En général\" indicates a recurring present habit, so présent fits; the past and future forms don't match this routine.",
+    "verb": "passer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-218",
+    "sentence": "Autrefois, tu ___ une lettre de ta grand-mère chaque semaine.",
+    "sentenceNl": "Vroeger kreeg je elke week een brief van je oma.",
+    "options": [
+      "reçois",
+      "recevais",
+      "recevras",
+      "as reçu"
+    ],
+    "answer": "recevais",
+    "why": "\"Autrefois\" plus \"chaque semaine\" mark a repeated past habit, the imparfait; a single completed act wouldn't fit.",
+    "verb": "recevoir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-219",
+    "sentence": "Dans deux jours, il ___ son nouveau travail au centre-ville.",
+    "sentenceNl": "Over twee dagen begint hij aan zijn nieuwe baan in het centrum.",
+    "options": [
+      "commence",
+      "commençait",
+      "commencera",
+      "a commencé"
+    ],
+    "answer": "commencera",
+    "why": "\"Dans deux jours\" points to a specific future start, so futur fits and the present, past or completed forms don't.",
+    "verb": "commencer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-220",
+    "sentence": "La semaine dernière, ils ___ trois jours entiers à Rome.",
+    "sentenceNl": "Vorige week hebben ze drie hele dagen in Rome doorgebracht.",
+    "options": [
+      "passent",
+      "passaient",
+      "passeront",
+      "ont passé"
+    ],
+    "answer": "ont passé",
+    "why": "\"La semaine dernière\" marks a finished past stay, so passé composé fits; the habitual and future forms don't match a completed event.",
+    "verb": "passer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-221",
+    "sentence": "En ce moment, tu ___ ce bruit bizarre dans la cuisine ?",
+    "sentenceNl": "Hoor je op dit moment dat rare geluid in de keuken?",
+    "options": [
+      "entends",
+      "entendais",
+      "entendras",
+      "as entendu"
+    ],
+    "answer": "entends",
+    "why": "The cue \"en ce moment\" points to something happening right now, so only the présent fits, not a past or future form.",
+    "verb": "entendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-222",
+    "sentence": "Quand nous étions étudiants, nous ___ toujours le bus ensemble.",
+    "sentenceNl": "Toen we studenten waren, namen we altijd samen de bus.",
+    "options": [
+      "prenons",
+      "prenions",
+      "prendrons",
+      "avons pris"
+    ],
+    "answer": "prenions",
+    "why": "\"Quand nous étions étudiants\" sets a past habit, which calls for the imparfait rather than a present, future, or single completed action.",
+    "verb": "prendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-223",
+    "sentence": "Demain soir, je ___ le match de football à la télé.",
+    "sentenceNl": "Morgenavond kijk ik naar de voetbalwedstrijd op tv.",
+    "options": [
+      "regarde",
+      "regardais",
+      "regarderai",
+      "ai regardé"
+    ],
+    "answer": "regarderai",
+    "why": "\"Demain soir\" places the action in the future, so only the futur simple works here.",
+    "verb": "regarder",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-224",
+    "sentence": "Hier, tu ___ à ta grand-mère toute la journée ?",
+    "sentenceNl": "Heb je gisteren de hele dag aan je oma gedacht?",
+    "options": [
+      "penses",
+      "pensais",
+      "penseras",
+      "as pensé"
+    ],
+    "answer": "as pensé",
+    "why": "\"Hier\" marks a single completed past day, so the passé composé is required, not a habit or future.",
+    "verb": "penser",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-225",
+    "sentence": "En général, il ___ un croissant au petit-déjeuner.",
+    "sentenceNl": "Meestal eet hij een croissant bij het ontbijt.",
+    "options": [
+      "mange",
+      "mangeait",
+      "mangera",
+      "a mangé"
+    ],
+    "answer": "mange",
+    "why": "\"En général\" signals a habitual routine in the present, so the présent fits, not past or future forms.",
+    "verb": "manger",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-226",
+    "sentence": "Quand tu étais petit, tu ___ toujours ton pull à l'envers.",
+    "sentenceNl": "Toen je klein was, deed je je trui altijd binnenstebuiten aan.",
+    "options": [
+      "mets",
+      "mettais",
+      "mettras",
+      "as mis"
+    ],
+    "answer": "mettais",
+    "why": "\"Quand tu étais petit\" frames a repeated past habit, so the imparfait is correct rather than présent, futur, or a one-off passé composé.",
+    "verb": "mettre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-227",
+    "sentence": "L'année prochaine, tu ___ plus souvent avec tes amis.",
+    "sentenceNl": "Volgend jaar ga je vaker uit met je vrienden.",
+    "options": [
+      "sors",
+      "sortais",
+      "sortiras",
+      "es sorti(e)"
+    ],
+    "answer": "sortiras",
+    "why": "\"L'année prochaine\" points clearly to the future, so only the futur simple fits.",
+    "verb": "sortir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-228",
+    "sentence": "La semaine dernière, nous ___ trois jours à la montagne.",
+    "sentenceNl": "Vorige week hebben we drie dagen in de bergen doorgebracht.",
+    "options": [
+      "passons",
+      "passions",
+      "passerons",
+      "avons passé"
+    ],
+    "answer": "avons passé",
+    "why": "\"La semaine dernière\" marks a completed past event, so the passé composé is needed, not a habit or future.",
+    "verb": "passer",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-229",
+    "sentence": "D'habitude, je ___ français avec mes collègues au bureau.",
+    "sentenceNl": "Gewoonlijk spreek ik Frans met mijn collega's op kantoor.",
+    "options": [
+      "parle",
+      "parlais",
+      "parlerai",
+      "ai parlé"
+    ],
+    "answer": "parle",
+    "why": "\"D'habitude\" signals a present habit, so the présent is correct rather than a past or future form.",
+    "verb": "parler",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-230",
+    "sentence": "À cette époque-là, vous ___ dans une petite usine de textile.",
+    "sentenceNl": "In die tijd werkten jullie in een kleine textielfabriek.",
+    "options": [
+      "travaillez",
+      "travailliez",
+      "travaillerez",
+      "avez travaillé"
+    ],
+    "answer": "travailliez",
+    "why": "\"À cette époque-là\" describes an ongoing past situation, calling for the imparfait rather than présent, futur, or a single completed action.",
+    "verb": "travailler",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-231",
+    "sentence": "Ne t'inquiète pas, tu ___ bientôt une solution à ton problème.",
+    "sentenceNl": "Maak je geen zorgen, je vindt binnenkort een oplossing voor je probleem.",
+    "options": [
+      "trouves",
+      "trouvais",
+      "trouveras",
+      "as trouvé"
+    ],
+    "answer": "trouveras",
+    "why": "\"Bientôt\" projects the action into the future, so only the futur simple fits here.",
+    "verb": "trouver",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-232",
+    "sentence": "Ce matin, j'___ un grand verre de jus d'orange.",
+    "sentenceNl": "Vanochtend heb ik een groot glas sinaasappelsap gedronken.",
+    "options": [
+      "bois",
+      "buvais",
+      "boirai",
+      "ai bu"
+    ],
+    "answer": "ai bu",
+    "why": "\"Ce matin\" marks a completed past moment, so the passé composé is required, not a habit or future.",
+    "verb": "boire",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-233",
+    "sentence": "Maintenant, nous ___ à la piscine tous les mercredis.",
+    "sentenceNl": "Nu gaan we elke woensdag naar het zwembad.",
+    "options": [
+      "allons",
+      "allions",
+      "irons",
+      "sommes allé(e)s"
+    ],
+    "answer": "allons",
+    "why": "\"Maintenant\" with a current routine calls for the présent, not past or future forms.",
+    "verb": "aller",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-234",
+    "sentence": "Quand nous étions jeunes, nous ne ___ rien à ce cours.",
+    "sentenceNl": "Toen we jong waren, begrepen we niets van die les.",
+    "options": [
+      "comprenons",
+      "comprenions",
+      "comprendrons",
+      "avons compris"
+    ],
+    "answer": "comprenions",
+    "why": "\"Quand nous étions jeunes\" frames an ongoing past state, so the imparfait fits rather than présent, futur, or a single completed action.",
+    "verb": "comprendre",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-235",
+    "sentence": "Dans deux ans, tu ___ un excellent médecin, j'en suis sûr.",
+    "sentenceNl": "Over twee jaar word je een uitstekende dokter, dat weet ik zeker.",
+    "options": [
+      "deviens",
+      "devenais",
+      "deviendras",
+      "es devenu(e)"
+    ],
+    "answer": "deviendras",
+    "why": "\"Dans deux ans\" points to the future, so only the futur simple works here.",
+    "verb": "devenir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-236",
+    "sentence": "Ce matin, nous ___ la boutique une heure plus tôt que d'habitude.",
+    "sentenceNl": "Vanochtend hebben we de winkel een uur eerder dan gewoonlijk geopend.",
+    "options": [
+      "ouvrons",
+      "ouvrions",
+      "ouvrirons",
+      "avons ouvert"
+    ],
+    "answer": "avons ouvert",
+    "why": "\"Ce matin\" marks a single completed past action, so the passé composé is required, not a habit or future.",
+    "verb": "ouvrir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-237",
+    "sentence": "En ce moment, ils ___ ensemble tous les vendredis soir.",
+    "sentenceNl": "Op dit moment gaan ze elke vrijdagavond samen uit.",
+    "options": [
+      "sortent",
+      "sortaient",
+      "sortiront",
+      "sont sorti(e)s"
+    ],
+    "answer": "sortent",
+    "why": "\"En ce moment\" with a current routine calls for the présent, not past or future forms.",
+    "verb": "sortir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-238",
+    "sentence": "Autrefois, je ___ chez mes parents pendant toutes les vacances.",
+    "sentenceNl": "Vroeger bleef ik alle vakanties bij mijn ouders.",
+    "options": [
+      "reste",
+      "restais",
+      "resterai",
+      "suis resté(e)"
+    ],
+    "answer": "restais",
+    "why": "\"Autrefois\" describes a repeated past habit, so the imparfait fits rather than présent, futur, or a single completed action.",
+    "verb": "rester",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-239",
+    "sentence": "Dans deux jours, je ___ te voir à ton nouvel appartement.",
+    "sentenceNl": "Over twee dagen kom ik je opzoeken in je nieuwe appartement.",
+    "options": [
+      "viens",
+      "venais",
+      "viendrai",
+      "suis venu(e)"
+    ],
+    "answer": "viendrai",
+    "why": "\"Dans deux jours\" places the action in the future, so only the futur simple fits.",
+    "verb": "venir",
+    "category": "tense-4way"
+  },
+  {
+    "id": "ch-240",
+    "sentence": "Hier soir, tu ___ un film policier jusqu'à minuit.",
+    "sentenceNl": "Gisteravond heb je tot middernacht naar een misdaadfilm gekeken.",
+    "options": [
+      "regardes",
+      "regardais",
+      "regarderas",
+      "as regardé"
+    ],
+    "answer": "as regardé",
+    "why": "\"Hier soir\" marks a completed past event, so the passé composé is required, not a habit or future.",
+    "verb": "regarder",
+    "category": "tense-4way"
   }
 ]
