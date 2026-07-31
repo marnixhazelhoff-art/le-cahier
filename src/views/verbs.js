@@ -1,14 +1,16 @@
 import { fullTable, splitEnding, CORE_TENSES, ALL_TENSES, SUBJECTS } from '../conjugate.js';
 import { newCard, grade } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
-import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
+import { getCard, putCard, getSettings, recordReview } from '../store.js';
 import { buildVerbCardDeck } from '../verb-cards.js';
 import { groupVerbExercises, statsFor, idsOf } from '../modules.js';
 import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
 import { attachAccentHelper } from '../accent-helper.js';
 
-const PRACTICE_MORE_BATCH = 10;
+// There is no daily cap on any mode. Practice always comes in batches of
+// this size instead, repeated on request until nothing is eligible left.
+const BATCH_SIZE = 10;
 
 const EXERCISE_NOTES = {
   'passe-compose': "Redesigned: one card asks for the whole form, j'ai mangé or je suis allé(e), not the auxiliary by itself. Choosing avoir or être happens as part of producing the real answer.",
@@ -28,21 +30,26 @@ function today() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-function buildQueue(deck, settings, extraNew = 0) {
-  const withState = deck.map((spec) => ({ spec, card: getCard(spec.id) ?? newCard(spec.id) }));
-  const due = withState.filter((c) => c.card.state !== 'new' && c.card.due <= today());
-  const fresh = withState
-    .filter((c) => c.card.state === 'new')
-    .sort((a, b) => a.spec.id.localeCompare(b.spec.id))
-    .slice(0, newCardAllowance('verbs', settings.newCardsPerDay + extraNew));
-  return [...shuffle(due), ...shuffle(fresh)];
+// Everything due, plus everything never seen. No daily cap: practicing a
+// deck to the end just means nothing here is eligible again until a due
+// date genuinely arrives tomorrow.
+function eligiblePool(deck) {
+  const t = today();
+  return deck
+    .map((spec) => ({ spec, card: getCard(spec.id) ?? newCard(spec.id) }))
+    .filter(({ card }) => card.state === 'new' || card.due <= t);
 }
 
+function nextBatch(deck) {
+  return shuffle(eligiblePool(deck)).slice(0, BATCH_SIZE);
+}
+
+// index >= queue.length just means this batch is done; the caller (runLoop)
+// decides what that means (more available, or nothing left today).
 function renderCard(container, queue, index, verbs, onDone) {
   clear(container);
 
   if (index >= queue.length) {
-    container.append(h('p', {}, 'Session complete for today. Come back tomorrow, or switch to Browse to look up any verb.'));
     onDone();
     return;
   }
@@ -104,7 +111,7 @@ function renderCard(container, queue, index, verbs, onDone) {
   const accentRow = attachAccentHelper(input);
 
   form.append(...[
-    h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left`),
+    h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left in this batch`),
     h('h2', {}, spec.prompt),
     input,
     accentRow,
@@ -116,14 +123,36 @@ function renderCard(container, queue, index, verbs, onDone) {
   input.focus();
 }
 
-function runDrill(container, verbs, deck, extraNew, onBack) {
+function showExhausted(container, onBack) {
   clear(container);
-  container.append(h('p', {}, h('button', { type: 'button', onclick: onBack }, '← Back to exercises')));
-  const settings = getSettings();
-  const queue = buildQueue(deck, settings, extraNew);
+  container.append(...[
+    h('p', {}, 'Nothing left here for today. Come back tomorrow, or try something else.'),
+    onBack ? h('div', { class: 'button-row' }, h('button', { type: 'button', onclick: onBack }, '← Back to exercises')) : null,
+  ].filter(Boolean));
+}
+
+function runLoop(container, verbs, deck, onBack) {
+  const batch = nextBatch(deck);
+  if (batch.length === 0) { showExhausted(container, onBack); return; }
+
+  clear(container);
   const session = h('div', { class: 'drill' });
   container.append(session);
-  renderCard(session, queue, 0, verbs, () => {});
+  renderCard(session, batch, 0, verbs, () => {
+    const remaining = eligiblePool(deck).length;
+    clear(container);
+    if (remaining === 0) { showExhausted(container, onBack); return; }
+    container.append(...[
+      h('p', {}, 'Batch done.'),
+      h('div', { class: 'button-row' }, [
+        h('button', {
+          type: 'button',
+          onclick: () => runLoop(container, verbs, deck, onBack),
+        }, `Practice ${Math.min(BATCH_SIZE, remaining)} more`),
+        onBack ? h('button', { type: 'button', onclick: onBack }, '← Back to exercises') : null,
+      ].filter(Boolean)),
+    ]);
+  });
 }
 
 function statLine(stats) {
@@ -142,26 +171,32 @@ function renderExercises(container, verbs) {
 
   function backHere() { clear(container); renderExercises(container, verbs); }
 
-  container.append(
+  const allRemaining = eligiblePool(deck).length;
+  container.append(...[
     h('p', {}, 'The same fixed 50 verbs as always: no modules to unlock here, just a few kinds of practice, plus Browse for reference.'),
-    h('div', { class: 'button-row' }, h('button', {
-      type: 'button',
-      onclick: () => runDrill(container, verbs, deck, 0, backHere),
-    }, "Start today's session (all verbs, mixed)")),
-  );
+    allRemaining > 0
+      ? h('div', { class: 'button-row' }, h('button', {
+        type: 'button',
+        onclick: () => runLoop(container, verbs, deck, backHere),
+      }, `Practice ${Math.min(BATCH_SIZE, allRemaining)} (all verbs, mixed)`))
+      : h('p', { class: 'gloss' }, 'Nothing to practice across all verbs right now.'),
+  ].filter(Boolean));
 
   for (const ex of exercises) {
     if (ex.cards.length === 0) continue;
     const stats = statsFor(idsOf(ex.cards), t);
+    const remaining = eligiblePool(ex.cards).length;
     // native Element.append coerces a null argument to the text "null"
     // instead of skipping it, unlike this file's h() helper — filter first.
     container.append(...[
       h('h3', {}, ex.label),
       h('p', { class: 'gloss' }, statLine(stats)),
-      h('div', { class: 'button-row' }, [
-        h('button', { type: 'button', onclick: () => runDrill(container, verbs, ex.cards, 0, backHere) }, "Continue today's session"),
-        h('button', { type: 'button', onclick: () => runDrill(container, verbs, ex.cards, PRACTICE_MORE_BATCH, backHere) }, `Practice ${PRACTICE_MORE_BATCH} more today`),
-      ]),
+      remaining > 0
+        ? h('div', { class: 'button-row' }, h('button', {
+          type: 'button',
+          onclick: () => runLoop(container, verbs, ex.cards, backHere),
+        }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
+        : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'),
       EXERCISE_NOTES[ex.id] ? h('p', { class: 'gloss' }, EXERCISE_NOTES[ex.id]) : null,
     ].filter(Boolean));
   }

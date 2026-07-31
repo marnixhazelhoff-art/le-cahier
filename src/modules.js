@@ -114,3 +114,27 @@ export function idsOf(cards) {
 export function statsFor(ids, day) {
   return tally(withState(ids), day);
 }
+
+// The ladder from BRIEF.md section 8.2: 2, 5, 12, 30, 75, 180 days. A card's
+// interval rarely lands exactly on a rung once ease has moved it, so this
+// buckets by the highest rung reached so far, same idea as "learned" already
+// meaning interval >= 30 rather than interval === 30.
+export const INTERVAL_RUNGS = [2, 5, 12, 30, 75, 180];
+
+export function intervalBuckets(ids, getCard) {
+  const counts = { new: 0 };
+  for (const rung of INTERVAL_RUNGS) counts[rung] = 0;
+  for (const id of ids) {
+    const card = getCard(id);
+    if (!card || card.state === 'new') {
+      counts.new += 1;
+      continue;
+    }
+    let rung = INTERVAL_RUNGS[0];
+    for (const r of INTERVAL_RUNGS) {
+      if (card.interval >= r) rung = r;
+    }
+    counts[rung] += 1;
+  }
+  return counts;
+}

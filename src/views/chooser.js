@@ -1,37 +1,37 @@
 import { newCard, grade } from '../scheduler.js';
-import { getCard, putCard, getSettings, recordReview, newCardAllowance } from '../store.js';
+import { getCard, putCard, recordReview } from '../store.js';
 import { groupChooserCategories, statsFor } from '../modules.js';
 import { h, clear, shuffle } from '../dom.js';
 
-const PRACTICE_MORE_BATCH = 10;
+// There is no daily cap on any mode. Practice always comes in batches of
+// this size instead, repeated on request until nothing is eligible left.
+const BATCH_SIZE = 10;
 
 function today() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-function buildQueue(items, settings, extraNew = 0) {
-  const withState = items.map((item) => ({
-    item,
-    id: `ch:${item.id}`,
-    card: getCard(`ch:${item.id}`) ?? newCard(`ch:${item.id}`),
-  }));
-  const due = withState.filter((c) => c.card.state !== 'new' && c.card.due <= today());
-  // Unlike vocab, chooser items carry no required introduction order, so
-  // which items become new today is itself shuffled, not just their
-  // presentation order. The source data alternates imparfait/passé composé
-  // answers in id order by construction, so sorting by id and shuffling only
-  // the slice kept surfacing that same alternating pattern.
-  const fresh = shuffle(withState.filter((c) => c.card.state === 'new'))
-    .slice(0, newCardAllowance('chooser', settings.newCardsPerDay + extraNew));
-  return [...shuffle(due), ...fresh];
+// Everything due, plus everything never seen. No daily cap, and no ordering
+// requirement either (unlike vocab, chooser items carry no frequency rank),
+// so which items are eligible is simply due-or-new.
+function eligiblePool(items) {
+  const t = today();
+  return items
+    .map((item) => ({ item, id: `ch:${item.id}`, card: getCard(`ch:${item.id}`) ?? newCard(`ch:${item.id}`) }))
+    .filter(({ card }) => card.state === 'new' || card.due <= t);
 }
 
+function nextBatch(items) {
+  return shuffle(eligiblePool(items)).slice(0, BATCH_SIZE);
+}
+
+// index >= queue.length just means this batch is done; the caller (runLoop)
+// decides what that means (more available, or nothing left today).
 function renderCard(container, queue, index, onDone) {
   clear(container);
 
   if (index >= queue.length) {
-    container.append(h('p', {}, 'Session complete for today. Come back tomorrow for more.'));
     onDone();
     return;
   }
@@ -77,21 +77,43 @@ function renderCard(container, queue, index, onDone) {
   const actions = h('div', { class: 'actions choices' }, buttons);
 
   container.append(
-    h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left`),
+    h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left in this batch`),
     h('h2', { class: 'mono' }, [before, h('span', { class: 'ending' }, '___'), after]),
     feedback,
     actions,
   );
 }
 
-function runSession(container, items, extraNew, onBack) {
+function showExhausted(container, onBack) {
   clear(container);
-  if (onBack) container.append(h('p', {}, h('button', { type: 'button', onclick: onBack }, '← Back')));
-  const settings = getSettings();
-  const queue = buildQueue(items, settings, extraNew);
+  container.append(...[
+    h('p', {}, 'Nothing left here for today. Come back tomorrow, or try something else.'),
+    onBack ? h('div', { class: 'button-row' }, h('button', { type: 'button', onclick: onBack }, '← Back to categories')) : null,
+  ].filter(Boolean));
+}
+
+function runLoop(container, items, onBack) {
+  const batch = nextBatch(items);
+  if (batch.length === 0) { showExhausted(container, onBack); return; }
+
+  clear(container);
   const session = h('div', { class: 'drill' });
   container.append(session);
-  renderCard(session, queue, 0, () => {});
+  renderCard(session, batch, 0, () => {
+    const remaining = eligiblePool(items).length;
+    clear(container);
+    if (remaining === 0) { showExhausted(container, onBack); return; }
+    container.append(...[
+      h('p', {}, 'Batch done.'),
+      h('div', { class: 'button-row' }, [
+        h('button', {
+          type: 'button',
+          onclick: () => runLoop(container, items, onBack),
+        }, `Practice ${Math.min(BATCH_SIZE, remaining)} more`),
+        onBack ? h('button', { type: 'button', onclick: onBack }, '← Back to categories') : null,
+      ].filter(Boolean)),
+    ]);
+  });
 }
 
 function statLine(stats) {
@@ -109,26 +131,32 @@ function renderCategories(container, chooser) {
 
   function backHere() { clear(container); renderCategories(container, chooser); }
 
-  container.append(h('p', {}, 'Every item has two grammatically valid answers: only one fits the meaning. These are the five contrasts from BRIEF.md section 9.'));
+  container.append(h('p', {}, 'Every item has two grammatically valid answers: only one fits the meaning. These are the five contrasts from BRIEF.md section 9. Picking a category here just narrows which items come up, same as everywhere else in the app: the item itself never announces which grammar point it is testing.'));
 
   for (const cat of categories) {
     const stats = statsFor(cat.ids, t);
+    const remaining = eligiblePool(cat.items).length;
     // native Element.append coerces a null argument to the text "null"
     // instead of skipping it, unlike this file's h() helper — filter first.
     container.append(...[
       h('h3', {}, cat.label),
       h('p', { class: 'gloss' }, statLine(stats)),
-      h('div', { class: 'button-row' }, [
-        h('button', { type: 'button', onclick: () => runSession(container, cat.items, 0, backHere) }, "Continue today's session"),
-        h('button', { type: 'button', onclick: () => runSession(container, cat.items, PRACTICE_MORE_BATCH, backHere) }, `Practice ${PRACTICE_MORE_BATCH} more today`),
-      ]),
+      remaining > 0
+        ? h('div', { class: 'button-row' }, h('button', {
+          type: 'button',
+          onclick: () => runLoop(container, cat.items, backHere),
+        }, `Practice ${Math.min(BATCH_SIZE, remaining)}`))
+        : h('p', { class: 'gloss' }, 'Nothing to practice here right now.'),
     ].filter(Boolean));
   }
 }
 
 export function renderChooserView(container, { chooser }) {
   clear(container);
-  container.append(h('h1', {}, 'Imparfait or passé composé'));
+  // Not "imparfait or passé composé": that title alone would give away the
+  // answer pair on every single item, in every mode, before the sentence is
+  // even read.
+  container.append(h('h1', {}, 'Chooser'));
 
   if (!chooser || chooser.length === 0) {
     container.append(h('p', {}, 'This drill needs 100 written contrast items, reviewed before they enter the deck. It arrives once the vocabulary bank exists.'));
@@ -138,7 +166,9 @@ export function renderChooserView(container, { chooser }) {
   const tabs = h('div', { class: 'subtabs' });
   const body = h('div', {});
 
-  const showToday = () => runSession(body, chooser, 0, null);
+  // The tab bar above stays the way back out, so the loop itself does not
+  // need its own back button here.
+  const showToday = () => { clear(body); runLoop(body, chooser, null); };
   const showCategories = () => { clear(body); renderCategories(body, chooser); };
 
   tabs.append(

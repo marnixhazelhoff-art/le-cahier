@@ -3,7 +3,7 @@
 
 import { buildVerbCardDeck } from './verb-cards.js';
 import { buildVocabCardDeck } from './vocab-cards.js';
-import { getCard, getSettings, newCardAllowance } from './store.js';
+import { getCard } from './store.js';
 import { newCard, isDue, today } from './scheduler.js';
 
 const PRODUCE_UNLOCK_INTERVAL = 21;
@@ -24,58 +24,50 @@ export function tally(cards, day) {
   return { total: cards.length, due, states };
 }
 
-function verbSummary(verbs, limit, day) {
+// There is no daily cap on any mode: newAvailable is the true count of
+// not-yet-introduced cards, not a preview truncated by a per-day budget.
+function verbSummary(verbs, day) {
   if (!verbs || verbs.length === 0) return null;
   const cards = withState(buildVerbCardDeck(verbs).map((s) => s.id));
   const base = tally(cards, day);
-  return {
-    ...base,
-    newAvailable: Math.min(newCardAllowance('verbs', limit), base.states.new),
-  };
+  return { ...base, newAvailable: base.states.new };
 }
 
-function vocabSummary(vocab, limit, day) {
+function vocabSummary(vocab, day) {
   if (!vocab || vocab.length === 0) return null;
   const deck = buildVocabCardDeck(vocab);
   const cards = deck.map((spec) => getCard(spec.id) ?? newCard(spec.id, { familiar: spec.familiar }));
   const base = tally(cards, day);
 
   const newRecall = deck.filter((spec, i) => spec.kind === 'recall' && cards[i].state === 'new').length;
-  // Production is not gated by the daily cap: it is a harder stage of a word
-  // already known, not a new word (section 8.5).
+  // Production is gated by the 21-day unlock (section 8.5), never by a daily
+  // cap: it is a harder stage of a word already known, not a new word.
   const unlockedProduce = deck.filter((spec, i) => {
     if (spec.kind !== 'produce' || cards[i].state !== 'new') return false;
     const recall = getCard(spec.requiresCardId);
     return recall && recall.interval >= PRODUCE_UNLOCK_INTERVAL;
   }).length;
 
-  return {
-    ...base,
-    newAvailable: Math.min(newCardAllowance('vocab', limit), newRecall) + unlockedProduce,
-  };
+  return { ...base, newAvailable: newRecall + unlockedProduce };
 }
 
-function chooserSummary(chooser, limit, day) {
+function chooserSummary(chooser, day) {
   if (!chooser || chooser.length === 0) return null;
   const cards = withState(chooser.map((item) => `ch:${item.id}`));
   const base = tally(cards, day);
-  return {
-    ...base,
-    newAvailable: Math.min(newCardAllowance('chooser', limit), base.states.new),
-  };
+  return { ...base, newAvailable: base.states.new };
 }
 
 /**
  * Returns one entry per mode that has data, each with what is left today.
  */
 export function summarise({ verbs, vocab, chooser }) {
-  const limit = getSettings().newCardsPerDay;
   const day = today();
 
   const modes = [
-    { key: 'verbs', label: 'Verbs', route: '#/verbs', summary: verbSummary(verbs, limit, day) },
-    { key: 'vocab', label: 'Vocabulary', route: '#/vocab', summary: vocabSummary(vocab, limit, day) },
-    { key: 'chooser', label: 'Chooser', route: '#/chooser', summary: chooserSummary(chooser, limit, day) },
+    { key: 'verbs', label: 'Verbs', route: '#/verbs', summary: verbSummary(verbs, day) },
+    { key: 'vocab', label: 'Vocabulary', route: '#/vocab', summary: vocabSummary(vocab, day) },
+    { key: 'chooser', label: 'Chooser', route: '#/chooser', summary: chooserSummary(chooser, day) },
   ];
 
   return modes
