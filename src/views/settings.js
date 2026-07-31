@@ -78,6 +78,38 @@ function renderSyncSection(container) {
   });
 }
 
+// "Is this the new version?" is otherwise unanswerable from inside the app, and
+// a cache first PWA makes it a fair question. The cache name is the running
+// version, so read that rather than a number compiled in somewhere.
+function renderVersion(container) {
+  const line = h('p', { class: 'gloss' }, 'Checking which version is installed.');
+  container.append(h('h2', {}, 'Version'), line);
+
+  (async () => {
+    if (typeof caches === 'undefined') {
+      clear(line);
+      line.append('This browser does not report the offline cache.');
+      return;
+    }
+    try {
+      const names = (await caches.keys()).filter((n) => n.startsWith('le-cahier-'));
+      const controlled = Boolean(navigator.serviceWorker?.controller);
+      clear(line);
+      if (names.length === 0) {
+        line.append('Not installed for offline use yet. Reload once while online.');
+        return;
+      }
+      line.append(`Offline cache ${names.join(', ')}. `);
+      line.append(controlled
+        ? 'This page is being served by it.'
+        : 'This page came from the network, so a reload will pick it up.');
+    } catch {
+      clear(line);
+      line.append('Could not read the offline cache in this browser.');
+    }
+  })();
+}
+
 export function renderSettingsView(container) {
   clear(container);
   const settings = getSettings();
@@ -127,6 +159,7 @@ export function renderSettingsView(container) {
   );
 
   renderSyncSection(container);
+  renderVersion(container);
 
   if (/iP(hone|ad|od)/.test(navigator.userAgent) && !navigator.standalone) {
     container.append(h('p', {}, 'On iPhone or iPad: open this page in Safari, then Share, then Add to Home Screen. Chrome on iOS cannot install it.'));

@@ -71,6 +71,16 @@ p, ul, ol {
   font-family: var(--mono);
 }
 
+.load-notice {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: calc(var(--rule) / 2) 1.5rem 0;
+}
+
+.load-notice p {
+  margin-bottom: calc(var(--rule) / 2);
+}
+
 .update-notice {
   display: flex;
   flex-wrap: wrap;

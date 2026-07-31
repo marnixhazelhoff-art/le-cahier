@@ -63,11 +63,25 @@ async function start() {
   clear(root);
   root.append(h('p', {}, 'Loading…'));
 
+  // verbs.json is the one file the app cannot open without. The other two are
+  // allowed to be missing, but never silently: a deck that fails to load looks
+  // exactly like a deck that is finished for the day, and guessing which is
+  // which costs an evening.
+  const failures = [];
+  async function loadDeck(path) {
+    try {
+      return await fetchJSON(path);
+    } catch (err) {
+      failures.push(err.message);
+      return [];
+    }
+  }
+
   let verbs, vocab, chooser;
   try {
     ({ verbs } = await fetchJSON('./data/verbs.json'));
-    vocab = await fetchJSON('./data/vocab.json').catch(() => []);
-    chooser = await fetchJSON('./data/chooser.json').catch(() => []);
+    vocab = await loadDeck('./data/vocab.json');
+    chooser = await loadDeck('./data/chooser.json');
   } catch (err) {
     clear(root);
     root.append(h('div', { class: 'page' }, h('p', { class: 'incorrect' }, err.message)));
@@ -82,6 +96,10 @@ async function start() {
   const page = h('div', { class: 'page' }, [nav, main]);
 
   clear(root);
+  if (failures.length > 0) {
+    root.append(h('div', { class: 'load-notice', role: 'status' },
+      failures.map((message) => h('p', { class: 'incorrect' }, message))));
+  }
   root.append(page);
 
   function render() {
