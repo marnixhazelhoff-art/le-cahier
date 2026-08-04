@@ -2,7 +2,7 @@
 // Bump VERSION whenever the shell or the data files change. Old caches are
 // deleted on activate, so a bump is the whole upgrade story.
 
-const VERSION = 'v20';
+const VERSION = 'v21';
 const CACHE = `le-cahier-${VERSION}`;
 
 // Relative so this survives a GitHub Pages subpath. These resolve against the

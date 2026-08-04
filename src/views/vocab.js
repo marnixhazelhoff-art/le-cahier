@@ -86,12 +86,15 @@ function renderProduceCard(container, spec, card, onGraded) {
       const typed = input.value;
       if (!typed.trim()) return;
       const result = gradeAnswer(typed, spec.expected);
-      speak(spec.expected);
+      // expected is usually one string, but a noun accepts two articles for
+      // the same gender (le cinéma / un cinéma) — speak and show the first.
+      const spoken = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
+      speak(spoken);
       input.disabled = true;
       clear(feedback);
       feedback.append(
         h('p', { class: result.grade === 'again' ? 'incorrect' : 'correct' },
-          result.grade === 'good' ? 'Correct.' : `${spec.expected}`),
+          result.grade === 'good' ? 'Correct.' : spoken),
       );
       if (spec.note) feedback.append(h('p', {}, spec.note));
       const next = h('button', { type: 'button', onclick: () => onGraded(result.grade) }, 'Next');

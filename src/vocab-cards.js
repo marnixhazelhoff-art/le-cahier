@@ -5,6 +5,25 @@ function surfaceForm(entry) {
   return entry.pos === 'noun' && entry.article ? `${entry.article} ${entry.fr}` : entry.fr;
 }
 
+// le/un and la/une are both correct as long as the gender is: definite vs
+// indefinite is a real but separate choice from the fact this drill is
+// actually testing. Grading only the stored article as correct meant typing
+// "un cinéma" for "le cinéma" failed despite the gender being right.
+const ARTICLE_SWAP = { le: 'un', un: 'le', la: 'une', une: 'la' };
+
+function alternateArticle(entry) {
+  if (entry.article in ARTICLE_SWAP) return ARTICLE_SWAP[entry.article];
+  if (entry.article === "l'") return entry.gender === 'f' ? 'une' : 'un';
+  return null;
+}
+
+function producibleForms(entry) {
+  const form = surfaceForm(entry);
+  if (entry.pos !== 'noun') return [form];
+  const alt = alternateArticle(entry);
+  return alt ? [form, `${alt} ${entry.fr}`] : [form];
+}
+
 export function buildVocabCardDeck(vocab) {
   const sorted = [...vocab].sort((a, b) => a.rank - b.rank);
   const cards = [];
@@ -33,7 +52,7 @@ export function buildVocabCardDeck(vocab) {
       familiar: entry.familiar,
       requiresCardId: recallId,
       prompt: entry.nl,
-      expected: form,
+      expected: producibleForms(entry),
       example: entry.example,
       exampleNl: entry.exampleNl,
       note: entry.note,
