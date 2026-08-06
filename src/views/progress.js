@@ -3,7 +3,7 @@ import { getHistory, allCards, getCard } from '../store.js';
 import { summarise } from '../deck-stats.js';
 import { today } from '../scheduler.js';
 import { buildVocabCardDeck } from '../vocab-cards.js';
-import { intervalBuckets, statsFor, INTERVAL_RUNGS } from '../modules.js';
+import { intervalBuckets, produceBuckets, statsFor, INTERVAL_RUNGS } from '../modules.js';
 
 const MODE_LABEL = { verbs: 'verbs', vocab: 'vocabulary', chooser: 'chooser' };
 
@@ -104,19 +104,18 @@ function renderWordBuckets(container, data) {
   const t = today();
   const deck = buildVocabCardDeck(data.vocab);
   const recallIds = deck.filter((c) => c.kind === 'recall').map((c) => c.id);
-  const produceIds = deck.filter((c) => c.kind === 'produce').map((c) => c.id);
-  const recallBuckets = intervalBuckets(recallIds, getCard);
-  const produceBuckets = intervalBuckets(produceIds, getCard);
+  const produceSpecs = deck.filter((c) => c.kind === 'produce');
+  const recall = intervalBuckets(recallIds, getCard);
+  const produce = produceBuckets(produceSpecs, getCard, t);
   const recallDue = statsFor(recallIds, t).due;
-  const produceDue = statsFor(produceIds, t).due;
 
   container.append(
     h('h2', {}, 'Where your words are'),
     table(
-      ['', 'New', 'Due', ...INTERVAL_RUNGS.map((r) => `${r}d`)],
+      ['', 'Locked', 'New', 'Due', ...INTERVAL_RUNGS.map((r) => `${r}d`)],
       [
-        ['Recall', String(recallBuckets.new), String(recallDue), ...INTERVAL_RUNGS.map((r) => String(recallBuckets[r]))],
-        ['Writing', String(produceBuckets.new), String(produceDue), ...INTERVAL_RUNGS.map((r) => String(produceBuckets[r]))],
+        ['Recall', '—', String(recall.new), String(recallDue), ...INTERVAL_RUNGS.map((r) => String(recall[r]))],
+        ['Writing', String(produce.locked), String(produce.new), String(produce.due), ...INTERVAL_RUNGS.map((r) => String(produce[r]))],
       ],
     ),
   );

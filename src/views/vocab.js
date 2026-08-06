@@ -2,7 +2,7 @@ import { newCard, grade, PRODUCE_UNLOCK_INTERVAL } from '../scheduler.js';
 import { gradeAnswer } from '../grade.js';
 import { getCard, putCard, recordReview } from '../store.js';
 import { buildVocabCardDeck } from '../vocab-cards.js';
-import { groupVocabModules, statsFor, idsOf, intervalBuckets, INTERVAL_RUNGS } from '../modules.js';
+import { groupVocabModules, statsFor, idsOf, intervalBuckets, produceBuckets, INTERVAL_RUNGS } from '../modules.js';
 import { h, clear, shuffle } from '../dom.js';
 import { speak } from '../tts.js';
 import { attachAccentHelper } from '../accent-helper.js';
@@ -261,17 +261,18 @@ function renderModuleList(container, vocab, onOpenModule) {
   const t = today();
 
   const recallIds = deck.filter((c) => c.kind === 'recall').map((c) => c.id);
-  const produceIds = deck.filter((c) => c.kind === 'produce').map((c) => c.id);
-  const recallBuckets = intervalBuckets(recallIds, getCard);
-  const produceBuckets = intervalBuckets(produceIds, getCard);
+  const produceSpecs = deck.filter((c) => c.kind === 'produce');
+  const recall = intervalBuckets(recallIds, getCard);
+  const produce = produceBuckets(produceSpecs, getCard, t);
+  const recallDue = statsFor(recallIds, t).due;
 
   container.append(
     h('h2', {}, 'Where your words are'),
     table(
-      ['', 'New', ...INTERVAL_RUNGS.map((r) => `${r}d`)],
+      ['', 'Locked', 'New', 'Due', ...INTERVAL_RUNGS.map((r) => `${r}d`)],
       [
-        ['Recall', String(recallBuckets.new), ...INTERVAL_RUNGS.map((r) => String(recallBuckets[r]))],
-        ['Writing', String(produceBuckets.new), ...INTERVAL_RUNGS.map((r) => String(produceBuckets[r]))],
+        ['Recall', '—', String(recall.new), String(recallDue), ...INTERVAL_RUNGS.map((r) => String(recall[r]))],
+        ['Writing', String(produce.locked), String(produce.new), String(produce.due), ...INTERVAL_RUNGS.map((r) => String(produce[r]))],
       ],
     ),
   );

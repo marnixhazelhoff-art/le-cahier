@@ -9,6 +9,7 @@
 // tile can never disagree with what Home or Progress already show for the
 // same cards.
 import { tally, withState } from './deck-stats.js';
+import { PRODUCE_UNLOCK_INTERVAL } from './scheduler.js';
 
 export const VOCAB_MODULE_SIZE = 50;
 
@@ -140,6 +141,33 @@ export function intervalBuckets(ids, getCard) {
       if (card.interval >= r) rung = r;
     }
     counts[rung] += 1;
+  }
+  return counts;
+}
+
+// Same idea as intervalBuckets, but for produce cards specifically: a card
+// still waiting on its recall card's PRODUCE_UNLOCK_INTERVAL isn't "new and
+// ready" the way deck-stats.js's newAvailable already treats it (section
+// 8.5) — counting it as plain "new" here would make this table disagree
+// with what Home and the "Left today" table show. Needs the full specs
+// (each with requiresCardId), not bare ids.
+export function produceBuckets(produceSpecs, getCard, day) {
+  const counts = { locked: 0, new: 0, due: 0 };
+  for (const rung of INTERVAL_RUNGS) counts[rung] = 0;
+  for (const spec of produceSpecs) {
+    const card = getCard(spec.id);
+    if (!card || card.state === 'new') {
+      const recall = getCard(spec.requiresCardId);
+      const unlocked = recall && recall.interval >= PRODUCE_UNLOCK_INTERVAL;
+      counts[unlocked ? 'new' : 'locked'] += 1;
+      continue;
+    }
+    let rung = INTERVAL_RUNGS[0];
+    for (const r of INTERVAL_RUNGS) {
+      if (card.interval >= r) rung = r;
+    }
+    counts[rung] += 1;
+    if (card.due <= day) counts.due += 1;
   }
   return counts;
 }
