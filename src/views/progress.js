@@ -1,7 +1,9 @@
 import { h, clear } from '../dom.js';
-import { getHistory, allCards } from '../store.js';
+import { getHistory, allCards, getCard } from '../store.js';
 import { summarise } from '../deck-stats.js';
 import { today } from '../scheduler.js';
+import { buildVocabCardDeck } from '../vocab-cards.js';
+import { intervalBuckets, INTERVAL_RUNGS } from '../modules.js';
 
 const MODE_LABEL = { verbs: 'verbs', vocab: 'vocabulary', chooser: 'chooser' };
 
@@ -96,6 +98,27 @@ function renderDeck(container, data) {
   );
 }
 
+function renderWordBuckets(container, data) {
+  if (!data.vocab || data.vocab.length === 0) return;
+
+  const deck = buildVocabCardDeck(data.vocab);
+  const recallIds = deck.filter((c) => c.kind === 'recall').map((c) => c.id);
+  const produceIds = deck.filter((c) => c.kind === 'produce').map((c) => c.id);
+  const recallBuckets = intervalBuckets(recallIds, getCard);
+  const produceBuckets = intervalBuckets(produceIds, getCard);
+
+  container.append(
+    h('h2', {}, 'Where your words are'),
+    table(
+      ['', 'New', ...INTERVAL_RUNGS.map((r) => `${r}d`)],
+      [
+        ['Recall', String(recallBuckets.new), ...INTERVAL_RUNGS.map((r) => String(recallBuckets[r]))],
+        ['Writing', String(produceBuckets.new), ...INTERVAL_RUNGS.map((r) => String(produceBuckets[r]))],
+      ],
+    ),
+  );
+}
+
 function renderRecent(container, history) {
   const days = Object.keys(history).filter((d) => history[d]?.total).sort().reverse().slice(0, 14);
   if (days.length === 0) return;
@@ -134,8 +157,9 @@ export function renderProgressView(container, data = {}) {
 
   renderToday(container, history);
   renderLeft(container, data);
-  renderRecent(container, history);
   renderDeck(container, data);
+  renderWordBuckets(container, data);
+  renderRecent(container, history);
   renderAllTime(container, history);
 
   const leeches = Object.values(allCards()).filter((c) => c.state === 'leech');

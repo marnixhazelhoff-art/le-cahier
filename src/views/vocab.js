@@ -35,8 +35,25 @@ function eligiblePool(deck) {
     });
 }
 
+// Shuffling the whole eligible pool before slicing would let the batch pick
+// *any* new word, not just the next ones in line — silently breaking the
+// frequency-order rule (section 8.7) the moment a session had more eligible
+// words than BATCH_SIZE. Due cards are shuffled freely; the new pool is
+// only ever sliced from the front, since the deck is already rank order.
+// The combined result is shuffled once more purely for presentation.
 function nextBatch(deck) {
-  return shuffle(eligiblePool(deck)).slice(0, BATCH_SIZE);
+  const t = today();
+  const withState = deck.map((spec) => ({ spec, card: cardState(spec) }));
+  const due = withState.filter(({ card }) => card.state !== 'new' && card.due <= t);
+  const newEligible = withState.filter(({ spec, card }) => {
+    if (card.state !== 'new') return false;
+    if (spec.kind !== 'produce') return true;
+    const recall = getCard(spec.requiresCardId);
+    return recall && recall.interval >= PRODUCE_UNLOCK_INTERVAL;
+  });
+  const duePicked = due.slice(0, BATCH_SIZE);
+  const newPicked = newEligible.slice(0, Math.max(0, BATCH_SIZE - duePicked.length));
+  return shuffle([...duePicked, ...newPicked]);
 }
 
 function renderRecallCard(container, spec, card, onGraded) {
