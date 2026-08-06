@@ -93,6 +93,19 @@ export function buildVerbCardDeck(verbs) {
     }
   }
 
+  // --- Present, regular verbs beyond the three models ---------------------
+  // The three models above teach the whole pattern, including vous and ils,
+  // but knowing a pattern in the abstract and producing it for one specific
+  // verb are different skills — every other regular verb gets its own
+  // je/tu/il/nous cards too. vous is still skipped (recoverable from nous),
+  // and so is ils: a regular verb's ils never introduces a stem the others
+  // don't already show.
+  for (const verb of verbs) {
+    if (verb.group !== 1 && verb.group !== 2) continue;
+    if (REGULAR_MODELS.includes(verb.infinitive)) continue;
+    cards.push(presentCard(verb, 0), presentCard(verb, 1), presentCard(verb, 2), presentCard(verb, 3));
+  }
+
   // --- Passé composé, full production ------------------------------------
   // One card per verb that needs one: every être-aux verb (the auxiliary is
   // never optional there), every verb whose participle isn't predictable
