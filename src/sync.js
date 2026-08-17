@@ -294,27 +294,15 @@ export async function syncNow() {
   }
 }
 
-// After a review, push without pulling. Pulling every few seconds would cost
-// far more than it catches, and the next load pulls anyway.
-async function pushOnly() {
-  const cfg = config();
-  if (!cfg) return;
-  try {
-    const session = await ensureSession(cfg);
-    if (!session) return;
-    const state = getState();
-    await push(cfg, session, { cards: state.cards, history: state.history });
-    setStatus('synced', `Synced at ${clockLabel()}.`);
-  } catch (err) {
-    setStatus('error', err.message);
-  }
-}
-
 function schedulePush() {
   if (pushTimer) clearTimeout(pushTimer);
   pushTimer = setTimeout(() => {
     pushTimer = null;
-    pushOnly();
+    // Pull and merge before pushing, same as syncNow. A device left open in
+    // the background never reloads, so it never re-pulls on its own: a bare
+    // push here would overwrite whatever another device pushed meanwhile,
+    // which is the whole-document bug merge.js exists to avoid.
+    syncNow();
   }, PUSH_DEBOUNCE_MS);
 }
 
@@ -323,7 +311,7 @@ function flushPush() {
   if (!pushTimer) return;
   clearTimeout(pushTimer);
   pushTimer = null;
-  pushOnly();
+  syncNow();
 }
 
 /**
