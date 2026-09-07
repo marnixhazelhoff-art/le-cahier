@@ -35,6 +35,21 @@ function eligiblePool(deck) {
     });
 }
 
+// A word's recall and produce card never share a batch: having just seen the
+// answer one direction primes it for the other, and grading one no longer
+// tests what the other card is meant to check. Skipping a card here just
+// defers it, since due dates and eligibility are recomputed fresh next call.
+function pickNonConflicting(pool, remainingSlots, usedLemmas) {
+  const picked = [];
+  for (const item of pool) {
+    if (picked.length >= remainingSlots) break;
+    if (usedLemmas.has(item.spec.lemma)) continue;
+    picked.push(item);
+    usedLemmas.add(item.spec.lemma);
+  }
+  return picked;
+}
+
 // Shuffling the whole eligible pool before slicing would let the batch pick
 // *any* new word, not just the next ones in line — silently breaking the
 // frequency-order rule (section 8.7) the moment a session had more eligible
@@ -51,8 +66,9 @@ function nextBatch(deck) {
     const recall = getCard(spec.requiresCardId);
     return recall && recall.interval >= PRODUCE_UNLOCK_INTERVAL;
   });
-  const duePicked = due.slice(0, BATCH_SIZE);
-  const newPicked = newEligible.slice(0, Math.max(0, BATCH_SIZE - duePicked.length));
+  const usedLemmas = new Set();
+  const duePicked = pickNonConflicting(due, BATCH_SIZE, usedLemmas);
+  const newPicked = pickNonConflicting(newEligible, BATCH_SIZE - duePicked.length, usedLemmas);
   return shuffle([...duePicked, ...newPicked]);
 }
 

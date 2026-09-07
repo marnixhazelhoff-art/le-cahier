@@ -173,7 +173,30 @@ if (vocab.length > 0) {
     ok(`${label}: example and exampleNl are both present or both absent`,
       Boolean(entry.example) === Boolean(entry.exampleNl));
     ok(`${label}: has a non-empty nl gloss`, typeof entry.nl === 'string' && entry.nl.trim().length > 0);
+    if (entry.promptHint !== undefined) {
+      ok(`${label}: promptHint is a non-empty string`,
+        typeof entry.promptHint === 'string' && entry.promptHint.trim().length > 0);
+    }
   }
+
+  // Two entries with the same Dutch gloss give the produce card (Dutch shown,
+  // French typed) no way to tell which French word is wanted — see the "an"
+  // vs "année" bug both glossing "jaar". A promptHint on every entry in the
+  // group fixes that; this check keeps a future enrich.mjs batch from
+  // reintroducing the collision silently.
+  const byNl = new Map();
+  for (const entry of vocab) {
+    const key = entry.nl.trim().toLowerCase();
+    if (!byNl.has(key)) byNl.set(key, []);
+    byNl.get(key).push(entry);
+  }
+  for (const [nl, group] of byNl) {
+    if (group.length < 2) continue;
+    const words = group.map((e) => e.fr).join(' / ');
+    ok(`"${nl}" (${words}): every entry sharing this gloss has a promptHint`,
+      group.every((e) => typeof e.promptHint === 'string' && e.promptHint.trim().length > 0));
+  }
+
   console.log(`\nvocab.json: ${vocab.length} entries checked`);
 }
 

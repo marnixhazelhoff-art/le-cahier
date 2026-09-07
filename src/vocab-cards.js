@@ -24,6 +24,14 @@ function producibleForms(entry) {
   return alt ? [form, `${alt} ${entry.fr}`] : [form];
 }
 
+// A handful of Dutch glosses are shared by two entries (an/année both gloss
+// "jaar"). Without a hint the produce prompt gives no way to know which
+// French word is wanted, so those entries carry a short promptHint to show
+// alongside the gloss.
+function producePrompt(entry) {
+  return entry.promptHint ? `${entry.nl} (${entry.promptHint})` : entry.nl;
+}
+
 export function buildVocabCardDeck(vocab) {
   const sorted = [...vocab].sort((a, b) => a.rank - b.rank);
   const cards = [];
@@ -51,7 +59,7 @@ export function buildVocabCardDeck(vocab) {
       lemma: entry.fr,
       familiar: entry.familiar,
       requiresCardId: recallId,
-      prompt: entry.nl,
+      prompt: producePrompt(entry),
       expected: producibleForms(entry),
       example: entry.example,
       exampleNl: entry.exampleNl,

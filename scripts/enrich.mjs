@@ -57,12 +57,12 @@ const RESPONSE_SCHEMA = {
 
 const BOOTSTRAP_EXAMPLES = [
   {
-    fr: 'voiture', article: 'une', nl: 'auto', pos: 'noun', gender: 'f',
+    fr: 'voiture', article: 'une', nl: 'de auto', pos: 'noun', gender: 'f',
     example: 'Ma voiture est en panne.', exampleNl: 'Mijn auto is kapot.',
     familiar: false, falseFriend: null, note: null,
   },
   {
-    fr: 'maison', article: 'une', nl: 'huis', pos: 'noun', gender: 'f',
+    fr: 'maison', article: 'une', nl: 'het huis', pos: 'noun', gender: 'f',
     example: "J'habite dans une maison.", exampleNl: 'Ik woon in een huis.',
     familiar: false, falseFriend: null, note: null,
   },
@@ -70,6 +70,11 @@ const BOOTSTRAP_EXAMPLES = [
     fr: 'content', article: null, nl: 'blij, tevreden', pos: 'adj', gender: null,
     example: 'Je suis très content.', exampleNl: 'Ik ben erg blij.',
     familiar: false, falseFriend: null, note: 'Not related to Dutch "content" (inhoud).',
+  },
+  {
+    fr: 'temps', article: 'le', nl: 'de tijd, het weer', pos: 'noun', gender: 'm',
+    example: "Je n'ai pas le temps.", exampleNl: 'Ik heb geen tijd.',
+    familiar: false, falseFriend: null, note: null,
   },
 ];
 
@@ -104,7 +109,13 @@ Fields to produce:
 - article: mandatory for nouns, one of le, la, un, une, l'. Pick whichever reads most
   naturally for how this word is normally introduced, but it must agree with the given
   gender (masculine: le, un, l'; feminine: la, une, l'). Null for non-nouns.
-- nl: the two or three most useful Dutch senses, comma separated, no articles.
+- nl: the one to three most useful Dutch senses, comma separated. For every sense that
+  is itself a countable Dutch noun, prefix it with its own article, de or het — judge
+  each sense on its own Dutch gender, which does not have to match the French word's
+  gender and does not have to be the same across senses (temps is "de tijd, het weer",
+  not "de tijd, de weer"). Leave a sense bare only when it genuinely takes no article in
+  Dutch (a plural, an adjective or adverb used as the gloss, a fixed greeting). Never
+  guess if unsure of de/het; use the form you are most confident is correct.
 - example: a natural French sentence of six words or fewer that a beginner could
   plausibly say. Everyday register, not literary. Include the article for nouns.
   The sentence must contain the target word itself (its exact base form, or a
@@ -122,8 +133,8 @@ Fields to produce:
 - note: a real trap only (irregular plural, gender that contradicts the ending, a
   fixed preposition, a meaning that shifts with gender). Never filler. Null if none.
 
-Format contract, three real entries already in the bank:
-${JSON.stringify(BOOTSTRAP_EXAMPLES.slice(0, 3), null, 2)}`;
+Format contract, four real entries already in the bank:
+${JSON.stringify(BOOTSTRAP_EXAMPLES, null, 2)}`;
 }
 
 function buildUserMessage(batch) {
@@ -193,6 +204,11 @@ function validateEntry(entry, candidate) {
         ? FEMININE_ARTICLES.has(entry.article)
         : true; // mf: either is fine
     if (!genderOk) return `article "${entry.article}" disagrees with gender "${candidate.gender}"`;
+  } else if (entry.article) {
+    // A non-noun with an article usually means the LLM picked a fixed phrase
+    // (un peu) instead of grading the bare word (peu) the candidate actually
+    // is, which then gets produce-tested with the wrong surface form.
+    return `non-noun "${candidate.fr}" (${candidate.pos}) has article "${entry.article}", expected null`;
   }
   if (Boolean(entry.example) !== Boolean(entry.exampleNl)) return 'example and exampleNl must both be present or both absent';
   if (!entry.nl || !entry.nl.trim()) return 'missing nl gloss';

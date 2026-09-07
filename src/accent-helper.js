@@ -1,20 +1,23 @@
 import { h } from './dom.js';
 import { getSettings } from './store.js';
 
-const ACCENTS = ['é', 'è', 'ê', 'à', 'â', 'ç', 'î', 'ô', 'û', 'ù'];
+const ACCENTS = ['é', 'è', 'ê', 'ë', 'à', 'â', 'ç', 'î', 'ï', 'ô', 'û', 'ù', 'œ'];
 
 // Alt-key shortcuts for desktop typists. Long-pressing a vowel already gives
 // accents on both iOS and Android keyboards, so this row is a desktop aid,
 // not a touch one (section 12.1) — Alt+e/shift/ctrl covers e's three forms,
-// the rest get one or two.
+// the rest get one or two. œ has no natural letter+modifier slot, so it is
+// row only, not a shortcut.
 const SHORTCUTS = [
   { key: 'e', alt: true, char: 'é' },
   { key: 'e', alt: true, shift: true, char: 'è' },
   { key: 'e', alt: true, ctrl: true, char: 'ê' },
+  { key: 'e', alt: true, ctrl: true, shift: true, char: 'ë' },
   { key: 'a', alt: true, char: 'à' },
   { key: 'a', alt: true, shift: true, char: 'â' },
   { key: 'c', alt: true, char: 'ç' },
   { key: 'i', alt: true, char: 'î' },
+  { key: 'i', alt: true, shift: true, char: 'ï' },
   { key: 'o', alt: true, char: 'ô' },
   { key: 'u', alt: true, char: 'û' },
   { key: 'u', alt: true, shift: true, char: 'ù' },
