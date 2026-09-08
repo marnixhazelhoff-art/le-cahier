@@ -16,6 +16,10 @@ Static PWA. No build step, no runtime dependencies, no framework. Vanilla ES mod
 - Accent errors grade as Almost. Gender errors grade as Again.
 - Failure halves the interval. It never resets to day one.
 - Verbs are never vocabulary cards. Vocabulary is never conjugated.
+- Noun articles are never l', even before a vowel or mute h where real French
+  always elides (l'hôpital, l'eau). Store and show le/la/un/une by the word's
+  actual gender instead (le hôpital, une eau): l' hides the gender a learner
+  is trying to build. See src/vocab-cards.js ARTICLE_SWAP.
 - Bump VERSION in service-worker.js whenever a shell or data file changes, and
   add new src/ files to its CORE list. An installed copy serves its cache first,
   so skipping the bump ships nothing.

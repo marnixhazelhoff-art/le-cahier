@@ -168,7 +168,9 @@ if (vocab.length > 0) {
     ok(`${label}: pos is valid`, VALID_POS.has(entry.pos));
     if (entry.pos === 'noun') {
       ok(`${label}: noun has gender`, entry.gender === 'm' || entry.gender === 'f' || entry.gender === 'mf');
-      ok(`${label}: noun has article`, ['le', 'la', 'un', 'une', "l'"].includes(entry.article));
+      // l' is never valid here: it hides gender behind elision, defeating the
+      // reason nouns carry an article at all. See vocab-cards.js ARTICLE_SWAP.
+      ok(`${label}: noun has article`, ['le', 'la', 'un', 'une'].includes(entry.article));
     }
     ok(`${label}: example and exampleNl are both present or both absent`,
       Boolean(entry.example) === Boolean(entry.exampleNl));

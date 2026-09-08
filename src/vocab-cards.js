@@ -9,12 +9,15 @@ function surfaceForm(entry) {
 // indefinite is a real but separate choice from the fact this drill is
 // actually testing. Grading only the stored article as correct meant typing
 // "un cinéma" for "le cinéma" failed despite the gender being right.
+//
+// l' is never stored (data/vocab.json only ever holds le/la/un/une): real
+// elision hides the gender it takes a beginner years to stop needing to see,
+// so every vowel-initial noun is kept as "le hôpital"/"une eau" here even
+// though no French speaker would ever write it that way.
 const ARTICLE_SWAP = { le: 'un', un: 'le', la: 'une', une: 'la' };
 
 function alternateArticle(entry) {
-  if (entry.article in ARTICLE_SWAP) return ARTICLE_SWAP[entry.article];
-  if (entry.article === "l'") return entry.gender === 'f' ? 'une' : 'un';
-  return null;
+  return ARTICLE_SWAP[entry.article] ?? null;
 }
 
 function producibleForms(entry) {

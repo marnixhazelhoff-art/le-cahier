@@ -761,7 +761,7 @@
   },
   {
     "fr": "argent",
-    "article": "l'",
+    "article": "le",
     "nl": "het geld, het zilver",
     "pos": "noun",
     "gender": "m",
@@ -775,7 +775,7 @@
   },
   {
     "fr": "air",
-    "article": "l'",
+    "article": "le",
     "nl": "de lucht, het uiterlijk, het wijsje",
     "pos": "noun",
     "gender": "m",
@@ -845,7 +845,7 @@
   },
   {
     "fr": "amour",
-    "article": "l'",
+    "article": "le",
     "nl": "de liefde",
     "pos": "noun",
     "gender": "m",
@@ -888,7 +888,7 @@
   },
   {
     "fr": "oeil",
-    "article": "l'",
+    "article": "le",
     "nl": "het oog",
     "pos": "noun",
     "gender": "m",
@@ -1268,7 +1268,7 @@
   },
   {
     "fr": "eau",
-    "article": "l'",
+    "article": "la",
     "nl": "het water",
     "pos": "noun",
     "gender": "f",
@@ -2856,7 +2856,7 @@
   },
   {
     "fr": "attention",
-    "article": "l'",
+    "article": "la",
     "nl": "de aandacht, oppassen",
     "pos": "noun",
     "gender": "f",
@@ -2926,7 +2926,7 @@
   },
   {
     "fr": "esprit",
-    "article": "l'",
+    "article": "le",
     "nl": "de geest, het verstand",
     "pos": "noun",
     "gender": "m",
@@ -3010,7 +3010,7 @@
   },
   {
     "fr": "âge",
-    "article": "l'",
+    "article": "le",
     "nl": "de leeftijd",
     "pos": "noun",
     "gender": "m",
@@ -3164,7 +3164,7 @@
   },
   {
     "fr": "état",
-    "article": "l'",
+    "article": "le",
     "nl": "de staat, de toestand",
     "pos": "noun",
     "gender": "m",
@@ -3318,7 +3318,7 @@
   },
   {
     "fr": "âme",
-    "article": "l'",
+    "article": "la",
     "nl": "de ziel",
     "pos": "noun",
     "gender": "f",
@@ -3599,7 +3599,7 @@
   },
   {
     "fr": "honneur",
-    "article": "l'",
+    "article": "le",
     "nl": "de eer",
     "pos": "noun",
     "gender": "m",
@@ -4484,7 +4484,7 @@
   },
   {
     "fr": "or",
-    "article": "l'",
+    "article": "le",
     "nl": "het goud",
     "pos": "noun",
     "gender": "m",
@@ -5339,7 +5339,7 @@
   },
   {
     "fr": "intérieur",
-    "article": "l'",
+    "article": "le",
     "nl": "de binnenkant, het interieur",
     "pos": "noun",
     "gender": "m",
@@ -5437,7 +5437,7 @@
   },
   {
     "fr": "enfer",
-    "article": "l'",
+    "article": "le",
     "nl": "de hel",
     "pos": "noun",
     "gender": "m",
@@ -5943,7 +5943,7 @@
   },
   {
     "fr": "est",
-    "article": "l'",
+    "article": "le",
     "nl": "het oosten",
     "pos": "noun",
     "gender": "m",
@@ -6799,7 +6799,7 @@
   },
   {
     "fr": "art",
-    "article": "l'",
+    "article": "le",
     "nl": "de kunst",
     "pos": "noun",
     "gender": "m",
@@ -6841,7 +6841,7 @@
   },
   {
     "fr": "avenir",
-    "article": "l'",
+    "article": "le",
     "nl": "de toekomst",
     "pos": "noun",
     "gender": "m",
@@ -7390,7 +7390,7 @@
   },
   {
     "fr": "été",
-    "article": "l'",
+    "article": "le",
     "nl": "de zomer",
     "pos": "noun",
     "gender": "m",
@@ -7572,7 +7572,7 @@
   },
   {
     "fr": "époux",
-    "article": "l'",
+    "article": "le",
     "nl": "de echtgenoot",
     "pos": "noun",
     "gender": "m",
@@ -7698,7 +7698,7 @@
   },
   {
     "fr": "espoir",
-    "article": "l'",
+    "article": "le",
     "nl": "de hoop, de verwachting",
     "pos": "noun",
     "gender": "m",
@@ -9332,7 +9332,7 @@
   },
   {
     "fr": "arrière",
-    "article": "l'",
+    "article": "le",
     "nl": "de achterkant, het achterste",
     "pos": "noun",
     "gender": "m",
@@ -9543,7 +9543,7 @@
   },
   {
     "fr": "anglais",
-    "article": "l'",
+    "article": "le",
     "nl": "het Engels, de Engelsman",
     "pos": "noun",
     "gender": "m",
@@ -9837,7 +9837,7 @@
   },
   {
     "fr": "allemand",
-    "article": "l'",
+    "article": "le",
     "nl": "het Duits",
     "pos": "noun",
     "gender": "m",
@@ -11297,7 +11297,7 @@
   },
   {
     "fr": "alcool",
-    "article": "l'",
+    "article": "le",
     "nl": "de alcohol",
     "pos": "noun",
     "gender": "m",
@@ -11339,7 +11339,7 @@
   },
   {
     "fr": "invité",
-    "article": "l'",
+    "article": "le",
     "nl": "de gast, de genodigde",
     "pos": "noun",
     "gender": "m",
@@ -11409,7 +11409,7 @@
   },
   {
     "fr": "université",
-    "article": "l'",
+    "article": "la",
     "nl": "de universiteit",
     "pos": "noun",
     "gender": "f",
@@ -11913,7 +11913,7 @@
   },
   {
     "fr": "hiver",
-    "article": "l'",
+    "article": "le",
     "nl": "de winter",
     "pos": "noun",
     "gender": "m",
@@ -12925,7 +12925,7 @@
   },
   {
     "fr": "herbe",
-    "article": "l'",
+    "article": "la",
     "nl": "het gras, het kruid",
     "pos": "noun",
     "gender": "f",
@@ -12939,7 +12939,7 @@
   },
   {
     "fr": "identité",
-    "article": "l'",
+    "article": "la",
     "nl": "de identiteit",
     "pos": "noun",
     "gender": "f",
@@ -13093,7 +13093,7 @@
   },
   {
     "fr": "univers",
-    "article": "l'",
+    "article": "le",
     "nl": "het universum, het heelal",
     "pos": "noun",
     "gender": "m",
@@ -13291,7 +13291,7 @@
   },
   {
     "fr": "essence",
-    "article": "l'",
+    "article": "la",
     "nl": "de benzine, de essentie",
     "pos": "noun",
     "gender": "f",
@@ -13333,7 +13333,7 @@
   },
   {
     "fr": "aéroport",
-    "article": "l'",
+    "article": "le",
     "nl": "de luchthaven, het vliegveld",
     "pos": "noun",
     "gender": "m",
@@ -13389,7 +13389,7 @@
   },
   {
     "fr": "enfance",
-    "article": "l'",
+    "article": "la",
     "nl": "de kindertijd, de jeugd",
     "pos": "noun",
     "gender": "f",
@@ -13417,7 +13417,7 @@
   },
   {
     "fr": "autorité",
-    "article": "l'",
+    "article": "la",
     "nl": "het gezag, de autoriteit",
     "pos": "noun",
     "gender": "f",
@@ -13529,7 +13529,7 @@
   },
   {
     "fr": "aise",
-    "article": "l'",
+    "article": "la",
     "nl": "het gemak, de behaaglijkheid",
     "pos": "noun",
     "gender": "f",
@@ -15635,7 +15635,7 @@
   },
   {
     "fr": "ouest",
-    "article": "l'",
+    "article": "le",
     "nl": "het westen",
     "pos": "noun",
     "gender": "m",
@@ -16788,7 +16788,7 @@
   },
   {
     "fr": "extérieur",
-    "article": "l'",
+    "article": "le",
     "nl": "de buitenkant, het exterieur",
     "pos": "noun",
     "gender": "m",
@@ -16845,7 +16845,7 @@
   },
   {
     "fr": "ascenseur",
-    "article": "l'",
+    "article": "le",
     "nl": "de lift",
     "pos": "noun",
     "gender": "m",
@@ -17153,7 +17153,7 @@
   },
   {
     "fr": "océan",
-    "article": "l'",
+    "article": "le",
     "nl": "de oceaan",
     "pos": "noun",
     "gender": "m",
@@ -18023,7 +18023,7 @@
   },
   {
     "fr": "humanité",
-    "article": "l'",
+    "article": "la",
     "nl": "de mensheid, de menselijkheid",
     "pos": "noun",
     "gender": "f",
@@ -18037,7 +18037,7 @@
   },
   {
     "fr": "excellence",
-    "article": "l'",
+    "article": "la",
     "nl": "de uitmuntendheid",
     "pos": "noun",
     "gender": "f",
@@ -18458,7 +18458,7 @@
   },
   {
     "fr": "huile",
-    "article": "l'",
+    "article": "la",
     "nl": "de olie",
     "pos": "noun",
     "gender": "f",
@@ -21739,7 +21739,7 @@
   },
   {
     "fr": "intelligence",
-    "article": "l'",
+    "article": "la",
     "nl": "de intelligentie",
     "pos": "noun",
     "gender": "f",
@@ -21866,7 +21866,7 @@
   },
   {
     "fr": "ouverture",
-    "article": "l'",
+    "article": "la",
     "nl": "de opening",
     "pos": "noun",
     "gender": "f",
@@ -21979,7 +21979,7 @@
   },
   {
     "fr": "éternité",
-    "article": "l'",
+    "article": "la",
     "nl": "de eeuwigheid",
     "pos": "noun",
     "gender": "f",
@@ -22751,7 +22751,7 @@
   },
   {
     "fr": "humour",
-    "article": "l'",
+    "article": "le",
     "nl": "de humor",
     "pos": "noun",
     "gender": "m",
@@ -23059,7 +23059,7 @@
   },
   {
     "fr": "économie",
-    "article": "l'",
+    "article": "la",
     "nl": "de economie, de zuinigheid",
     "pos": "noun",
     "gender": "f",
@@ -23087,7 +23087,7 @@
   },
   {
     "fr": "instinct",
-    "article": "l'",
+    "article": "le",
     "nl": "het instinct",
     "pos": "noun",
     "gender": "m",
@@ -23129,7 +23129,7 @@
   },
   {
     "fr": "automne",
-    "article": "l'",
+    "article": "le",
     "nl": "de herfst",
     "pos": "noun",
     "gender": "m",
@@ -24279,7 +24279,7 @@
   },
   {
     "fr": "are",
-    "article": "l'",
+    "article": "le",
     "nl": "de are",
     "pos": "noun",
     "gender": "m",
@@ -24349,7 +24349,7 @@
   },
   {
     "fr": "électricité",
-    "article": "l'",
+    "article": "la",
     "nl": "de elektriciteit",
     "pos": "noun",
     "gender": "f",
@@ -25946,7 +25946,7 @@
   },
   {
     "fr": "obscurité",
-    "article": "l'",
+    "article": "la",
     "nl": "de duisternis, het donker",
     "pos": "noun",
     "gender": "f",
@@ -26352,7 +26352,7 @@
   },
   {
     "fr": "oxygène",
-    "article": "l'",
+    "article": "le",
     "nl": "de zuurstof",
     "pos": "noun",
     "gender": "m",
@@ -26619,7 +26619,7 @@
   },
   {
     "fr": "acier",
-    "article": "l'",
+    "article": "le",
     "nl": "het staal",
     "pos": "noun",
     "gender": "m",
@@ -26718,7 +26718,7 @@
   },
   {
     "fr": "accueil",
-    "article": "l'",
+    "article": "le",
     "nl": "de ontvangst, de receptie",
     "pos": "noun",
     "gender": "m",
@@ -26872,7 +26872,7 @@
   },
   {
     "fr": "accusé",
-    "article": "l'",
+    "article": "le",
     "nl": "de beschuldigde, de verdachte",
     "pos": "noun",
     "gender": "m",
@@ -27026,7 +27026,7 @@
   },
   {
     "fr": "écriture",
-    "article": "l'",
+    "article": "la",
     "nl": "het schrift, het handschrift",
     "pos": "noun",
     "gender": "f",

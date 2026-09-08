@@ -17,9 +17,13 @@ const CANDIDATES_PATH = new URL('../data/frequency/lexique-top.json', import.met
 const VOCAB_PATH = new URL('../data/vocab.json', import.meta.url);
 const STATE_PATH = new URL('../data/enrich-state.json', import.meta.url);
 
-const ARTICLES = new Set(['le', 'la', 'un', 'une', "l'"]);
-const MASCULINE_ARTICLES = new Set(['le', 'un', "l'"]);
-const FEMININE_ARTICLES = new Set(['la', 'une', "l'"]);
+// l' is deliberately not a valid article here: real elision (l'hôpital)
+// hides the gender the learner is trying to build, so a vowel-initial noun
+// still gets le/la/un/une, matching its actual gender, even though that is
+// not how a French speaker would write it.
+const ARTICLES = new Set(['le', 'la', 'un', 'une']);
+const MASCULINE_ARTICLES = new Set(['le', 'un']);
+const FEMININE_ARTICLES = new Set(['la', 'une']);
 
 const ENTRY_SCHEMA = {
   type: 'object',
@@ -106,9 +110,13 @@ pos and gender are given to you as facts from a lexical database. Use them; do n
 guess or second-guess them.
 
 Fields to produce:
-- article: mandatory for nouns, one of le, la, un, une, l'. Pick whichever reads most
-  naturally for how this word is normally introduced, but it must agree with the given
-  gender (masculine: le, un, l'; feminine: la, une, l'). Null for non-nouns.
+- article: mandatory for nouns, one of le, la, un, une. Never l', even when the word
+  starts with a vowel or mute h and a real French speaker would always elide (l'hôpital,
+  l'eau) — write le hôpital, une eau instead. This is deliberately not how French is
+  actually written: l' hides the gender a learner is trying to build, so pick le/la/un/une
+  by the given gender (masculine: le, un; feminine: la, une) every time, elision or not.
+  Whichever of definite/indefinite reads most naturally for how the word is normally
+  introduced. Null for non-nouns.
 - nl: the one to three most useful Dutch senses, comma separated. For every sense that
   is itself a countable Dutch noun, prefix it with its own article, de or het — judge
   each sense on its own Dutch gender, which does not have to match the French word's
