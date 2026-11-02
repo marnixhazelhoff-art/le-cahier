@@ -1,4 +1,4 @@
-# le cahier
+# Le Cahier
 
 Static PWA. No build step, no runtime dependencies, no framework. Vanilla ES modules.
 `npm start` serves it. Fetching data over file:// does not work.

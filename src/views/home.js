@@ -4,7 +4,7 @@ import { summarise } from '../deck-stats.js';
 export function renderHomeView(container, data = {}) {
   clear(container);
   container.append(
-    h('h1', {}, 'le cahier'),
+    h('h1', {}, 'Le Cahier'),
     h('p', {}, 'A French vocabulary and conjugation trainer, fifteen minutes a day.'),
   );
 

@@ -1,4 +1,4 @@
-# Build brief: *le cahier*, a French vocabulary and conjugation trainer
+# Build brief: *Le Cahier*, a French vocabulary and conjugation trainer
 
 ## How to use this file
 
@@ -485,7 +485,7 @@ Stop and show the learner at each **CHECKPOINT**.
 Keep it short. It is read on every session, so it must earn its tokens.
 
 ```markdown
-# le cahier
+# Le Cahier
 
 Static PWA. No build step, no runtime dependencies, no framework. Vanilla ES modules.
 `npm start` serves it. Fetching data over file:// does not work.

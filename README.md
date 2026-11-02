@@ -1,4 +1,4 @@
-# le cahier
+# Le Cahier
 
 A French vocabulary and conjugation trainer for one Dutch speaking learner.
 Spaced repetition, fifteen minutes a day, on a laptop and a phone.

@@ -37,5 +37,5 @@ createServer(async (req, res) => {
     res.end('Not found: ' + path);
   }
 }).listen(port, () => {
-  console.log(`le cahier: http://localhost:${port}`);
+  console.log(`Le Cahier: http://localhost:${port}`);
 });

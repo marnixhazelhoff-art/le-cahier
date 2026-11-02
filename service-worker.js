@@ -2,7 +2,7 @@
 // Bump VERSION whenever the shell or the data files change. Old caches are
 // deleted on activate, so a bump is the whole upgrade story.
 
-const VERSION = 'v27';
+const VERSION = 'v28';
 const CACHE = `le-cahier-${VERSION}`;
 
 // Relative so this survives a GitHub Pages subpath. These resolve against the
@@ -109,7 +109,7 @@ async function staleWhileRevalidate(event) {
   }
 
   return new Response(
-    'le cahier is offline and this file was never cached. Reconnect once to finish the install.',
+    'Le Cahier is offline and this file was never cached. Reconnect once to finish the install.',
     { status: 503, statusText: 'Offline', headers: { 'Content-Type': 'text/plain; charset=utf-8' } }
   );
 }
