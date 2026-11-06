@@ -67,10 +67,13 @@ function renderCard(container, queue, index, verbs, onDone) {
       const typed = input.value;
       if (!typed.trim()) return;
       const result = gradeAnswer(typed, spec.expected);
-      const graded = grade(card, result.grade);
+      // The stored card, not the batch snapshot: a card repeated after an
+      // Almost has already been graded once in this batch.
+      const current = getCard(spec.id) ?? card;
+      const graded = grade(current, result.grade);
       putCard(graded);
-      // card is the pre-grade state, so reps 0 means this review introduced it.
-      recordReview('verbs', result.grade, { introduced: card.reps === 0 });
+      // current is the pre-grade state, so reps 0 means this review introduced it.
+      recordReview('verbs', result.grade, { introduced: current.reps === 0 });
 
       // expected is usually one string, but a card can offer several accepted
       // answers (je suis allé / je suis allée) — speak and show the display

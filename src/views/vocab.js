@@ -126,8 +126,10 @@ function renderProduceCard(container, spec, card, onGraded) {
       input.disabled = true;
       clear(feedback);
       feedback.append(
-        h('p', { class: result.grade === 'again' ? 'incorrect' : 'correct' },
-          result.grade === 'good' ? 'Correct.' : spoken),
+        h('p', { class: result.grade === 'good' ? 'correct' : 'incorrect' },
+          result.grade === 'good' ? 'Correct.'
+            : result.grade === 'almost' ? `Almost, mind the accent: ${result.correction}. This one comes back in a moment.`
+              : spoken),
       );
       if (spec.note) feedback.append(h('p', {}, spec.note));
       const next = h('button', { type: 'button', onclick: () => onGraded(result.grade) }, 'Next');
@@ -165,11 +167,21 @@ function renderCard(container, queue, index, mode, onDone) {
   container.append(h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left in this batch`), body);
 
   const onGraded = (outcome) => {
-    const graded = grade(card, outcome);
+    // Read the stored card, not the batch snapshot: a card repeated after an
+    // Almost has already been graded once in this batch.
+    const current = getCard(spec.id) ?? card;
+    const graded = grade(current, outcome);
     putCard(graded);
-    // card is the pre-grade state, so reps 0 means this review introduced it.
-    recordReview('vocab', outcome, { introduced: card.reps === 0 });
-    renderCard(container, queue, index + 1, mode, onDone);
+    // current is the pre-grade state, so reps 0 means this review introduced it.
+    recordReview('vocab', outcome, { introduced: current.reps === 0 });
+    // Almost leaves interval and due date where they were (section 8.4), so
+    // the card has to come back later in this batch. Without the repeat it
+    // simply stays due, and a word typed without its accent returns every
+    // day without ever moving up the ladder.
+    const nextQueue = outcome === 'almost'
+      ? [...queue.slice(0, index + 1), ...queue.slice(index + 1, index + 4), queue[index], ...queue.slice(index + 4)]
+      : queue;
+    renderCard(container, nextQueue, index + 1, mode, onDone);
   };
 
   if (spec.kind === 'recall') renderRecallCard(body, spec, card, onGraded);
