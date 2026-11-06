@@ -99,13 +99,19 @@ export function grade(card, outcome) {
       ease = clampEase(card.ease - 0.2);
       lapses = card.lapses + 1;
       break;
+    // A correct answer always moves the card on by at least a day. At the
+    // ease floor round(1 * 1.3) is 1, so a word missed five times and parked
+    // at a 1 day interval came back every day forever however often it was
+    // answered right. Easy stays at least a day ahead of Good.
     case 'good':
-      interval = isNew ? graduatingInterval(card) : Math.round(card.interval * card.ease);
+      interval = isNew
+        ? graduatingInterval(card)
+        : Math.max(card.interval + 1, Math.round(card.interval * card.ease));
       break;
     case 'easy':
       interval = isNew
         ? Math.round(graduatingInterval(card) * 1.3)
-        : Math.round(card.interval * card.ease * 1.3);
+        : Math.max(card.interval + 2, Math.round(card.interval * card.ease * 1.3));
       ease = clampEase(card.ease + 0.15);
       break;
     default:

@@ -73,3 +73,14 @@ test('easy grows the interval further than good and bumps ease up', () => {
   assert.ok(graded.interval > Math.round(10 * 2.3));
   assert.ok(graded.ease > 2.3);
 });
+
+test('a card at the ease floor still moves on when answered right', () => {
+  let card = grade(newCard('v:test:recall'), 'good');
+  for (let i = 0; i < 5; i++) card = grade(card, 'again');
+  assert.equal(card.ease, EASE_MIN);
+  assert.equal(card.interval, 1);
+  card = grade(card, 'good');
+  assert.equal(card.interval, 2);
+  card = grade(card, 'good');
+  assert.equal(card.interval, 3);
+});
