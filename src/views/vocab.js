@@ -105,7 +105,15 @@ function renderRecallCard(container, spec, card, onGraded) {
   );
 }
 
-function renderProduceCard(container, spec, card, onGraded) {
+// A typed answer that is wrong for this card but is the French for another
+// word with the same Dutch sense: right word, other context. An accent slip
+// on the synonym still counts, since the learner clearly knew the word.
+function isSynonym(typed, spec) {
+  if (!spec.synonyms || spec.synonyms.length === 0) return false;
+  return gradeAnswer(typed, spec.synonyms).grade !== 'again';
+}
+
+function renderProduceCard(container, spec, card, onGraded, synonymSeen) {
   const input = h('input', {
     type: 'text', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false',
     'aria-label': 'Type the French word, with its article if it is a noun',
@@ -118,16 +126,35 @@ function renderProduceCard(container, spec, card, onGraded) {
       e.preventDefault();
       const typed = input.value;
       if (!typed.trim()) return;
-      const result = gradeAnswer(typed, spec.expected);
-      // expected is usually one string, but a noun accepts two articles for
-      // the same gender (le cinéma / un cinéma) — speak and show the first.
-      const spoken = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
-      speak(spoken);
+      let result = gradeAnswer(typed, spec.expected);
       input.disabled = true;
       clear(feedback);
+
+      // First synonym in this batch: say so, keep the answer hidden, leave
+      // the card untouched and bring it back shortly so the wanted word can
+      // still be found. A second synonym shows the answer and grades as
+      // Almost, so a word you do not know cannot loop forever.
+      if (result.grade === 'again' && isSynonym(typed, spec)) {
+        if (!synonymSeen) {
+          feedback.append(h('p', { class: 'correct' },
+            'Also right, but this card wants a different word. It comes back in a moment.'));
+          const next = h('button', { type: 'button', onclick: () => onGraded('synonym') }, 'Next');
+          clear(actions);
+          actions.append(next);
+          next.focus();
+          return;
+        }
+        result = { grade: 'almost', correction: null, synonym: true };
+      }
+
+      // expected is usually one string, but a noun accepts two articles for
+      // the same gender (le cinéma / un cinéma). Speak and show the first.
+      const spoken = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
+      speak(spoken);
       feedback.append(
         h('p', { class: result.grade === 'good' ? 'correct' : 'incorrect' },
           result.grade === 'good' ? 'Correct.'
+            : result.synonym ? `Also right, but this card wants ${spoken}. It comes back in a moment.`
             : result.grade === 'almost' ? `Almost, mind the accent: ${result.correction}. This one comes back in a moment.`
               : spoken),
       );
@@ -161,12 +188,22 @@ function renderCard(container, queue, index, mode, onDone) {
     return;
   }
 
-  const { spec, card } = queue[index];
+  const { spec, card, synonymSeen } = queue[index];
   const remaining = queue.length - index;
   const body = h('div', {});
   container.append(h('p', {}, `${remaining} card${remaining === 1 ? '' : 's'} left in this batch`), body);
 
+  // Puts this card back a few places later in the batch.
+  const repeatLater = (item) =>
+    [...queue.slice(0, index + 1), ...queue.slice(index + 1, index + 4), item, ...queue.slice(index + 4)];
+
   const onGraded = (outcome) => {
+    // A synonym is not a review: nothing is graded or recorded. The card
+    // comes back marked, so a second synonym reveals the answer.
+    if (outcome === 'synonym') {
+      renderCard(container, repeatLater({ ...queue[index], synonymSeen: true }), index + 1, mode, onDone);
+      return;
+    }
     // Read the stored card, not the batch snapshot: a card repeated after an
     // Almost has already been graded once in this batch.
     const current = getCard(spec.id) ?? card;
@@ -178,14 +215,12 @@ function renderCard(container, queue, index, mode, onDone) {
     // the card has to come back later in this batch. Without the repeat it
     // simply stays due, and a word typed without its accent returns every
     // day without ever moving up the ladder.
-    const nextQueue = outcome === 'almost'
-      ? [...queue.slice(0, index + 1), ...queue.slice(index + 1, index + 4), queue[index], ...queue.slice(index + 4)]
-      : queue;
+    const nextQueue = outcome === 'almost' ? repeatLater(queue[index]) : queue;
     renderCard(container, nextQueue, index + 1, mode, onDone);
   };
 
   if (spec.kind === 'recall') renderRecallCard(body, spec, card, onGraded);
-  else renderProduceCard(body, spec, card, onGraded);
+  else renderProduceCard(body, spec, card, onGraded, synonymSeen);
 }
 
 function showExhausted(container, onBack) {

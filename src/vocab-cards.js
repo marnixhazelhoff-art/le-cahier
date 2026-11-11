@@ -35,11 +35,74 @@ function producePrompt(entry) {
   return entry.promptHint ? `${entry.nl} (${entry.promptHint})` : entry.nl;
 }
 
+// One Dutch sense, split into a base, an optional qualifier and whether it
+// carries a noun article: "de bank (geld)" becomes
+// { base: 'bank', qualifier: 'geld', noun: true }. Every Dutch noun gloss
+// carries de/het, so the article tells "het gelijk" (raison) apart from the
+// adjective "gelijk" (égal).
+function parseSense(raw) {
+  const text = raw.trim().toLowerCase();
+  const match = text.match(/\(([^)]*)\)/);
+  const qualifier = match ? match[1].trim() : null;
+  const stripped = text.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+  const noun = /^(de|het)\s/.test(stripped);
+  const base = stripped.replace(/^(de|het|een)\s+/, '').trim();
+  return { base, qualifier, noun };
+}
+
+function sensesOf(entry) {
+  return String(entry.nl).split(/[,;]/).map(parseSense).filter((s) => s.base);
+}
+
+// A register qualifier says how a word sounds, not what it means.
+const REGISTER = new Set(['informeel', 'formeel', 'spreektaal', 'plat']);
+
+function meaningQualifier(sense) {
+  return sense.qualifier && !REGISTER.has(sense.qualifier) ? sense.qualifier : null;
+}
+
+// Same base, same word class and the same meaning qualifier. "de bank
+// (geld)" and "de bank" (the sofa) are different words that share a Dutch
+// spelling; "de vrouw" and "de vrouw (informeel)" are real synonyms.
+function sameSense(a, b) {
+  return a.base === b.base && a.noun === b.noun && meaningQualifier(a) === meaningQualifier(b);
+}
+
+// For every entry, the French forms of the other entries that share at least
+// one Dutch sense with it. A produce card uses this to tell a wrong answer
+// apart from a right word in another context: difficile for "hard, moeilijk"
+// (which wants dur) is not a mistake.
+function synonymForms(sorted) {
+  const senses = sorted.map(sensesOf);
+  const byBase = new Map();
+  senses.forEach((list, i) => {
+    for (const sense of list) {
+      if (!byBase.has(sense.base)) byBase.set(sense.base, []);
+      byBase.get(sense.base).push(i);
+    }
+  });
+
+  return sorted.map((entry, i) => {
+    const others = new Set();
+    for (const sense of senses[i]) {
+      for (const j of byBase.get(sense.base)) {
+        if (j === i || others.has(j)) continue;
+        if (senses[j].some((other) => sameSense(sense, other))) others.add(j);
+      }
+    }
+    const own = new Set(producibleForms(entry));
+    return [...others]
+      .flatMap((j) => producibleForms(sorted[j]))
+      .filter((form) => !own.has(form));
+  });
+}
+
 export function buildVocabCardDeck(vocab) {
   const sorted = [...vocab].sort((a, b) => a.rank - b.rank);
+  const synonyms = synonymForms(sorted);
   const cards = [];
 
-  for (const entry of sorted) {
+  sorted.forEach((entry, i) => {
     const form = surfaceForm(entry);
     const recallId = `v:${entry.fr}:recall`;
 
@@ -64,11 +127,12 @@ export function buildVocabCardDeck(vocab) {
       requiresCardId: recallId,
       prompt: producePrompt(entry),
       expected: producibleForms(entry),
+      synonyms: synonyms[i],
       example: entry.example,
       exampleNl: entry.exampleNl,
       note: entry.note,
     });
-  }
+  });
 
   return cards;
 }
