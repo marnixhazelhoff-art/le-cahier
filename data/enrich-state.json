@@ -1,1218 +1,1587 @@
 {
-  "cursor": 2383,
+  "version": 2,
+  "done": [
+    "de|prep",
+    "ne|adv",
+    "pas|adv",
+    "et|conj",
+    "à|prep",
+    "d'|prep",
+    "pour|prep",
+    "en|prep",
+    "mais|conj",
+    "dans|prep",
+    "non|adv",
+    "avec|prep",
+    "oui|adv",
+    "sur|prep",
+    "comme|conj",
+    "si|adv",
+    "quand|conj",
+    "par|prep",
+    "ou|conj",
+    "quoi|adj",
+    "si|conj",
+    "pourquoi|adv",
+    "est-ce que|adv",
+    "toujours|adv",
+    "tout|adv",
+    "sans|prep",
+    "peu|noun",
+    "s'|conj",
+    "enfant|noun",
+    "voilà|prep",
+    "pourquoi|conj",
+    "donc|conj",
+    "maison|noun",
+    "gens|noun",
+    "après|prep",
+    "comme|adv",
+    "comment|conj",
+    "parce que|conj",
+    "ouais|adv",
+    "avant|prep",
+    "main|noun",
+    "vite|adv",
+    "depuis|prep",
+    "moins|adv",
+    "mort|noun",
+    "mal|adv",
+    "voiture|noun",
+    "demain|adv",
+    "assez|adv",
+    "même|adj",
+    "combien|adv",
+    "merci|noun",
+    "ni|conj",
+    "entre|prep",
+    "chance|noun",
+    "tout|noun",
+    "putain|noun",
+    "part|noun",
+    "voici|prep",
+    "revoir|noun",
+    "puis|conj",
+    "juste|adv",
+    "car|conj",
+    "ok|adj",
+    "nouveau|noun",
+    "vers|prep",
+    "petit|noun",
+    "fin|noun",
+    "merde|noun",
+    "chef|noun",
+    "livre|noun",
+    "tour|noun",
+    "aide|noun",
+    "chéri|noun",
+    "cul|noun",
+    "premier|noun",
+    "vieux|noun",
+    "cours|noun",
+    "près|prep",
+    "puis|adv",
+    "pas|noun",
+    "gueule|noun",
+    "con|noun",
+    "gosse|noun",
+    "bien|noun",
+    "pute|noun",
+    "garde|noun",
+    "seul|noun",
+    "bon|noun",
+    "professeur|noun",
+    "fort|adj",
+    "fou|noun",
+    "grand|noun",
+    "meilleur|noun",
+    "plein|prep",
+    "poste|noun",
+    "mme|noun",
+    "a|noun",
+    "noir|noun",
+    "radio|noun",
+    "camarade|noun",
+    "droit|adj",
+    "dernier|noun",
+    "idiot|adj",
+    "derrière|adv",
+    "super|noun",
+    "bas|noun",
+    "gauche|noun",
+    "i|noun",
+    "m|noun",
+    "parmi|prep",
+    "pauvre|noun",
+    "haut|adj",
+    "vacance|noun",
+    "salope|noun",
+    "bon|adv",
+    "calme|adj",
+    "ami|adj",
+    "passé|noun",
+    "j|noun",
+    "secret|adj",
+    "quelque|adv",
+    "ben|noun",
+    "e|noun",
+    "mémoire|noun",
+    "c|noun",
+    "puisque|conj",
+    "devant|adv",
+    "o|noun",
+    "bête|adj",
+    "to|noun",
+    "con|adj",
+    "dessus|noun",
+    "d|prep",
+    "jeune|noun",
+    "mieux|noun",
+    "soit|conj",
+    "dire|noun",
+    "présent|adj",
+    "justice|noun",
+    "beau|noun",
+    "moyen|adj",
+    "demain|noun",
+    "connard|noun",
+    "poche|noun",
+    "couple|noun",
+    "lorsque|conj",
+    "pire|noun",
+    "in|adj",
+    "blanc|noun",
+    "shérif|noun",
+    "malgré|prep",
+    "mlle|noun",
+    "ombre|noun",
+    "américain|noun",
+    "public|adj",
+    "espace|noun",
+    "imbécile|noun",
+    "commissaire|noun",
+    "oeuvre|noun",
+    "ministre|noun",
+    "allemand|adj",
+    "haut|adv",
+    "général|adj",
+    "malade|noun",
+    "com|noun",
+    "artiste|noun",
+    "geste|noun",
+    "saint|noun",
+    "enfoiré|noun",
+    "français|noun",
+    "page|noun",
+    "chaud|adv",
+    "collègue|noun",
+    "couille|noun",
+    "politique|noun",
+    "s|noun",
+    "ça|noun",
+    "prof|noun",
+    "prêt|noun",
+    "pilote|noun",
+    "vrai|noun",
+    "esclave|noun",
+    "propriétaire|noun",
+    "rouge|noun",
+    "élève|noun",
+    "carrière|noun",
+    "lors|adv",
+    "envers|prep",
+    "russe|noun",
+    "journaliste|noun",
+    "gloire|noun",
+    "somme|noun",
+    "point|adv",
+    "bouge|noun",
+    "cher|adv",
+    "grâce|noun",
+    "bien|adj",
+    "tard|noun",
+    "impossible|noun",
+    "y|noun",
+    "pédé|noun",
+    "fait|adj",
+    "anglais|adj",
+    "connard|adj",
+    "ensemble|noun",
+    "b|noun",
+    "enculé|adj",
+    "mode|noun",
+    "droit|adv",
+    "étranger|adj",
+    "secrétaire|noun",
+    "marié|adj",
+    "t|noun",
+    "gorge|noun",
+    "juif|adj",
+    "prochain|noun",
+    "plat|noun",
+    "humain|noun",
+    "auprès|prep",
+    "gros|noun",
+    "froid|noun",
+    "partenaire|noun",
+    "môme|noun",
+    "sérieux|noun",
+    "pour|noun",
+    "venu|adj",
+    "lâche|noun",
+    "suivant|noun",
+    "frais|noun",
+    "cher|noun",
+    "f|noun",
+    "v|noun",
+    "bite|noun",
+    "monseigneur|noun",
+    "bas|adv",
+    "bleu|noun",
+    "pub|noun",
+    "ancien|noun",
+    "ferme|adj",
+    "donne|noun",
+    "innocent|noun",
+    "rose|noun",
+    "détective|noun",
+    "mai|noun",
+    "barbe|noun",
+    "bagnole|noun",
+    "führer|noun",
+    "italien|noun",
+    "avant|adj",
+    "vierge|noun",
+    "rose|adj",
+    "adulte|noun",
+    "futur|adj",
+    "inconnu|adj",
+    "responsable|noun",
+    "malin|noun",
+    "personnel|noun",
+    "oublie|noun",
+    "gamin|adj",
+    "feu|adj",
+    "qu|conj",
+    "souris|noun",
+    "salopard|noun",
+    "long|noun",
+    "au-delà|adv",
+    "garce|noun",
+    "coupable|noun",
+    "vague|noun",
+    "blond|adj",
+    "fan|noun",
+    "chinois|adj",
+    "vidéo|noun",
+    "for|noun",
+    "incroyable|noun",
+    "plus|noun",
+    "riche|noun",
+    "dur|noun",
+    "bijoux|noun",
+    "crème|noun",
+    "moi|noun",
+    "voile|noun",
+    "cieux|noun",
+    "prisonnier|adj",
+    "pro|noun",
+    "double|noun",
+    "man|noun",
+    "nègre|noun",
+    "criminel|adj",
+    "blessé|adj",
+    "drôle|noun",
+    "juste|noun",
+    "auto|noun",
+    "espagnol|noun",
+    "u|noun",
+    "beau|adv",
+    "vivant|noun",
+    "vide|noun",
+    "patient|adj",
+    "franc|noun",
+    "dehors|noun",
+    "guide|noun",
+    "amoureux|noun",
+    "arrière|adj",
+    "commandant|adj",
+    "psy|noun",
+    "or|conj",
+    "tire|noun",
+    "peintre|noun",
+    "major|noun",
+    "salaud|adj",
+    "spécialiste|noun",
+    "terroriste|noun",
+    "basket|noun",
+    "possible|noun",
+    "ténèbres|noun",
+    "direct|noun",
+    "orange|noun",
+    "par-dessus|prep",
+    "lourd|adv",
+    "photographe|noun",
+    "pars|noun",
+    "afin de|prep",
+    "bref|adj",
+    "business|noun",
+    "directeur|adj",
+    "dentiste|noun",
+    "go|noun",
+    "tandis que|conj",
+    "micro|noun",
+    "parti|adj",
+    "sauvage|noun",
+    "café|adj",
+    "enfoiré|adj",
+    "méchant|noun",
+    "anniversaire|adj",
+    "troisième|noun",
+    "scientifique|noun",
+    "ennemi|adj",
+    "mal|adj",
+    "coca|noun",
+    "complice|noun",
+    "touriste|noun",
+    "aveugle|noun",
+    "voisin|adj",
+    "manche|noun",
+    "civil|noun",
+    "commun|noun",
+    "intéressant|noun",
+    "critique|noun",
+    "etc|adv",
+    "chaud|noun",
+    "crétin|adj",
+    "supérieur|noun",
+    "arabe|noun",
+    "casse|noun",
+    "soudain|adj",
+    "psychiatre|noun",
+    "fort|noun",
+    "plastique|noun",
+    "deuxième|noun",
+    "professionnel|noun",
+    "particulier|noun",
+    "militaire|noun",
+    "intérieur|adj",
+    "concernant|prep",
+    "reçu|noun"
+  ],
   "rejected": [
     {
-      "rank": 1,
+      "key": "de|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 2,
+      "key": "ne|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 3,
+      "key": "pas|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 4,
+      "key": "et|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 5,
+      "key": "à|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 6,
+      "key": "d'|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 7,
+      "key": "pour|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 8,
+      "key": "en|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 9,
+      "key": "mais|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 10,
+      "key": "dans|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 13,
+      "key": "non|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 14,
+      "key": "avec|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 15,
+      "key": "oui|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 17,
+      "key": "sur|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 19,
+      "key": "comme|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 20,
+      "key": "si|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 22,
+      "key": "quand|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 25,
+      "key": "par|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 27,
+      "key": "ou|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 28,
+      "key": "quoi|adj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 31,
+      "key": "si|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 33,
+      "key": "pourquoi|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 35,
+      "key": "est-ce que|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 40,
+      "key": "tout|adv",
       "reason": "duplicate",
       "batch": "2026-07-30"
     },
     {
-      "rank": 45,
+      "key": "sans|prep",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 57,
+      "key": "s'|conj",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 69,
+      "key": "voilà|prep",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 75,
+      "key": "pourquoi|conj",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 79,
+      "key": "donc|conj",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 80,
+      "key": "maison|noun",
       "reason": "duplicate",
       "batch": "2026-07-30"
     },
     {
-      "rank": 54,
+      "key": "peu|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 68,
+      "key": "enfant|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 82,
+      "key": "après|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 84,
+      "key": "comme|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 90,
+      "key": "parce que|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 92,
+      "key": "ouais|adv",
       "reason": "interjection",
       "batch": "2026-07-30"
     },
     {
-      "rank": 93,
+      "key": "avant|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 97,
+      "key": "vite|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 99,
+      "key": "depuis|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 101,
+      "key": "moins|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 105,
+      "key": "mort|noun",
       "reason": "verb",
       "batch": "2026-07-30"
     },
     {
-      "rank": 107,
+      "key": "mal|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 110,
+      "key": "voiture|noun",
       "reason": "duplicate",
       "batch": "2026-07-30"
     },
     {
-      "rank": 111,
+      "key": "demain|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 115,
+      "key": "assez|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 118,
+      "key": "combien|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 81,
+      "key": "gens|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 96,
+      "key": "main|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 126,
+      "key": "ni|conj",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 128,
+      "key": "entre|prep",
       "reason": "function-word",
       "batch": "2026-07-30"
     },
     {
-      "rank": 136,
+      "key": "tout|noun",
       "reason": "missing",
       "batch": "2026-07-30"
     },
     {
-      "rank": 147,
+      "key": "putain|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 125,
+      "key": "merci|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 129,
+      "key": "chance|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 148,
+      "key": "part|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 165,
+      "key": "voici|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 175,
+      "key": "revoir|noun",
       "reason": "verb",
       "batch": "2026-07-30"
     },
     {
-      "rank": 177,
+      "key": "puis|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 189,
+      "key": "car|conj",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 190,
+      "key": "ok|adj",
       "reason": "interjection",
       "batch": "2026-07-30"
     },
     {
-      "rank": 196,
+      "key": "vers|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 194,
+      "key": "nouveau|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 214,
+      "key": "merde|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 213,
+      "key": "fin|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 214,
+      "key": "merde|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 224,
+      "key": "chef|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 229,
+      "key": "livre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 230,
+      "key": "tour|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 254,
+      "key": "aide|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 259,
+      "key": "chéri|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 293,
+      "key": "cul|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 323,
+      "key": "ok|adv",
       "reason": "artefact",
       "batch": "2026-07-30"
     },
     {
-      "rank": 293,
+      "key": "cul|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 311,
+      "key": "cours|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 329,
+      "key": "près|prep",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 340,
+      "key": "puis|adv",
       "reason": "function",
       "batch": "2026-07-30"
     },
     {
-      "rank": 355,
+      "key": "gueule|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 349,
+      "key": "pas|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 368,
+      "key": "con|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 368,
+      "key": "con|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 406,
+      "key": "gosse|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 423,
+      "key": "pute|noun",
       "reason": "crude",
       "batch": "2026-07-30"
     },
     {
-      "rank": 423,
+      "key": "pute|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 426,
+      "key": "garde|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 452,
+      "key": "professeur|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 503,
+      "key": "pote|noun",
       "reason": "duplicate",
       "batch": "2026-07-30"
     },
     {
-      "rank": 523,
+      "key": "mme|noun",
       "reason": "abbreviation",
       "batch": "2026-07-30"
     },
     {
-      "rank": 526,
+      "key": "a|noun",
       "reason": "artefact",
       "batch": "2026-07-30"
     },
     {
-      "rank": 513,
+      "key": "poste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 545,
+      "key": "radio|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 547,
+      "key": "camarade|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 607,
+      "key": "i|noun",
       "reason": "letter",
       "batch": "2026-07-30"
     },
     {
-      "rank": 612,
+      "key": "m|noun",
       "reason": "letter",
       "batch": "2026-07-30"
     },
     {
-      "rank": 604,
+      "key": "gauche|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-30"
     },
     {
-      "rank": 624,
+      "key": "parmi|prep",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 644,
+      "key": "salope|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 634,
+      "key": "vacance|noun",
       "reason": "rejected: unknown article \"les\"",
       "batch": "2026-07-31"
     },
     {
-      "rank": 669,
+      "key": "j|noun",
       "reason": "letter",
       "batch": "2026-07-31"
     },
     {
-      "rank": 685,
+      "key": "quelque|adv",
       "reason": "function-word",
       "batch": "2026-07-31"
     },
     {
-      "rank": 700,
+      "key": "ben|noun",
       "reason": "interjection",
       "batch": "2026-07-31"
     },
     {
-      "rank": 707,
+      "key": "e|noun",
       "reason": "letter",
       "batch": "2026-07-31"
     },
     {
-      "rank": 708,
+      "key": "mémoire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 716,
+      "key": "c|noun",
       "reason": "letter",
       "batch": "2026-07-31"
     },
     {
-      "rank": 725,
+      "key": "puisque|conj",
       "reason": "function-word",
       "batch": "2026-07-31"
     },
     {
-      "rank": 743,
+      "key": "o|noun",
       "reason": "letter",
       "batch": "2026-07-31"
     },
     {
-      "rank": 716,
+      "key": "c|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 743,
+      "key": "o|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 762,
+      "key": "to|noun",
       "reason": "artefact",
       "batch": "2026-07-31"
     },
     {
-      "rank": 767,
+      "key": "con|adj",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 777,
+      "key": "d|prep",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 785,
+      "key": "soit|conj",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 790,
+      "key": "dire|noun",
       "reason": "verb",
       "batch": "2026-07-31"
     },
     {
-      "rank": 815,
+      "key": "déjeuner|noun",
       "reason": "verb",
       "batch": "2026-07-31"
     },
     {
-      "rank": 834,
+      "key": "connard|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 822,
+      "key": "justice|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 830,
+      "key": "demain|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 846,
+      "key": "lorsque|conj",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 869,
+      "key": "in|adj",
       "reason": "anglicism",
       "batch": "2026-07-31"
     },
     {
-      "rank": 876,
+      "key": "shérif|noun",
       "reason": "anglicism",
       "batch": "2026-07-31"
     },
     {
-      "rank": 879,
+      "key": "malgré|prep",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 841,
+      "key": "poche|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 842,
+      "key": "couple|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 893,
+      "key": "mlle|noun",
       "reason": "abbreviation",
       "batch": "2026-07-31"
     },
     {
-      "rank": 894,
+      "key": "ombre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 930,
+      "key": "espace|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 938,
+      "key": "imbécile|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 939,
+      "key": "commissaire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 957,
+      "key": "oeuvre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1002,
+      "key": "enfoiré|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 965,
+      "key": "ministre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 978,
+      "key": "com|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 979,
+      "key": "artiste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 980,
+      "key": "geste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 995,
+      "key": "saint|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1011,
+      "key": "star|noun",
       "reason": "kept",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1027,
+      "key": "couille|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1034,
+      "key": "s|noun",
       "reason": "artefact",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1036,
+      "key": "ça|noun",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1007,
+      "key": "page|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1024,
+      "key": "collègue|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1027,
+      "key": "couille|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1033,
+      "key": "politique|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1034,
+      "key": "s|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1036,
+      "key": "ça|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1047,
+      "key": "prof|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1089,
+      "key": "lors|adv",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1053,
+      "key": "pilote|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1058,
+      "key": "esclave|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1062,
+      "key": "propriétaire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1071,
+      "key": "élève|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1077,
+      "key": "carrière|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1096,
+      "key": "envers|prep",
       "reason": "function",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1117,
+      "key": "bouge|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1097,
+      "key": "russe|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1099,
+      "key": "journaliste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1100,
+      "key": "gloire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1101,
+      "key": "somme|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1151,
+      "key": "y|noun",
       "reason": "function-word",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1154,
+      "key": "pédé|noun",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1198,
+      "key": "connard|adj",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1203,
+      "key": "b|noun",
       "reason": "artefact",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1204,
+      "key": "enculé|adj",
       "reason": "crude",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1208,
+      "key": "mode|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-07-31"
     },
     {
-      "rank": 1232,
+      "key": "t|noun",
       "reason": "letter",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1223,
+      "key": "secrétaire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1232,
+      "key": "t|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1237,
+      "key": "gorge|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1256,
+      "key": "plat|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1266,
+      "key": "auprès|prep",
       "reason": "preposition",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1343,
+      "key": "pour|noun",
       "reason": "function-word",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1344,
+      "key": "venu|adj",
       "reason": "verb",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1318,
+      "key": "partenaire|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1331,
+      "key": "môme|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1387,
+      "key": "f|noun",
       "reason": "letter",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1365,
+      "key": "lâche|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1393,
+      "key": "v|noun",
       "reason": "letter",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1401,
+      "key": "bite|noun",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1410,
+      "key": "monseigneur|noun",
       "reason": "title",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1428,
+      "key": "pub|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1456,
+      "key": "donne|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1508,
+      "key": "führer|noun",
       "reason": "proper-noun",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1505,
+      "key": "bagnole|noun",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1517,
+      "key": "rose|adj",
       "reason": "duplicate",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1477,
+      "key": "rose|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1481,
+      "key": "détective|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1490,
+      "key": "mai|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1498,
+      "key": "barbe|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1536,
+      "key": "adulte|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1585,
+      "key": "oublie|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1607,
+      "key": "qu|conj",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1624,
+      "key": "salopard|noun",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1626,
+      "key": "au-delà|adv",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1629,
+      "key": "garce|noun",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1613,
+      "key": "souris|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1639,
+      "key": "vague|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1648,
+      "key": "fan|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1657,
+      "key": "for|noun",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1657,
+      "key": "for|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1696,
+      "key": "bijoux|noun",
       "reason": "rejected: unknown article \"les\"",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1698,
+      "key": "crème|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1700,
+      "key": "moi|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1708,
+      "key": "voile|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1733,
+      "key": "cieux|noun",
       "reason": "rejected: unknown article \"les\"",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1776,
+      "key": "pro|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1785,
+      "key": "man|noun",
       "reason": "English",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1804,
+      "key": "nègre|noun",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1785,
+      "key": "man|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1804,
+      "key": "nègre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1831,
+      "key": "auto|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1848,
+      "key": "u|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1903,
+      "key": "guide|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1940,
+      "key": "tire|noun",
       "reason": "verb",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1928,
+      "key": "psy|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1950,
+      "key": "peintre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1956,
+      "key": "major|noun",
       "reason": "proper-noun",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1956,
+      "key": "major|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1976,
+      "key": "spécialiste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1987,
+      "key": "terroriste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2032,
+      "key": "par-dessus|prep",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 1998,
+      "key": "basket|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2013,
+      "key": "ténèbres|noun",
       "reason": "rejected: unknown article \"les\"",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2019,
+      "key": "orange|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2055,
+      "key": "pars|noun",
       "reason": "verb",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2072,
+      "key": "afin de|prep",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2075,
+      "key": "business|noun",
       "reason": "English",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2051,
+      "key": "photographe|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2100,
+      "key": "go|noun",
       "reason": "artefact",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2091,
+      "key": "dentiste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2121,
+      "key": "jusque|prep",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2123,
+      "key": "tandis que|conj",
       "reason": "function",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2139,
+      "key": "enfoiré|adj",
       "reason": "crude",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2125,
+      "key": "micro|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2171,
+      "key": "coca|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2184,
+      "key": "complice|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2191,
+      "key": "touriste|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2206,
+      "key": "manche|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2247,
+      "key": "etc|adv",
       "reason": "abbreviation",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2242,
+      "key": "critique|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2284,
+      "key": "arabe|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2285,
+      "key": "casse|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2301,
+      "key": "psychiatre|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2312,
+      "key": "plastique|noun",
       "reason": "rejected: noun missing gender or article",
       "batch": "2026-09-07"
     },
     {
-      "rank": 2372,
+      "key": "concernant|prep",
       "reason": "function",
       "batch": "2026-09-07"
     }

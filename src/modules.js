@@ -10,6 +10,7 @@
 // same cards.
 import { tally, withState } from './deck-stats.js';
 import { PRODUCE_UNLOCK_INTERVAL } from './scheduler.js';
+import { entryKey } from './vocab-cards.js';
 
 export const VOCAB_MODULE_SIZE = 50;
 
@@ -40,7 +41,7 @@ export function groupVocabModules(vocab, vocabCards) {
     .map(([id, rawEntries]) => {
       const entries = rawEntries.sort((a, b) => a.rank - b.rank);
       const cardsOfKind = (kind) => entries.flatMap(
-        (e) => (cardsByLemma.get(e.fr) ?? []).filter((c) => c.kind === kind)
+        (e) => (cardsByLemma.get(entryKey(e)) ?? []).filter((c) => c.kind === kind)
       );
       return {
         id,

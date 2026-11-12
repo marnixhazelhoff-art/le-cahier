@@ -1,6 +1,15 @@
 // Builds the vocabulary card deck from data/vocab.json. Nouns are always
 // drilled with the article attached (section 5.2) since gender learned as a
 // separate fact does not survive contact with speech.
+import { conjugate, subject } from './conjugate.js';
+
+// The key a word's cards hang off. A verb gets its own, because several
+// infinitives are also nouns already in the bank (le devoir, le pouvoir, le
+// savoir) and the two must never share progress.
+export function entryKey(entry) {
+  return entry.pos === 'verb' ? `${entry.fr}_verb` : entry.fr;
+}
+
 function surfaceForm(entry) {
   return entry.pos === 'noun' && entry.article ? `${entry.article} ${entry.fr}` : entry.fr;
 }
@@ -51,7 +60,9 @@ function parseSense(raw) {
 }
 
 function sensesOf(entry) {
-  return String(entry.nl).split(/[,;]/).map(parseSense).filter((s) => s.base);
+  const verb = entry.pos === 'verb';
+  return String(entry.nl).split(/[,;]/).map(parseSense).filter((s) => s.base)
+    .map((s) => ({ ...s, verb }));
 }
 
 // A register qualifier says how a word sounds, not what it means.
@@ -65,7 +76,8 @@ function meaningQualifier(sense) {
 // (geld)" and "de bank" (the sofa) are different words that share a Dutch
 // spelling; "de vrouw" and "de vrouw (informeel)" are real synonyms.
 function sameSense(a, b) {
-  return a.base === b.base && a.noun === b.noun && meaningQualifier(a) === meaningQualifier(b);
+  return a.base === b.base && a.noun === b.noun && a.verb === b.verb
+    && meaningQualifier(a) === meaningQualifier(b);
 }
 
 // For every entry, the French forms of the other entries that share at least
@@ -97,22 +109,70 @@ function synonymForms(sorted) {
   });
 }
 
+// --- Verbs -------------------------------------------------------------------
+//
+// A vocabulary verb carries the same conjugation data data/verbs.json uses
+// (entry.verb), so every form comes from src/conjugate.js. The Dutch side of
+// each tense (entry.nlForms) is written by scripts/enrich.mjs.
+
+const TENSE_LABELS = { 'passe-compose': 'passé composé', futur: 'futur', imparfait: 'imparfait' };
+const NL_FORM_KEYS = { 'passe-compose': 'pc', futur: 'futur', imparfait: 'imparfait' };
+
+// je, or il for a verb that only has a third person (il faut, il pleut).
+function personOf(verb) {
+  return verb.impersonal ? 2 : 0;
+}
+
+// One tense, with its subject: the form to show and every form to accept.
+// conjugate() marks être agreement as "(e)" for display; both genders are
+// accepted when grading.
+function tenseForms(verb, tense) {
+  const person = personOf(verb);
+  const form = conjugate(verb, tense)[person];
+  const firstWord = form.split(' ')[0];
+  const display = `${subject(person, firstWord)}${form}`;
+  if (!display.includes('(e)')) return { display, accepted: [display] };
+  return { display, accepted: [display.replace('(e)', ''), display.replace('(e)', 'e')] };
+}
+
+// Shown with the answer on a verb's recall card: what kind of verb it is and
+// its three tenses. Information only, never graded.
+function verbInfo(verb) {
+  const kind = verb.irregular ? 'Irregular' : 'Regular';
+  const tenses = ['passe-compose', 'futur', 'imparfait']
+    .map((tense) => `${TENSE_LABELS[tense]}: ${tenseForms(verb, tense).display}`);
+  return [kind, ...tenses].join(' · ');
+}
+
+// Writing cards per tense. Irregular verbs get all three; a regular verb
+// only gets the passé composé, where the avoir/être choice lives, because
+// its futur and imparfait follow the rule with nothing new to learn. The
+// 50 verbs of data/verbs.json get none: Verbs mode already drills them.
+function tensesToDrill(entry) {
+  if (entry.verb.inVerbsMode) return [];
+  return entry.verb.irregular ? ['passe-compose', 'futur', 'imparfait'] : ['passe-compose'];
+}
+
 export function buildVocabCardDeck(vocab) {
   const sorted = [...vocab].sort((a, b) => a.rank - b.rank);
   const synonyms = synonymForms(sorted);
   const cards = [];
 
   sorted.forEach((entry, i) => {
+    const key = entryKey(entry);
     const form = surfaceForm(entry);
-    const recallId = `v:${entry.fr}:recall`;
+    const recallId = `v:${key}:recall`;
+    const produceId = `v:${key}:produce`;
+    const isVerb = entry.pos === 'verb' && entry.verb;
 
     cards.push({
       id: recallId,
       kind: 'recall',
-      lemma: entry.fr,
+      lemma: key,
       familiar: entry.familiar,
       prompt: form,
       answer: entry.nl,
+      verbInfo: isVerb ? verbInfo(entry.verb) : null,
       example: entry.example,
       exampleNl: entry.exampleNl,
       falseFriend: entry.falseFriend,
@@ -120,9 +180,9 @@ export function buildVocabCardDeck(vocab) {
     });
 
     cards.push({
-      id: `v:${entry.fr}:produce`,
+      id: produceId,
       kind: 'produce',
-      lemma: entry.fr,
+      lemma: key,
       familiar: entry.familiar,
       requiresCardId: recallId,
       prompt: producePrompt(entry),
@@ -132,6 +192,30 @@ export function buildVocabCardDeck(vocab) {
       exampleNl: entry.exampleNl,
       note: entry.note,
     });
+
+    if (!isVerb) return;
+
+    // Each tense unlocks once the infinitive writing card has matured, the
+    // same staging as recall to produce, so a new verb never arrives as four
+    // cards at once.
+    for (const tense of tensesToDrill(entry)) {
+      const { display, accepted } = tenseForms(entry.verb, tense);
+      cards.push({
+        id: `v:${key}:${tense}`,
+        kind: 'produce',
+        tense,
+        lemma: key,
+        familiar: false,
+        requiresCardId: produceId,
+        prompt: `${entry.nlForms[NL_FORM_KEYS[tense]]} (${TENSE_LABELS[tense]})`,
+        expected: accepted,
+        display,
+        synonyms: [],
+        example: null,
+        exampleNl: null,
+        note: null,
+      });
+    }
   });
 
   return cards;

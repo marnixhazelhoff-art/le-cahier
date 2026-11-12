@@ -15,7 +15,13 @@ Static PWA. No build step, no runtime dependencies, no framework. Vanilla ES mod
   See BRIEF.md section 8.7.
 - Accent errors grade as Almost. Gender errors grade as Again.
 - Failure halves the interval. It never resets to day one.
-- Verbs are never vocabulary cards. Vocabulary is never conjugated.
+- Verbs are vocabulary too (pos `verb`, decided 2026-11-12). A vocab verb carries
+  the data/verbs.json shape in `entry.verb`, built from Lexique by
+  scripts/lexique-verbs.mjs, and Dutch tense forms in `entry.nlForms`. Its cards:
+  recall (with the tenses shown as information), the infinitive writing card,
+  and tense writing cards (all three for irregular verbs, passé composé only for
+  regular ones, none for the 50 verbs Verbs mode already drills). Card keys use
+  `<lemma>_verb` so a verb never shares progress with a noun (le devoir).
 - Noun articles are never l', even before a vowel or mute h where real French
   always elides (l'hôpital, l'eau). Store and show le/la/un/une by the word's
   actual gender instead (le hôpital, une eau): l' hides the gender a learner

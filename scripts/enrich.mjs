@@ -8,6 +8,7 @@
 //
 // ANTHROPIC_API_KEY is read from the environment and never written to disk.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { isIrregular } from './lexique-verbs.mjs';
 
 const BATCH_SIZE = 40;
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-opus-4-8';
@@ -16,6 +17,13 @@ const API_URL = 'https://api.anthropic.com/v1/messages';
 const CANDIDATES_PATH = new URL('../data/frequency/lexique-top.json', import.meta.url);
 const VOCAB_PATH = new URL('../data/vocab.json', import.meta.url);
 const STATE_PATH = new URL('../data/enrich-state.json', import.meta.url);
+const VERB_FORMS_PATH = new URL('../data/frequency/verb-forms.json', import.meta.url);
+const VERBS_PATH = new URL('../data/verbs.json', import.meta.url);
+
+// A candidate is identified by its lemma and part of speech, never by its
+// position in the list: devoir the noun and devoir the verb are two words,
+// and the list's ranks shift whenever it is rebuilt.
+const keyOf = (c) => `${c.fr}|${c.pos}`;
 
 // l' is deliberately not a valid article here: real elision (l'hôpital)
 // hides the gender the learner is trying to build, so a vowel-initial noun
@@ -36,8 +44,23 @@ const ENTRY_SCHEMA = {
     familiar: { type: 'boolean' },
     falseFriend: { type: ['string', 'null'] },
     note: { type: ['string', 'null'] },
+    nlForms: {
+      anyOf: [
+        { type: 'null' },
+        {
+          type: 'object',
+          properties: {
+            pc: { type: 'string' },
+            futur: { type: 'string' },
+            imparfait: { type: 'string' },
+          },
+          required: ['pc', 'futur', 'imparfait'],
+          additionalProperties: false,
+        },
+      ],
+    },
   },
-  required: ['rank', 'article', 'nl', 'example', 'exampleNl', 'familiar', 'falseFriend', 'note'],
+  required: ['rank', 'article', 'nl', 'example', 'exampleNl', 'familiar', 'falseFriend', 'note', 'nlForms'],
   additionalProperties: false,
 };
 
@@ -80,6 +103,12 @@ const BOOTSTRAP_EXAMPLES = [
     example: "Je n'ai pas le temps.", exampleNl: 'Ik heb geen tijd.',
     familiar: false, falseFriend: null, note: null,
   },
+  {
+    fr: 'aller', article: null, nl: 'gaan', pos: 'verb', gender: null,
+    example: 'Je vais au marché.', exampleNl: 'Ik ga naar de markt.',
+    familiar: false, falseFriend: null, note: null,
+    nlForms: { pc: 'ik ben gegaan', futur: 'ik zal gaan', imparfait: 'ik ging' },
+  },
 ];
 
 function todayISO() {
@@ -102,9 +131,11 @@ separately from a textbook; you are teaching words, not rules.
 
 For each candidate word, either produce a study entry or skip it.
 
-Skip, with a one-word reason, if the word is: a verb, a proper noun, a function word,
-an interjection with no stable meaning, crude, an English artefact, or a duplicate of
-something you already produced in this batch.
+Skip, with a one-word reason, if the word is: a proper noun, a function word, an
+interjection with no stable meaning, crude, an English artefact, a duplicate of
+something you already produced in this batch, or a verb that is essentially only used
+pronominally (se souvenir, s'en aller), since the bare infinitive would teach a form
+nobody uses.
 
 pos and gender are given to you as facts from a lexical database. Use them; do not
 guess or second-guess them.
@@ -140,6 +171,16 @@ Fields to produce:
   speaker even though it is for an English one.
 - note: a real trap only (irregular plural, gender that contradicts the ending, a
   fixed preposition, a meaning that shifts with gender). Never filler. Null if none.
+- nlForms: verbs only, null for every other word. The Dutch of the verb's main sense
+  (the first sense in nl) in three French tenses, first person singular, written the
+  way a Dutch speaker would say it:
+  pc: the passé composé as a Dutch perfect (ik ben gegaan, ik heb gegeten),
+  futur: the futur simple with zullen (ik zal gaan),
+  imparfait: the imparfait as a Dutch simple past (ik ging, ik at).
+  For a verb that only exists in the third person (falloir, pleuvoir) use the Dutch
+  that matches French il: het heeft geregend, het zal regenen, het regende.
+- For verbs, nl is the infinitive in Dutch (gaan, eten, zich herinneren), article null,
+  and the example uses the verb conjugated naturally.
 
 Format contract, four real entries already in the bank:
 ${JSON.stringify(BOOTSTRAP_EXAMPLES, null, 2)}`;
@@ -203,6 +244,15 @@ async function callClaude(batch) {
 }
 
 function validateEntry(entry, candidate) {
+  if (candidate.pos === 'verb') {
+    if (entry.article) return `verb "${candidate.fr}" has article "${entry.article}", expected null`;
+    const f = entry.nlForms;
+    if (!f || ![f.pc, f.futur, f.imparfait].every((x) => typeof x === 'string' && x.trim())) {
+      return 'verb missing nlForms';
+    }
+  } else if (entry.nlForms) {
+    return `non-verb "${candidate.fr}" has nlForms`;
+  }
   if (candidate.pos === 'noun') {
     if (!candidate.gender || !entry.article) return 'noun missing gender or article';
     if (!ARTICLES.has(entry.article)) return `unknown article "${entry.article}"`;
@@ -223,18 +273,43 @@ function validateEntry(entry, candidate) {
   return null;
 }
 
-async function runBatch(candidates, cursor, vocab, state) {
-  const seenFr = new Set(vocab.map((v) => v.fr));
+// Conjugation data for a verb: the hand-verified data/verbs.json entry when
+// the verb is one of those 50, otherwise what scripts/fetch-frequency.mjs
+// built from Lexique. Null when neither has a complete set of forms.
+function conjugationFor(candidate, verbForms, verifiedVerbs) {
+  const source = verifiedVerbs[candidate.fr] ?? verbForms[candidate.fr];
+  if (!source) return null;
+  const { infinitive, aux, participle, present, futureStem, imperfectStem, impersonal } = source;
+  const conj = { infinitive, aux, participle, present, futureStem };
+  if (imperfectStem) conj.imperfectStem = imperfectStem;
+  if (impersonal) conj.impersonal = true;
+  // Verbs mode already drills the 50 verified verbs per tense, so their
+  // vocabulary cards stop at the infinitive. See src/vocab-cards.js.
+  if (verifiedVerbs[candidate.fr]) conj.inVerbsMode = true;
+  return { ...conj, irregular: isIrregular(conj) };
+}
+
+// The next batch: candidates in rank order that are neither in the bank nor
+// already handled. Verbs without conjugation data are skipped here, before
+// any API call, so they never cost anything.
+function nextBatch(candidates, vocab, state, verbForms, verifiedVerbs) {
+  const handled = new Set([...vocab.map(keyOf), ...state.done]);
   const batch = [];
-  let i = cursor;
-  while (batch.length < BATCH_SIZE && i < candidates.length) {
-    const c = candidates[i];
-    i += 1;
-    if (seenFr.has(c.fr)) continue;
+  const noForms = [];
+  for (const c of candidates) {
+    if (batch.length >= BATCH_SIZE) break;
+    if (handled.has(keyOf(c))) continue;
+    if (c.pos === 'verb' && !conjugationFor(c, verbForms, verifiedVerbs)) {
+      noForms.push(c);
+      continue;
+    }
     batch.push(c);
   }
+  return { batch, noForms };
+}
 
-  if (batch.length === 0) return { nextCursor: i, added: [], skipped: [] };
+async function runBatch(batch, verbForms, verifiedVerbs) {
+  if (batch.length === 0) return { added: [], skipped: [] };
 
   const byRank = new Map(batch.map((c) => [c.rank, c]));
   const result = await callClaude(batch);
@@ -253,7 +328,7 @@ async function runBatch(candidates, cursor, vocab, state) {
       skipped.push({ rank: entry.rank, reason: `rejected: ${error}` });
       continue;
     }
-    added.push({
+    const word = {
       fr: candidate.fr,
       article: entry.article,
       nl: entry.nl,
@@ -266,10 +341,22 @@ async function runBatch(candidates, cursor, vocab, state) {
       note: entry.note,
       rank: candidate.rank,
       batch: todayISO(),
-    });
+    };
+    if (candidate.pos === 'verb') {
+      word.verb = conjugationFor(candidate, verbForms, verifiedVerbs);
+      word.nlForms = entry.nlForms;
+    }
+    added.push(word);
   }
 
-  return { nextCursor: i, added, skipped, batchCandidates: batch };
+  // Ranks the model neither entered nor skipped would otherwise be retried
+  // forever; record them so the next batch moves on.
+  const answered = new Set([...added.map((a) => a.rank), ...skipped.map((x) => x.rank)]);
+  for (const c of batch) {
+    if (!answered.has(c.rank)) skipped.push({ rank: c.rank, reason: 'no answer' });
+  }
+
+  return { added, skipped };
 }
 
 function printReview(added, skipped) {
@@ -299,7 +386,17 @@ async function main() {
   }
 
   let vocab = await readJSON(VOCAB_PATH, []);
-  let state = await readJSON(STATE_PATH, { cursor: 0, rejected: [], lastBatch: null });
+  let state = await readJSON(STATE_PATH, { version: 2, done: [], rejected: [], lastBatch: null });
+  if (state.version !== 2) {
+    console.error('data/enrich-state.json is in the old cursor format. It was migrated once by hand; see git history.');
+    process.exitCode = 1;
+    return;
+  }
+  const verbForms = await readJSON(VERB_FORMS_PATH, {});
+  const verifiedVerbs = Object.fromEntries(
+    ((await readJSON(VERBS_PATH, { verbs: [] })).verbs ?? []).map((v) => [v.infinitive, v])
+  );
+  const byRank = new Map(candidates.map((c) => [c.rank, c]));
 
   if (args['review-last']) {
     if (!state.lastBatch) {
@@ -311,9 +408,12 @@ async function main() {
   }
 
   if (args['dry-run']) {
-    const preview = candidates.slice(state.cursor, state.cursor + BATCH_SIZE);
-    console.log(`Next batch (candidates ${state.cursor}-${state.cursor + preview.length}), no API call:`);
-    console.table(preview.map((c) => ({ rank: c.rank, fr: c.fr, pos: c.pos, gender: c.gender ?? '', freq: c.freq })));
+    const { batch, noForms } = nextBatch(candidates, vocab, state, verbForms, verifiedVerbs);
+    console.log(`Next batch, no API call (${batch.length} words${noForms.length ? `, ${noForms.length} verbs skipped for missing forms` : ''}):`);
+    console.table(batch.map((c) => {
+      const conj = c.pos === 'verb' ? conjugationFor(c, verbForms, verifiedVerbs) : null;
+      return { rank: c.rank, fr: c.fr, pos: c.pos, gender: c.gender ?? '', irregular: conj ? conj.irregular : '' };
+    }));
     return;
   }
 
@@ -323,18 +423,30 @@ async function main() {
   let batchesRun = 0;
   while (batchesRun < batchCount) {
     if (target && vocab.length >= target) break;
-    if (state.cursor >= candidates.length) {
+    const { batch, noForms } = nextBatch(candidates, vocab, state, verbForms, verifiedVerbs);
+    if (batch.length === 0) {
       console.log('Ran out of candidates.');
       break;
     }
 
-    console.log(`\nBatch ${batchesRun + 1}: candidates from index ${state.cursor}...`);
-    const { nextCursor, added, skipped } = await runBatch(candidates, state.cursor, vocab, state);
+    console.log(`\nBatch ${batchesRun + 1}: ranks ${batch[0].rank} to ${batch[batch.length - 1].rank}...`);
+    const { added, skipped: modelSkipped } = await runBatch(batch, verbForms, verifiedVerbs);
+    const skipped = [
+      ...noForms.map((c) => ({ rank: c.rank, reason: 'verb without complete forms' })),
+      ...modelSkipped,
+    ];
+
+    const skippedRecords = skipped.map((x) => ({
+      key: byRank.has(x.rank) ? keyOf(byRank.get(x.rank)) : null,
+      reason: x.reason,
+      batch: todayISO(),
+    })).filter((x) => x.key);
 
     vocab = [...vocab, ...added];
     state = {
-      cursor: nextCursor,
-      rejected: [...state.rejected, ...skipped.map((s) => ({ ...s, batch: todayISO() }))],
+      version: 2,
+      done: [...state.done, ...skippedRecords.map((x) => x.key)],
+      rejected: [...state.rejected, ...skippedRecords],
       lastBatch: { added, skipped },
     };
 

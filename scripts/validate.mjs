@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { conjugate, subject } from '../src/conjugate.js';
 import { buildVerbCardDeck } from '../src/verb-cards.js';
+import { buildVocabCardDeck } from '../src/vocab-cards.js';
 
 const raw = await readFile(new URL('../data/verbs.json', import.meta.url), 'utf8');
 const { verbs } = JSON.parse(raw);
@@ -151,7 +152,7 @@ for (const card of deck) {
 
 // --- Vocabulary bank (if it exists yet) -------------------------------------
 
-const VALID_POS = new Set(['noun', 'adj', 'adv', 'prep', 'conj', 'expr']);
+const VALID_POS = new Set(['noun', 'adj', 'adv', 'prep', 'conj', 'expr', 'verb']);
 let vocab = [];
 try {
   vocab = JSON.parse(await readFile(new URL('../data/vocab.json', import.meta.url), 'utf8'));
@@ -160,12 +161,43 @@ try {
 }
 
 if (vocab.length > 0) {
-  const seenFr = new Set();
+  // A word is its lemma plus part of speech: devoir the noun and devoir the
+  // verb are both allowed, two nouns called devoir are not.
+  const seenKey = new Set();
   for (const entry of vocab) {
     const label = `${entry.fr} (rank ${entry.rank})`;
-    ok(`${label}: fr is unique`, !seenFr.has(entry.fr));
-    seenFr.add(entry.fr);
+    const key = `${entry.fr}|${entry.pos}`;
+    ok(`${label}: fr is unique for its part of speech`, !seenKey.has(key));
+    seenKey.add(key);
     ok(`${label}: pos is valid`, VALID_POS.has(entry.pos));
+    if (entry.pos === 'verb') {
+      const v = entry.verb;
+      ok(`${label}: verb has conjugation data`,
+        v && Array.isArray(v.present) && v.present.length === 6 &&
+        typeof v.futureStem === 'string' && v.futureStem.endsWith('r') &&
+        typeof v.participle === 'string' && (v.aux === 'avoir' || v.aux === 'être') &&
+        typeof v.irregular === 'boolean' && v.infinitive === entry.fr);
+      ok(`${label}: verb has no article`, entry.article === null);
+      const f = entry.nlForms;
+      ok(`${label}: verb has Dutch pc, futur and imparfait`,
+        f && ['pc', 'futur', 'imparfait'].every((k) => typeof f[k] === 'string' && f[k].trim().length > 0));
+      if (v) {
+        for (const tense of ['present', 'imparfait', 'futur', 'passe-compose']) {
+          const person = v.impersonal ? 2 : 0;
+          const form = conjugate(v, tense)[person];
+          ok(`${label}: ${tense} conjugates`, typeof form === 'string' && form.length > 0);
+        }
+      }
+      if (v && byName[entry.fr]) {
+        const verified = byName[entry.fr];
+        ok(`${label}: conjugation matches data/verbs.json`,
+          JSON.stringify(v.present) === JSON.stringify(verified.present) &&
+          v.futureStem === verified.futureStem && v.participle === verified.participle &&
+          v.aux === verified.aux && v.inVerbsMode === true);
+      }
+    } else {
+      ok(`${label}: only verbs carry conjugation data`, entry.verb === undefined && entry.nlForms === undefined);
+    }
     if (entry.pos === 'noun') {
       ok(`${label}: noun has gender`, entry.gender === 'm' || entry.gender === 'f' || entry.gender === 'mf');
       // l' is never valid here: it hides gender behind elision, defeating the
@@ -197,6 +229,16 @@ if (vocab.length > 0) {
     const words = group.map((e) => e.fr).join(' / ');
     ok(`"${nl}" (${words}): every entry sharing this gloss has a promptHint`,
       group.every((e) => typeof e.promptHint === 'string' && e.promptHint.trim().length > 0));
+  }
+
+  const vocabDeck = buildVocabCardDeck(vocab);
+  const vocabIds = new Set();
+  for (const card of vocabDeck) {
+    ok(`vocab card ${card.id} has a unique id`, !vocabIds.has(card.id));
+    vocabIds.add(card.id);
+    ok(`vocab card ${card.id} has an expected answer`, card.kind !== 'produce' ||
+      (Array.isArray(card.expected) && card.expected.length > 0 && card.expected.every((e) => typeof e === 'string' && e.length > 0)));
+    if (card.requiresCardId) ok(`vocab card ${card.id} unlocks from a real card`, vocabIds.has(card.requiresCardId));
   }
 
   console.log(`\nvocab.json: ${vocab.length} entries checked`);

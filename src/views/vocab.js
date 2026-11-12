@@ -84,6 +84,7 @@ function renderRecallCard(container, spec, card, onGraded) {
     // "null" instead of skipping them, unlike this file's h() helper — filter first.
     revealed.append(...[
       h('p', { class: 'correct' }, spec.answer),
+      spec.verbInfo ? h('p', { class: 'mono gloss' }, spec.verbInfo) : null,
       spec.example ? h('p', { class: 'mono' }, spec.example) : null,
       spec.exampleNl ? h('p', { class: 'mono gloss' }, spec.exampleNl) : null,
       spec.falseFriend ? h('p', {}, `Let op: ${spec.falseFriend}`) : null,
@@ -149,8 +150,11 @@ function renderProduceCard(container, spec, card, onGraded, synonymSeen) {
 
       // expected is usually one string, but a noun accepts two articles for
       // the same gender (le cinéma / un cinéma). Speak and show the first.
-      const spoken = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
-      speak(spoken);
+      const firstAccepted = Array.isArray(spec.expected) ? spec.expected[0] : spec.expected;
+      // A tense card shows its agreement marker (je suis allé(e)) but speaks a
+      // real form.
+      const spoken = spec.display ?? firstAccepted;
+      speak(firstAccepted);
       feedback.append(
         h('p', { class: result.grade === 'good' ? 'correct' : 'incorrect' },
           result.grade === 'good' ? 'Correct.'
