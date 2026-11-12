@@ -118,21 +118,29 @@ function synonymForms(sorted) {
 const TENSE_LABELS = { 'passe-compose': 'passé composé', futur: 'futur', imparfait: 'imparfait' };
 const NL_FORM_KEYS = { 'passe-compose': 'pc', futur: 'futur', imparfait: 'imparfait' };
 
-// je, or il for a verb that only has a third person (il faut, il pleut).
+// je, or il for a verb that only has a third person (il faut, il pleut) or is
+// almost only used in it (ça coûte, ça dure: verb.thirdPerson, whose Dutch
+// forms are "het kost" rather than "ik kost").
 function personOf(verb) {
-  return verb.impersonal ? 2 : 0;
+  return verb.impersonal || verb.thirdPerson ? 2 : 0;
 }
 
 // One tense, with its subject: the form to show and every form to accept.
 // conjugate() marks être agreement as "(e)" for display; both genders are
-// accepted when grading.
+// accepted when grading. A thirdPerson verb also accepts ça, which is how
+// "het kost" is usually said.
 function tenseForms(verb, tense) {
   const person = personOf(verb);
   const form = conjugate(verb, tense)[person];
   const firstWord = form.split(' ')[0];
   const display = `${subject(person, firstWord)}${form}`;
-  if (!display.includes('(e)')) return { display, accepted: [display] };
-  return { display, accepted: [display.replace('(e)', ''), display.replace('(e)', 'e')] };
+  const genders = display.includes('(e)')
+    ? [display.replace('(e)', ''), display.replace('(e)', 'e')]
+    : [display];
+  const accepted = verb.thirdPerson && !verb.impersonal
+    ? [...genders, ...genders.map((f) => f.replace(/^il /, 'ça '))]
+    : genders;
+  return { display, accepted };
 }
 
 // Shown with the answer on a verb's recall card: what kind of verb it is and

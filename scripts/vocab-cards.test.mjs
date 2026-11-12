@@ -120,3 +120,13 @@ test('a verb gloss is never a synonym of a non-verb gloss', () => {
   ]);
   assert.deepEqual(produce(deck, 'être_verb').synonyms, []);
 });
+
+test('a verb mostly used in the third person is drilled with il, and ça is accepted', () => {
+  const couter = verbEntry('coûter', 'kosten', {
+    aux: 'avoir', participle: 'coûté', futureStem: 'coûter', irregular: false, thirdPerson: true,
+    present: ['coûte', 'coûtes', 'coûte', 'coûtons', 'coûtez', 'coûtent'],
+  }, { pc: 'het heeft gekost', futur: 'het zal kosten', imparfait: 'het kostte' });
+  const pc = buildVocabCardDeck([couter]).find((c) => c.tense === 'passe-compose');
+  assert.equal(pc.prompt, 'het heeft gekost (passé composé)');
+  assert.deepEqual(pc.expected, ['il a coûté', 'ça a coûté']);
+});

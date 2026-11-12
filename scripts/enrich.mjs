@@ -177,8 +177,11 @@ Fields to produce:
   pc: the passé composé as a Dutch perfect (ik ben gegaan, ik heb gegeten),
   futur: the futur simple with zullen (ik zal gaan),
   imparfait: the imparfait as a Dutch simple past (ik ging, ik at).
-  For a verb that only exists in the third person (falloir, pleuvoir) use the Dutch
-  that matches French il: het heeft geregend, het zal regenen, het regende.
+  For a verb that only exists in the third person (falloir, pleuvoir) or is almost
+  only used in it (coûter, durer) use the Dutch that matches French il or ça: het
+  heeft geregend, het zal regenen, het regende. Never put an object pronoun in these
+  forms (het heeft toebehoord, not het heeft mij toebehoord): the French card has none.
+  Pronominal verbs are skipped (see above), so these forms never contain me or zich.
 - For verbs, nl is the infinitive in Dutch (gaan, eten, zich herinneren), article null,
   and the example uses the verb conjugated naturally.
 
@@ -294,11 +297,17 @@ function conjugationFor(candidate, verbForms, verifiedVerbs) {
 // any API call, so they never cost anything.
 function nextBatch(candidates, vocab, state, verbForms, verifiedVerbs) {
   const handled = new Set([...vocab.map(keyOf), ...state.done]);
+  // Outside verbs, one lemma is one word, whatever its part of speech: the
+  // app keys non-verb cards by lemma alone, so le petit next to petit would
+  // share progress. The first (most frequent) one in wins.
+  const nonVerbLemmas = new Set(vocab.filter((v) => v.pos !== 'verb').map((v) => v.fr));
   const batch = [];
   const noForms = [];
   for (const c of candidates) {
     if (batch.length >= BATCH_SIZE) break;
     if (handled.has(keyOf(c))) continue;
+    if (c.pos !== 'verb' && nonVerbLemmas.has(c.fr)) continue;
+    if (c.pos !== 'verb') nonVerbLemmas.add(c.fr);
     if (c.pos === 'verb' && !conjugationFor(c, verbForms, verifiedVerbs)) {
       noForms.push(c);
       continue;
@@ -345,6 +354,10 @@ async function runBatch(batch, verbForms, verifiedVerbs) {
     if (candidate.pos === 'verb') {
       word.verb = conjugationFor(candidate, verbForms, verifiedVerbs);
       word.nlForms = entry.nlForms;
+      // "het kost", "het duurt": a verb mostly used in the third person. Its
+      // tense cards then ask for il/ça instead of je. See src/vocab-cards.js.
+      const forms = Object.values(entry.nlForms);
+      if (!word.verb.impersonal && forms.every((f) => /^het\s/i.test(f))) word.verb.thirdPerson = true;
     }
     added.push(word);
   }
@@ -442,10 +455,17 @@ async function main() {
       batch: todayISO(),
     })).filter((x) => x.key);
 
+    // A word the model silently left out gets one more try in a later batch;
+    // only a second miss marks it done.
+    const missedBefore = new Set(state.rejected.filter((r) => r.reason === 'no answer').map((r) => r.key));
+    const doneNow = skippedRecords
+      .filter((x) => x.reason !== 'no answer' || missedBefore.has(x.key))
+      .map((x) => x.key);
+
     vocab = [...vocab, ...added];
     state = {
       version: 2,
-      done: [...state.done, ...skippedRecords.map((x) => x.key)],
+      done: [...state.done, ...doneNow],
       rejected: [...state.rejected, ...skippedRecords],
       lastBatch: { added, skipped },
     };

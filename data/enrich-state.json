@@ -367,7 +367,95 @@
     "militaire|noun",
     "intérieur|adj",
     "concernant|prep",
-    "reçu|noun"
+    "reçu|noun",
+    "plaire|verb",
+    "prévoir|verb",
+    "chier|verb",
+    "profiter|verb",
+    "pleuvoir|verb",
+    "parfaire|verb",
+    "convaincre|verb",
+    "produire|verb",
+    "faillir|verb",
+    "effrayer|verb",
+    "péter|verb",
+    "buter|verb",
+    "contenir|verb",
+    "opérer|verb",
+    "décrire|verb",
+    "vaincre|verb",
+    "gérer|verb",
+    "repérer|verb",
+    "exagérer|verb",
+    "inscrire|verb",
+    "satisfaire|verb",
+    "céder|verb",
+    "piéger|verb",
+    "cuire|verb",
+    "pourvoir|verb",
+    "saurer|verb",
+    "douer|verb",
+    "semer|verb",
+    "concevoir|verb",
+    "transférer|verb",
+    "célébrer|verb",
+    "racheter|verb",
+    "séduire|verb",
+    "reproduire|verb",
+    "distraire|verb",
+    "accélérer|verb",
+    "luire|verb",
+    "traduire|verb",
+    "conquérir|verb",
+    "marrer|verb",
+    "botter|verb",
+    "enculer|verb",
+    "nuire|verb",
+    "lécher|verb",
+    "provenir|verb",
+    "tolérer|verb",
+    "procéder|verb",
+    "boy|noun",
+    "emparer|verb",
+    "foudre|noun",
+    "pareil|noun",
+    "malheureux|noun",
+    "branler|verb",
+    "clair|noun",
+    "ancêtre|noun",
+    "vivre|noun",
+    "by|noun",
+    "mannequin|noun",
+    "déplaire|verb",
+    "désespérer|verb",
+    "balayer|verb",
+    "nu|noun",
+    "dingue|noun",
+    "essuyer|verb",
+    "débile|noun",
+    "juillet|noun",
+    "clope|noun",
+    "nan|noun",
+    "octobre|noun",
+    "quoique|conj",
+    "amateur|noun",
+    "obséder|verb",
+    "exclure|verb",
+    "ya|noun",
+    "technique|noun",
+    "asseoir|verb",
+    "souvenir|verb",
+    "désoler|verb",
+    "dépêcher|verb",
+    "ficher|verb",
+    "débrouiller|verb",
+    "soucier|verb",
+    "évanouir|verb",
+    "fier|verb",
+    "évader|verb",
+    "taire|verb",
+    "fiancer|verb",
+    "excuser|verb"
   ],
   "rejected": [
     {
@@ -1584,561 +1672,1248 @@
       "key": "concernant|prep",
       "reason": "function",
       "batch": "2026-09-07"
+    },
+    {
+      "key": "plaire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "prévoir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "chier|verb",
+      "reason": "crude",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "profiter|verb",
+      "reason": "included",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "pleuvoir|verb",
+      "reason": "included",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "chier|verb",
+      "reason": "rejected: verb missing nlForms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "séparer|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "sur|adj",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "désirer|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "traîner|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "respecter|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "enfuir|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "diriger|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "crever|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "poursuivre|verb",
+      "reason": "no answer",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "parfaire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "convaincre|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "produire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "faillir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "effrayer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "péter|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "buter|verb",
+      "reason": "crude",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "contenir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "opérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "décrire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "vaincre|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "gérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "repérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "exagérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "inscrire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "satisfaire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "céder|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "piéger|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "cuire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "pourvoir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "saurer|verb",
+      "reason": "obscure",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "douer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "semer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "concevoir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "transférer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "célébrer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "racheter|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "séduire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "reproduire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "distraire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "accélérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "luire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "traduire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "conquérir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "marrer|verb",
+      "reason": "pronominal",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "botter|verb",
+      "reason": "crude",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "enculer|verb",
+      "reason": "crude",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "nuire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "lécher|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "provenir|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "tolérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "procéder|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "boy|noun",
+      "reason": "anglicism",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "emparer|verb",
+      "reason": "pronominal",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "foudre|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "pareil|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "malheureux|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "branler|verb",
+      "reason": "crude",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "clair|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "ancêtre|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "branler|verb",
+      "reason": "rejected: verb missing nlForms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "vivre|noun",
+      "reason": "rejected: non-verb \"vivre\" has nlForms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "by|noun",
+      "reason": "English",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "by|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "mannequin|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "déplaire|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "désespérer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "balayer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "nu|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "dingue|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "essuyer|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "débile|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "juillet|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "clope|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "nan|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "octobre|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "quoique|conj",
+      "reason": "function",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "amateur|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "obséder|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "exclure|verb",
+      "reason": "verb without complete forms",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "ya|noun",
+      "reason": "artefact",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "ya|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "technique|noun",
+      "reason": "rejected: noun missing gender or article",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "asseoir|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "souvenir|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "désoler|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "dépêcher|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "ficher|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "débrouiller|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "soucier|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "évanouir|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "fier|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "évader|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "taire|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "fiancer|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
+    },
+    {
+      "key": "excuser|verb",
+      "reason": "pronominal (removed by hand)",
+      "batch": "2026-11-12"
     }
   ],
   "lastBatch": {
     "added": [
       {
-        "fr": "fillette",
-        "article": "une",
-        "nl": "het meisje",
+        "fr": "orgueil",
+        "article": "le",
+        "nl": "de trots, de hoogmoed",
         "pos": "noun",
-        "gender": "f",
-        "example": "La fillette joue dehors.",
-        "exampleNl": "Het meisje speelt buiten.",
+        "gender": "m",
+        "example": "Il a trop d'orgueil.",
+        "exampleNl": "Hij heeft te veel trots.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2340,
-        "batch": "2026-09-07"
+        "rank": 3426,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "tranquillement",
+        "fr": "jadis",
         "article": null,
-        "nl": "rustig, kalm",
+        "nl": "vroeger, weleer",
         "pos": "adv",
         "gender": null,
-        "example": "Il dort tranquillement.",
-        "exampleNl": "Hij slaapt rustig.",
+        "example": "Jadis, tout était différent.",
+        "exampleNl": "Vroeger was alles anders.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2341,
-        "batch": "2026-09-07"
+        "rank": 3427,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "mark",
-        "article": "le",
-        "nl": "de mark (munt)",
-        "pos": "noun",
-        "gender": "m",
-        "example": "Il paie en marks.",
-        "exampleNl": "Hij betaalt in marken.",
+        "fr": "ramper",
+        "article": null,
+        "nl": "kruipen",
+        "pos": "verb",
+        "gender": null,
+        "example": "Le bébé rampe par terre.",
+        "exampleNl": "De baby kruipt over de grond.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2343,
-        "batch": "2026-09-07"
+        "rank": 3428,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "ramper",
+          "aux": "avoir",
+          "participle": "rampé",
+          "present": [
+            "rampe",
+            "rampes",
+            "rampe",
+            "rampons",
+            "rampez",
+            "rampent"
+          ],
+          "futureStem": "ramper",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb gekropen",
+          "futur": "ik zal kruipen",
+          "imparfait": "ik kroop"
+        }
       },
       {
-        "fr": "carnet",
-        "article": "un",
-        "nl": "het boekje, het notitieboekje",
-        "pos": "noun",
-        "gender": "m",
-        "example": "J'écris dans mon carnet.",
-        "exampleNl": "Ik schrijf in mijn notitieboekje.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2345,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "enveloppe",
-        "article": "une",
-        "nl": "de envelop",
-        "pos": "noun",
-        "gender": "f",
-        "example": "Je colle l'enveloppe.",
-        "exampleNl": "Ik plak de envelop dicht.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2346,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "japonais",
-        "article": "le",
-        "nl": "het Japans (taal), de Japanner",
-        "pos": "noun",
-        "gender": "m",
-        "example": "J'apprends le japonais.",
-        "exampleNl": "Ik leer Japans.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2347,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "résistance",
+        "fr": "fermeture",
         "article": "la",
-        "nl": "de weerstand, het verzet",
+        "nl": "de sluiting, het slot",
         "pos": "noun",
         "gender": "f",
-        "example": "Il oppose une résistance.",
-        "exampleNl": "Hij biedt weerstand.",
+        "example": "La fermeture est cassée.",
+        "exampleNl": "De sluiting is kapot.",
         "familiar": false,
         "falseFriend": null,
-        "note": null,
-        "rank": 2348,
-        "batch": "2026-09-07"
+        "note": "\"fermeture éclair\" = ritssluiting.",
+        "rank": 3429,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "ère",
-        "article": "une",
-        "nl": "het tijdperk, de era",
-        "pos": "noun",
-        "gender": "f",
-        "example": "C'est une nouvelle ère.",
-        "exampleNl": "Het is een nieuw tijdperk.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2349,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "phase",
-        "article": "une",
-        "nl": "de fase",
-        "pos": "noun",
-        "gender": "f",
-        "example": "Nous entrons dans une phase.",
-        "exampleNl": "We gaan een fase in.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2350,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "remarquable",
-        "article": null,
-        "nl": "opmerkelijk, opvallend",
-        "pos": "adj",
-        "gender": null,
-        "example": "C'est un travail remarquable.",
-        "exampleNl": "Het is opmerkelijk werk.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2351,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "richesse",
-        "article": "la",
-        "nl": "de rijkdom",
-        "pos": "noun",
-        "gender": "f",
-        "example": "La richesse ne fait pas tout.",
-        "exampleNl": "Rijkdom maakt niet alles.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2352,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "baby",
-        "article": "un",
-        "nl": "de baby",
-        "pos": "noun",
-        "gender": "m",
-        "example": "Le baby dort bien.",
-        "exampleNl": "De baby slaapt goed.",
-        "familiar": true,
-        "falseFriend": null,
-        "note": "Gewoner is \"bébé\".",
-        "rank": 2353,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "délire",
+        "fr": "mouchoir",
         "article": "le",
-        "nl": "de waanzin, het delirium",
+        "nl": "de zakdoek",
         "pos": "noun",
         "gender": "m",
-        "example": "C'est du délire total !",
-        "exampleNl": "Dit is complete waanzin!",
+        "example": "J'ai besoin d'un mouchoir.",
+        "exampleNl": "Ik heb een zakdoek nodig.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2354,
-        "batch": "2026-09-07"
+        "rank": 3430,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "dépôt",
-        "article": "un",
-        "nl": "het depot, de opslagplaats",
-        "pos": "noun",
-        "gender": "m",
-        "example": "Le train est au dépôt.",
-        "exampleNl": "De trein staat in het depot.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2355,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "disponible",
+        "fr": "gaspiller",
         "article": null,
-        "nl": "beschikbaar",
-        "pos": "adj",
+        "nl": "verspillen",
+        "pos": "verb",
         "gender": null,
-        "example": "Es-tu disponible demain ?",
-        "exampleNl": "Ben je morgen beschikbaar?",
+        "example": "Ne gaspille pas l'eau.",
+        "exampleNl": "Verspil geen water.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2356,
-        "batch": "2026-09-07"
+        "rank": 3432,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "gaspiller",
+          "aux": "avoir",
+          "participle": "gaspillé",
+          "present": [
+            "gaspille",
+            "gaspilles",
+            "gaspille",
+            "gaspillons",
+            "gaspillez",
+            "gaspillent"
+          ],
+          "futureStem": "gaspiller",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb verspild",
+          "futur": "ik zal verspillen",
+          "imparfait": "ik verspilde"
+        }
       },
       {
-        "fr": "paysage",
+        "fr": "bail",
         "article": "le",
-        "nl": "het landschap",
+        "nl": "het huurcontract",
         "pos": "noun",
         "gender": "m",
-        "example": "Le paysage est magnifique.",
-        "exampleNl": "Het landschap is prachtig.",
+        "example": "J'ai signé le bail.",
+        "exampleNl": "Ik heb het huurcontract getekend.",
         "familiar": false,
         "falseFriend": null,
-        "note": null,
-        "rank": 2357,
-        "batch": "2026-09-07"
+        "note": "Meervoud: baux.",
+        "rank": 3433,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "solitaire",
+        "fr": "précédemment",
         "article": null,
-        "nl": "eenzaam, solitair",
-        "pos": "adj",
+        "nl": "eerder, voorheen",
+        "pos": "adv",
         "gender": null,
-        "example": "C'est un homme solitaire.",
-        "exampleNl": "Het is een eenzame man.",
+        "example": "Comme dit précédemment.",
+        "exampleNl": "Zoals eerder gezegd.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2358,
-        "batch": "2026-09-07"
+        "rank": 3434,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "pratique",
-        "article": null,
-        "nl": "praktisch, handig",
-        "pos": "adj",
-        "gender": null,
-        "example": "C'est très pratique.",
-        "exampleNl": "Dat is erg handig.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": "Als zelfstandig naamwoord (la pratique): de praktijk.",
-        "rank": 2359,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "brun",
-        "article": null,
-        "nl": "bruin",
-        "pos": "adj",
-        "gender": "m",
-        "example": "Il a les cheveux bruns.",
-        "exampleNl": "Hij heeft bruin haar.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2361,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "coucou",
+        "fr": "troupeau",
         "article": "le",
-        "nl": "de koekoek",
+        "nl": "de kudde",
         "pos": "noun",
         "gender": "m",
-        "example": "Le coucou chante.",
-        "exampleNl": "De koekoek zingt.",
+        "example": "Un troupeau de moutons.",
+        "exampleNl": "Een kudde schapen.",
         "familiar": false,
         "falseFriend": null,
-        "note": "Ook als informele begroeting: \"hoi!\"",
-        "rank": 2362,
-        "batch": "2026-09-07"
+        "note": "Meervoud: troupeaux.",
+        "rank": 3435,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "misérable",
-        "article": null,
-        "nl": "ellendig, armzalig",
-        "pos": "adj",
-        "gender": null,
-        "example": "Il vit dans des conditions misérables.",
-        "exampleNl": "Hij leeft in ellendige omstandigheden.",
+        "fr": "calcul",
+        "article": "le",
+        "nl": "de berekening, het rekenen",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Je fais un calcul rapide.",
+        "exampleNl": "Ik maak een snelle berekening.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2363,
-        "batch": "2026-09-07"
+        "rank": 3436,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "punition",
+        "fr": "évidence",
         "article": "une",
-        "nl": "de straf",
+        "nl": "de vanzelfsprekendheid, het bewijs",
         "pos": "noun",
         "gender": "f",
-        "example": "C'est une punition sévère.",
-        "exampleNl": "Dat is een zware straf.",
+        "example": "C'est une évidence.",
+        "exampleNl": "Dat spreekt vanzelf.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2364,
-        "batch": "2026-09-07"
+        "rank": 3437,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "interne",
+        "fr": "plaider",
         "article": null,
-        "nl": "intern, inwendig",
+        "nl": "pleiten",
+        "pos": "verb",
+        "gender": null,
+        "example": "L'avocat va plaider demain.",
+        "exampleNl": "De advocaat gaat morgen pleiten.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3438,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "plaider",
+          "aux": "avoir",
+          "participle": "plaidé",
+          "present": [
+            "plaide",
+            "plaides",
+            "plaide",
+            "plaidons",
+            "plaidez",
+            "plaident"
+          ],
+          "futureStem": "plaider",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb gepleit",
+          "futur": "ik zal pleiten",
+          "imparfait": "ik pleitte"
+        }
+      },
+      {
+        "fr": "honorable",
+        "article": null,
+        "nl": "eerbaar, achtenswaardig",
         "pos": "adj",
         "gender": null,
-        "example": "C'est un problème interne.",
-        "exampleNl": "Het is een intern probleem.",
+        "example": "C'est un homme honorable.",
+        "exampleNl": "Het is een eerbaar man.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2365,
-        "batch": "2026-09-07"
+        "rank": 3440,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "beau-frère",
-        "article": "le",
-        "nl": "de zwager",
-        "pos": "noun",
-        "gender": "m",
-        "example": "Mon beau-frère habite ici.",
-        "exampleNl": "Mijn zwager woont hier.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2366,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "commercial",
+        "fr": "ressusciter",
         "article": null,
-        "nl": "commercieel, handels-",
-        "pos": "adj",
-        "gender": "m",
-        "example": "C'est une décision commerciale.",
-        "exampleNl": "Het is een commerciële beslissing.",
+        "nl": "opwekken, verrijzen",
+        "pos": "verb",
+        "gender": null,
+        "example": "On ne peut pas le ressusciter.",
+        "exampleNl": "Men kan hem niet doen verrijzen.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2367,
-        "batch": "2026-09-07"
+        "rank": 3441,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "ressusciter",
+          "aux": "avoir",
+          "participle": "ressuscité",
+          "present": [
+            "ressuscite",
+            "ressuscites",
+            "ressuscite",
+            "ressuscitons",
+            "ressuscitez",
+            "ressuscitent"
+          ],
+          "futureStem": "ressusciter",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik ben verrezen",
+          "futur": "ik zal verrijzen",
+          "imparfait": "ik verrees"
+        }
       },
       {
-        "fr": "démocratie",
-        "article": "la",
-        "nl": "de democratie",
-        "pos": "noun",
-        "gender": "f",
-        "example": "La démocratie est importante.",
-        "exampleNl": "Democratie is belangrijk.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2368,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "morale",
-        "article": "la",
-        "nl": "de moraal, het zedelijk besef",
-        "pos": "noun",
-        "gender": "f",
-        "example": "La morale de l'histoire est claire.",
-        "exampleNl": "De moraal van het verhaal is duidelijk.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": "Mannelijk \"le moral\" betekent het humeur/moreel.",
-        "rank": 2369,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "construction",
-        "article": "la",
-        "nl": "de bouw, het bouwwerk",
-        "pos": "noun",
-        "gender": "f",
-        "example": "La construction dure longtemps.",
-        "exampleNl": "De bouw duurt lang.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": null,
-        "rank": 2370,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "fringue",
-        "article": "une",
-        "nl": "de kleren, het kledingstuk",
-        "pos": "noun",
-        "gender": "f",
-        "example": "J'achète des fringues.",
-        "exampleNl": "Ik koop kleren.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": "Informeel; meestal in het meervoud gebruikt.",
-        "rank": 2371,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "gentleman",
-        "article": "un",
-        "nl": "de heer, de gentleman",
+        "fr": "télégramme",
+        "article": "le",
+        "nl": "het telegram",
         "pos": "noun",
         "gender": "m",
-        "example": "C'est un vrai gentleman.",
-        "exampleNl": "Hij is een echte heer.",
+        "example": "J'ai reçu un télégramme.",
+        "exampleNl": "Ik heb een telegram gekregen.",
         "familiar": true,
         "falseFriend": null,
         "note": null,
-        "rank": 2373,
-        "batch": "2026-09-07"
+        "rank": 3442,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "division",
-        "article": "une",
-        "nl": "de verdeling, de divisie",
+        "fr": "majorité",
+        "article": "la",
+        "nl": "de meerderheid",
         "pos": "noun",
         "gender": "f",
-        "example": "La division du travail.",
-        "exampleNl": "De verdeling van het werk.",
+        "example": "La majorité a voté oui.",
+        "exampleNl": "De meerderheid heeft ja gestemd.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2375,
-        "batch": "2026-09-07"
+        "rank": 3443,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "affection",
-        "article": "une",
-        "nl": "de genegenheid",
-        "pos": "noun",
-        "gender": "f",
-        "example": "Il montre de l'affection.",
-        "exampleNl": "Hij toont genegenheid.",
+        "fr": "enfiler",
+        "article": null,
+        "nl": "aantrekken, rijgen",
+        "pos": "verb",
+        "gender": null,
+        "example": "J'enfile mon manteau.",
+        "exampleNl": "Ik trek mijn jas aan.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2376,
-        "batch": "2026-09-07"
+        "rank": 3444,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "enfiler",
+          "aux": "avoir",
+          "participle": "enfilé",
+          "present": [
+            "enfile",
+            "enfiles",
+            "enfile",
+            "enfilons",
+            "enfilez",
+            "enfilent"
+          ],
+          "futureStem": "enfiler",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb aangetrokken",
+          "futur": "ik zal aantrekken",
+          "imparfait": "ik trok aan"
+        }
       },
       {
-        "fr": "tarte",
-        "article": "une",
-        "nl": "de taart",
-        "pos": "noun",
-        "gender": "f",
-        "example": "J'aime la tarte aux pommes.",
-        "exampleNl": "Ik hou van appeltaart.",
+        "fr": "glacé",
+        "article": null,
+        "nl": "ijskoud, geglaceerd",
+        "pos": "adj",
+        "gender": "m",
+        "example": "L'eau est glacée.",
+        "exampleNl": "Het water is ijskoud.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2377,
-        "batch": "2026-09-07"
+        "rank": 3445,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "pompier",
-        "article": "un",
-        "nl": "de brandweerman",
+        "fr": "insupportable",
+        "article": null,
+        "nl": "onuitstaanbaar, ondraaglijk",
+        "pos": "adj",
+        "gender": null,
+        "example": "Ce bruit est insupportable.",
+        "exampleNl": "Dit lawaai is onuitstaanbaar.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3446,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "graine",
+        "article": "la",
+        "nl": "het zaad, de korrel",
+        "pos": "noun",
+        "gender": "f",
+        "example": "Je plante des graines.",
+        "exampleNl": "Ik plant zaden.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3447,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "piqûre",
+        "article": "la",
+        "nl": "de prik, de injectie",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai peur des piqûres.",
+        "exampleNl": "Ik ben bang voor prikken.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3448,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "tâcher",
+        "article": null,
+        "nl": "trachten, proberen",
+        "pos": "verb",
+        "gender": null,
+        "example": "Je tâche de finir.",
+        "exampleNl": "Ik probeer het af te maken.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Vaste constructie: tâcher de + infinitief.",
+        "rank": 3449,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "tâcher",
+          "aux": "avoir",
+          "participle": "tâché",
+          "present": [
+            "tâche",
+            "tâches",
+            "tâche",
+            "tâchons",
+            "tâchez",
+            "tâchent"
+          ],
+          "futureStem": "tâcher",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb geprobeerd",
+          "futur": "ik zal proberen",
+          "imparfait": "ik probeerde"
+        }
+      },
+      {
+        "fr": "tonnerre",
+        "article": "le",
+        "nl": "de donder",
         "pos": "noun",
         "gender": "m",
-        "example": "Le pompier éteint le feu.",
-        "exampleNl": "De brandweerman blust het vuur.",
+        "example": "J'entends le tonnerre.",
+        "exampleNl": "Ik hoor de donder.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2378,
-        "batch": "2026-09-07"
+        "rank": 3450,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "chapitre",
-        "article": "un",
-        "nl": "het hoofdstuk",
+        "fr": "valet",
+        "article": "le",
+        "nl": "de knecht, de boer (kaartspel)",
         "pos": "noun",
         "gender": "m",
-        "example": "Je lis le premier chapitre.",
-        "exampleNl": "Ik lees het eerste hoofdstuk.",
+        "example": "Le valet de cœur.",
+        "exampleNl": "De hartenboer.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2379,
-        "batch": "2026-09-07"
+        "rank": 3451,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "cicatrice",
-        "article": "une",
-        "nl": "het litteken",
+        "fr": "actuellement",
+        "article": null,
+        "nl": "momenteel, op dit moment",
+        "pos": "adv",
+        "gender": null,
+        "example": "Je suis actuellement occupé.",
+        "exampleNl": "Ik ben momenteel bezig.",
+        "familiar": false,
+        "falseFriend": "Niet \"actueel\" in de zin van recent; het betekent \"momenteel\".",
+        "note": null,
+        "rank": 3452,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "cheminée",
+        "article": "la",
+        "nl": "de schoorsteen, de schouw",
         "pos": "noun",
         "gender": "f",
-        "example": "Il a une cicatrice au bras.",
-        "exampleNl": "Hij heeft een litteken op zijn arm.",
+        "example": "Le feu brûle dans la cheminée.",
+        "exampleNl": "Het vuur brandt in de schoorsteen.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2380,
-        "batch": "2026-09-07"
+        "rank": 3453,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "dalle",
-        "article": "une",
-        "nl": "de tegel, de plaat",
-        "pos": "noun",
-        "gender": "f",
-        "example": "La dalle est cassée.",
-        "exampleNl": "De tegel is gebroken.",
-        "familiar": false,
-        "falseFriend": null,
-        "note": "Informeel \"avoir la dalle\": honger hebben.",
-        "rank": 2381,
-        "batch": "2026-09-07"
-      },
-      {
-        "fr": "indien",
-        "article": "un",
-        "nl": "de Indiër, de indiaan",
+        "fr": "maquillage",
+        "article": "le",
+        "nl": "de make-up",
         "pos": "noun",
         "gender": "m",
-        "example": "C'est un plat indien.",
-        "exampleNl": "Het is een Indiaas gerecht.",
+        "example": "Elle met du maquillage.",
+        "exampleNl": "Zij doet make-up op.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2382,
-        "batch": "2026-09-07"
+        "rank": 3454,
+        "batch": "2026-11-12"
       },
       {
-        "fr": "tendance",
-        "article": "une",
-        "nl": "de tendens, de neiging",
-        "pos": "noun",
-        "gender": "f",
-        "example": "C'est une tendance actuelle.",
-        "exampleNl": "Het is een actuele tendens.",
+        "fr": "dérouler",
+        "article": null,
+        "nl": "afrollen, zich afspelen",
+        "pos": "verb",
+        "gender": null,
+        "example": "La fête s'est bien déroulée.",
+        "exampleNl": "Het feest is goed verlopen.",
         "familiar": false,
         "falseFriend": null,
         "note": null,
-        "rank": 2383,
-        "batch": "2026-09-07"
+        "rank": 3456,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "dérouler",
+          "aux": "avoir",
+          "participle": "déroulé",
+          "present": [
+            "déroule",
+            "déroules",
+            "déroule",
+            "déroulons",
+            "déroulez",
+            "déroulent"
+          ],
+          "futureStem": "dérouler",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb afgerold",
+          "futur": "ik zal afrollen",
+          "imparfait": "ik rolde af"
+        }
+      },
+      {
+        "fr": "hanter",
+        "article": null,
+        "nl": "spoken, achtervolgen",
+        "pos": "verb",
+        "gender": null,
+        "example": "Ce souvenir me hante.",
+        "exampleNl": "Deze herinnering achtervolgt me.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3457,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "hanter",
+          "aux": "avoir",
+          "participle": "hanté",
+          "present": [
+            "hante",
+            "hantes",
+            "hante",
+            "hantons",
+            "hantez",
+            "hantent"
+          ],
+          "futureStem": "hanter",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb achtervolgd",
+          "futur": "ik zal achtervolgen",
+          "imparfait": "ik achtervolgde"
+        }
+      },
+      {
+        "fr": "tennis",
+        "article": "le",
+        "nl": "het tennis",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Je joue au tennis.",
+        "exampleNl": "Ik speel tennis.",
+        "familiar": true,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3458,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "grec",
+        "article": "le",
+        "nl": "het Grieks, de Griek",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Je parle un peu le grec.",
+        "exampleNl": "Ik spreek een beetje Grieks.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3459,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "gré",
+        "article": "le",
+        "nl": "de wil, de zin",
+        "pos": "noun",
+        "gender": "m",
+        "example": "Je l'ai fait de bon gré.",
+        "exampleNl": "Ik heb het graag gedaan.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Vooral in uitdrukkingen: de bon gré, au gré de.",
+        "rank": 3460,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "flinguer",
+        "article": null,
+        "nl": "neerschieten",
+        "pos": "verb",
+        "gender": null,
+        "example": "Il s'est fait flinguer.",
+        "exampleNl": "Hij werd neergeschoten.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": "Zeer informeel.",
+        "rank": 3461,
+        "batch": "2026-11-12",
+        "verb": {
+          "infinitive": "flinguer",
+          "aux": "avoir",
+          "participle": "flingué",
+          "present": [
+            "flingue",
+            "flingues",
+            "flingue",
+            "flinguons",
+            "flinguez",
+            "flinguent"
+          ],
+          "futureStem": "flinguer",
+          "irregular": false
+        },
+        "nlForms": {
+          "pc": "ik heb neergeschoten",
+          "futur": "ik zal neerschieten",
+          "imparfait": "ik schoot neer"
+        }
+      },
+      {
+        "fr": "sirène",
+        "article": "la",
+        "nl": "de sirene, de zeemeermin",
+        "pos": "noun",
+        "gender": "f",
+        "example": "La sirène de police.",
+        "exampleNl": "De politiesirene.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3462,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "slip",
+        "article": "le",
+        "nl": "de onderbroek, de slip",
+        "pos": "noun",
+        "gender": "m",
+        "example": "J'achète un slip.",
+        "exampleNl": "Ik koop een onderbroek.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3463,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "obligation",
+        "article": "une",
+        "nl": "de verplichting",
+        "pos": "noun",
+        "gender": "f",
+        "example": "J'ai des obligations.",
+        "exampleNl": "Ik heb verplichtingen.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3464,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "gentiment",
+        "article": null,
+        "nl": "vriendelijk, lief",
+        "pos": "adv",
+        "gender": null,
+        "example": "Il m'a répondu gentiment.",
+        "exampleNl": "Hij antwoordde me vriendelijk.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3466,
+        "batch": "2026-11-12"
+      },
+      {
+        "fr": "insensé",
+        "article": null,
+        "nl": "waanzinnig, dwaas",
+        "pos": "adj",
+        "gender": "m",
+        "example": "C'est un projet insensé.",
+        "exampleNl": "Het is een waanzinnig plan.",
+        "familiar": false,
+        "falseFriend": null,
+        "note": null,
+        "rank": 3467,
+        "batch": "2026-11-12"
       }
     ],
     "skipped": [
       {
-        "rank": 2372,
-        "reason": "function"
+        "rank": 3431,
+        "reason": "verb without complete forms"
+      },
+      {
+        "rank": 3465,
+        "reason": "verb without complete forms"
+      },
+      {
+        "rank": 3439,
+        "reason": "artefact"
+      },
+      {
+        "rank": 3439,
+        "reason": "rejected: noun missing gender or article"
+      },
+      {
+        "rank": 3455,
+        "reason": "rejected: noun missing gender or article"
       }
     ]
   }

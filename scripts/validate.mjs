@@ -181,6 +181,17 @@ if (vocab.length > 0) {
       const f = entry.nlForms;
       ok(`${label}: verb has Dutch pc, futur and imparfait`,
         f && ['pc', 'futur', 'imparfait'].every((k) => typeof f[k] === 'string' && f[k].trim().length > 0));
+      if (f && v) {
+        // The tense cards ask for je, or il for an impersonal or third person
+        // verb; the Dutch has to ask for the same person, with no object or
+        // reflexive pronoun the French answer would not contain.
+        const subjectWord = v.impersonal || v.thirdPerson ? 'het' : 'ik';
+        const forms = [f.pc, f.futur, f.imparfait];
+        ok(`${label}: Dutch tense forms all start with "${subjectWord}"`,
+          forms.every((x) => new RegExp(`^${subjectWord}\\s`, 'i').test(x)));
+        ok(`${label}: Dutch tense forms have no me, mij or zich`,
+          forms.every((x) => !/\b(me|mij|zich)\b/i.test(x)));
+      }
       if (v) {
         for (const tense of ['present', 'imparfait', 'futur', 'passe-compose']) {
           const person = v.impersonal ? 2 : 0;
